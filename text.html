@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AUX function text</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1>text</h1>
+
+<table id="usage"><tr><th>
+y = text ( h,pos_x,pos_y,text )<br>y = _h.text ( pos_x,pos_y,text )</th></tr></table>
+
+<font face="Arial"><p>Display a text in the figure window or axes.</p></font>
+
+<table id="arguments">
+  <tr>
+    <th>arg</th>
+    <th>type</th>
+    <th>Description</th>
+    <th>Unit or Value scale</th>
+  </tr>
+  <tr><td width="15%"><b><font face="Courier New">_h</font></b></td><td width="10%">HGO</td><td width="50%"> Graphic handle, either figure or axes handle</td><td width="25%"></tr>
+<tr><td><b><font face="Courier New">pos_x</font></b></td><td>SCAL</td><td>x position proportion of the window or axes </td><td></tr>
+<tr><td><b><font face="Courier New">pos_y</font></b></td><td>SCAL</td><td>y position proportion of the window or axes </td><td></tr>
+<tr><td><b><font face="Courier New">text</font></b></td><td>TXT</td><td>Text to display</td><td></tr>
+
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Outputs</th></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> is the handle to the text displayed.</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul><li>If <b><font face="Courier New">_h</font></b> is omitted, the text is displayed in the current figure window. If the current figure window doesn't exist, it creates one.</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+  <tr><td><ul><li>text(.5, .5, "hello world!") // hello world! is displayed at the center point in the current window (left-aligned)</li></ul></td></tr>
+</table>
+<p></p>
+<table id="notes"><tr><th>See Also</th></tr></table><a href="figure.html">figure</a>&nbsp;&#124; <a href="plot.html">plot</a>&nbsp;&#124; <a href="axes.html">axes</a>&nbsp;&#124; <a href="delete.html">delete </a>
+</body>
+</html>

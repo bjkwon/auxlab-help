@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operator @</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1>@</h1>
+
+<table id="usage">
+<tr><td>z = x @ y</td></tr>
+</table>
+<font face="Arial"><p>"At" operator; Amplitude scaling in terms of dB</p></font>
+<table id="notes"><tr><th>Commutative</th></tr><tr><td>No</td></tr></table><p></p>
+<table id="notes"><tr><th>Data Types</th></tr></table>
+<table id="arguments">
+  <tr>
+    <th>x</th>
+    <th>y</th>
+    <th>z</th>
+  </tr>
+  <tr><td width="10%">AUD</td><td width="10%">SCAL</td><td width="80%">AUD</td></tr>
+  <tr><td width="10%">AUD</td><td width="10%">TSEQ</td><td width="80%">AUD</td></tr>
+</table>
+
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul>
+  <li>The rms level of <font face="Courier New">z</font> is to be <font face="Courier New">y</font> dB, if <font face="Courier New">y</font> is a scalar.</li> 
+  <li>0 dB is defined as the RMS level of a full-scale sinusoid. This means that the RMS of a full-scale square wave is to be 3 dB.</li> 
+</ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+   <tr><td><ul>
+   <font face="Courier New">AUX> x=tone(500,10)</font><br><img src="at1.png" alt=""><p></p>
+   <font face="Courier New">AUX> x=tone(500,10)@-6</font><br><img src="at2.png" alt=""><p></p>
+   <font face="Courier New">AUX> x=tone(500,100)@[0 .5 1;][-100 -6 -6]</font><br><img src="at3.png" alt=""><p></p>
+   </ul></td></tr>
+</table>
+</body>
+</html>

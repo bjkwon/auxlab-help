@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AUX function tscale</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1>tscale</h1>
+
+<table id="usage"><tr><th>
+y = tscale ( x,freq )<br>y = x.tscale ( freq )<br>y =  x <> freq</th></tr></table>
+
+<font face="Arial"><p>Increase/decrease the duration of the signal without affecting the spectrum</p></font>
+
+<table id="arguments">
+  <tr>
+    <th>arg</th>
+    <th>type</th>
+    <th>Description</th>
+    <th>Unit or Value scale</th>
+  </tr>
+  <tr><td width="15%"><b><font face="Courier New">x</font></b></td><td width="10%">AUD</td><td width="50%"> audio signal</td><td width="25%"></tr>
+<tr><td><b><font face="Courier New">freq</font></b></td><td>VCT</td><td>The desired change of duration in ratio ( > 1 to make longer or < 1 for shorter)</td><td></tr>
+
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Outputs</th></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> is audio with the same frequency as <b><font face="Courier New">x</font></b></li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+  
+</table>
+<p></p>
+<table id="notes"><tr><th>See Also</th></tr></table><a href="fscale.html">fscale</a>&nbsp;&#124; <a href="movespec.html">movespec </a>
+<p></p><table id="notes"><tr><th>Algorithm</th></tr></table>The algorithm is based on Dan Ellis's matlab code (<a href="http://www.ee.columbia.edu/ln/rosa/matlab/pvoc/">http://www.ee.columbia.edu/ln/rosa/matlab/pvoc/</a>), which was originally based on (Flanagan & Golden, "Phase Vocoder" 1966). This function in AUXLAB has minor modifications from Dan Ellis's code 1) adjustment of shot-term RMS to reduce unwanted fluctuations after processing and to adjust the duration properly.<p></p></body>
+</html>

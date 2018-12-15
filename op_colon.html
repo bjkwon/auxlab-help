@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operator :</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1><font face="Courier New"><strong>:</strong></font> </h1>
+
+<table id="usage">
+<tr><td>a = x : y</td></tr>
+</table>
+<font face="Arial"><p>Make an array <font face="Courier New">a</font> beginning from <font face="Courier New">x</font> to <font face="Courier New">y</font> with step of 1 or -1</p></font>
+<table id="usage">
+<tr><td>a = x : y : z</td></tr>
+</table>
+<font face="Arial"><p>Make an array <font face="Courier New">a</font> beginning from <font face="Courier New">x</font> to <font face="Courier New">z</font> with step of <font face="Courier New">y</font></p></font>
+
+<table id="notes"><tr><th>Commutative</th></tr><tr><td>No</td></tr></table><p></p>
+<table id="notes"><tr><th>Data Types</th></tr></table>
+<table id="arguments">
+  <tr>
+    <th>x</th>
+    <th>y</th>
+    <th>z</th>
+  </tr>
+  <tr><td width="10%">SCAL</td><td width="10%">SCAL</td><td width="80%">SCAL</td></tr>
+</table>
+
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul>
+  <li>In <font face="Courier New">x:y</font>, the step size is either 1, if <font face="Courier New">x</font> &lt <font face="Courier New">y</font>, or -1, if <font face="Courier New">x</font> &gt <font face="Courier New">y</font>. Note that this is different from the MATLAB convention.</li>
+</ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+   <tr><td><ul>
+   <font face="Courier New">AUX> 1:5<br>
+   ans =   1 2 3 4 5<p></p>
+   AUX> 5:1<br>
+   ans =   5 4 3 2 1<p></p>
+   AUX> 1:.5:3<br>
+   ans =   1 1.5 2 2.5 3</font><p></p>
+   </ul></td></tr>
+</table>
+</body>
+</html>

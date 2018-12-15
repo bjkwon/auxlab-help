@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operator >></title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1>>></h1>
+
+<table id="usage">
+<tr><td>z = x >> y</td></tr>
+</table>
+<font face="Arial"><p>Time-shift:Shift the audio signal <font face="Courier New">x</font> by <font face="Courier New">y</font> milliseconds</p></font>
+<table id="notes"><tr><th>Commutative</th></tr><tr><td>No</td></tr></table><p></p>
+<table id="notes"><tr><th>Data Types</th></tr></table>
+<table id="arguments">
+  <tr>
+    <th>x</th>
+    <th>y</th>
+    <th>z</th>
+  </tr>
+  <tr><td width="10%">AUD</td><td width="10%">SCAL</td><td width="80%">AUD</td></tr>
+</table>
+
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul>
+  <li>If <font face="Courier New">x</font> is present in the interval <font face="Courier New">(t1, t2)</font>, <font face="Courier New">z</font> will be present in the interval <font face="Courier New">(t1+y, t2+y)</font></li> 
+</ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+   <tr><td><ul>
+   <font face="Courier New">AUX> x=noise(50).sam(100)@-6</font><br><img src="timeshift1.png" alt=""><p></p>
+   <font face="Courier New">AUX> x=noise(50).sam(100)@-6 >> 50 </font><br><img src="timeshift2.png" alt=""><p></p>
+   </ul></td></tr>
+</table>
+</body>
+</html>

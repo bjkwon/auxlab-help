@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Compound Operator @=</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1><font face="Courier New">@=</font></h1>
+
+<table id="usage">
+<tr><td>x @= y</td></tr>
+</table>
+<font face="Arial"><p>Compound operator for the level operator @</p></font>
+<table  id="notes">
+<tr><td><i>Equivalent expression</i></td></tr>
+<tr><td>x = x @ y</td></tr>
+</table><p></p>
+
+
+<table id="notes"><tr><th>Commutative</th></tr><tr><td>No<td></tr></table><p></p>
+<table id="usage">
+
+<table id="notes"><tr><th>Data Types</th></tr></table>
+
+<table id="arguments">
+  <tr>
+    <th>x</th>
+    <th>y</th>
+  </tr>
+  <tr><td width="10%">AUD</td><td width="10%">SCAL</td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul>This is used to set the level at the target level y (with an absolute level)
+</ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+  <tr><td>Bandpass filter the white noise x</td></tr>
+  <tr><td><font face="Courier New">AUX> x=noise(100).bpf(100,200);<br><img src="compo_level1a.png"></font></td></tr>
+  <tr><td>The RMS level of x, -22.1 dB, as seen in the plot, is simply a byproduct of filtering. To set it specifically at -15 dB, do the following:</td></tr>
+  <tr><td><font face="Courier New">AUX> x @= -15<br><img src="compo_level1b.png"></font></td></tr>
+  
+</table>
+</body>
+</html>

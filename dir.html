@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AUX function dir</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1>dir</h1>
+
+<table id="usage"><tr><th>
+y = dir ( s )</th></tr></table>
+
+<font face="Arial"><p>Retrieve the files in the specified directory</p></font>
+
+<table id="arguments">
+  <tr>
+    <th>arg</th>
+    <th>type</th>
+    <th>Description</th>
+    <th>Unit or Value scale</th>
+  </tr>
+  <tr><td width="15%"><b><font face="Courier New">s</font></b></td><td width="10%">STR</td><td width="50%"> File name with or without a wild card, or directory</td><td width="25%"></tr>
+
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Outputs</th></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> is a cell array showing the directory contents. Each cell is a directory class with the following members: name, ext, path, isdir, date, and bytes.</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+  <tr><td><ul><li>y = dir ("c:\Temp\auxlab\1.42\") or <br></li><li>y = dir ("c:\Temp\auxlab\1.42\*.ini") <br></li><li>y{1} =<br> .bytes = 1341<br> .date = "06/18/2018, 04:18:28"<br> .ext = ".ini"<br> .isdir = (logical) 0<br> .name = "auxcon32.AUDITORY"<br> .path = "C:\Temp\auxlab\1.42\"<br></li><li>y{2} =<br> .bytes = 160<br> .date = "06/18/2018, 04:22:06"<br> .ext = ".ini"<br> .isdir = (logical) 0<br> .name = "auxlab32.AUDITORY"<br> .path = "C:\Temp\auxlab\1.42\"</li></ul></td></tr>
+</table>
+<p></p>
+<table id="notes"><tr><th>See Also</th></tr></table><a href=".html"> </a>
+</body>
+</html>

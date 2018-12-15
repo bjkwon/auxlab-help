@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operators * /</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1>* /</h1>
+
+<table id="usage">
+<tr><td>z = x * y</td></tr>
+<tr><td>z = x / y</td></tr>
+</table>
+<font face="Arial"><p>Arithmetic Multiplication or Division</p></font>
+<table id="notes"><tr><th>Commutative</th></tr><tr><td>Yes for * No for /</td></tr></table><p></p>
+<table id="notes"><tr><th>Data Types</th></tr></table>
+<table id="arguments">
+  <tr>
+    <th>Allowed</th>
+    <th>Not allowed</th>
+  </tr>
+  <tr><td width="50%">SCAL, VCT, AUD, TEXT, TSEQ, NUL</td><td width="50%">CLASS, CELL</td></tr>
+</table>
+<p></p>
+<table id="arguments">
+  <tr>
+    <th>x</th>
+    <th>y</th>
+    <th>z</th>
+  </tr>
+  <tr><td width="10%">NUL</td><td width="10%">anything</td><td width="80%">anything</td></tr>
+  <tr><td width="10%">SCAL</td><td width="10%">anything</td><td width="80%">anything</td></tr>
+  <tr><td width="10%">VCT</td><td width="10%">VCT</td><td width="80%">VCT (see below)</td></tr>
+  <tr><td width="10%">VCT</td><td width="10%">AUD</td><td width="80%">AUD (see below)</td></tr>
+  <tr><td width="10%">TSEQ</td><td width="10%">AUD</td><td width="80%">AUD (special meaning; see below)</td></tr>
+  <tr><td width="10%">TSEQ</td><td width="10%">VCT</td><td width="80%">TSEQ</td></tr>
+</table>
+
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul>
+  <li>In essence, this is "dot-multiplication," in the MATLAB language.</li> 
+  <li>In the case of SCAL * VCT or SCAL * AUD, the scalar is applied (multiplied) to the entire array.</li> 
+  <li>In the case of VCT * VCT, if the lengths of operands are different, the operation takes place until the two values are available.</li> 
+  <li>In the case of VCT * AUD, if the lengths of operands are different, the operation takes place until the two values are available.</li> 
+  <li>In the case of AUD * AUD, the operation is time-based: i.e., if the signal is available at the particular time, the operation takes place.</li> 
+  <li>In the case of SCAL * TSEQ, the operation applies to the value of the TSEQ: i.e., the output TSEQ has the value multiplied by SCAL at each time point.</li> 
+  <li>In the case of TSEQ * TSEQ, both must have the same number of time points (individual time points don't need to be the same).</li> 
+  <li>TSEQ * AUD multiplies each value of the audio signal with a linear interpolated version of TSEQ (see example below).</li> 
+  <li>When both operands are grouped (i.e., matrix), both must have the equal number of groups(i.e., rows)</li> 
+</ul></td></tr>
+</table>
+<p></p>
+</body>
+</html>

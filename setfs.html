@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AUX function setfs</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1>setfs</h1>
+
+<table id="usage"><tr><th>
+y = setfs ( new_Fs )</th></tr></table>
+
+<font face="Arial"><p>Adjusts the sample rate to the specified value</p></font>
+
+<table id="arguments">
+  <tr>
+    <th>arg</th>
+    <th>type</th>
+    <th>Description</th>
+    <th>Unit or Value scale</th>
+  </tr>
+  <tr><td width="15%"><b><font face="Courier New">new_Fs</font></b></td><td width="10%">SCL</td><td width="50%"> The new sample rate</td><td width="25%"></tr>
+
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Outputs</th></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> is undefined. Don't try to use it, as in setfs(16000)+1</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul><li>The usage of this function is limited to the user-defined functions or the auxcon module. In general, it is better to use a hook command (as in #setfs 16000), because it involves UI and expressions. This will not update existing variables according to the new sample rate, as done by the hook command, so this functionality is pretty limited.</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+  
+</table>
+<p></p>
+<table id="notes"><tr><th>See Also</th></tr></table><a href=".html"> </a>
+</body>
+</html>

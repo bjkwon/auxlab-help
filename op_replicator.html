@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operator ..</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1><font face="Courier New"><strong>..</strong></font> </h1>
+
+<table id="usage">
+<tr><td>x = any expression with .. </td></tr>
+<tr><td>x(id) = any expression with .. </td></tr>
+<tr><td>x(id1:id2) = any expression with .. </td></tr>
+<tr><td>x(id1:id2,jd1:jd2) = any expression with .. </td></tr>
+<tr><td>x(t1~t2) = any expression with .. </td></tr>
+</table>
+<font face="Arial"><p>Replicator; Replicate what's in the left hand side to the right hand side </p></font>
+<table id="notes"><tr><th>Commutative</th></tr><tr><td>N/A</td></tr></table><p></p>
+<table id="notes"><tr><th>Data Types</th></tr></table>
+<p>This applies to multiple cases of expressions, not necessarily tied to one data type.</p>
+<table id="arguments">
+</table>
+
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul>
+   <li><font face="Arial">Whatever is on the left hand side is being replicated to the right hand side with <big><strong>..</strong></big> . Therefore, </font><br>
+   <font face="Courier New">very_long_variable_name = any_function(..)</font><br>
+   <font face="Arial">is equivalent to:</font><br>
+   <font face="Courier New">very_long_variable_name = any_function(very_long_variable_name)</font><p></p></li>
+   <li><font face="Arial">The dot (.) notation also applies; therefore, the following is also an equivalent statement:<br>
+   <font face="Courier New">very_long_variable_name = ...any_function</font><br>
+   <font face="Arial">as long as <font face="Courier New">any_function</font> supports the object function style.</font><p></p></li>
+   <li>Conceptually, you might understand this as a sort of an advanced compound assignment operator: <br>
+   <font face="Courier New">x = x + 50</font> can be written as either <font face="Courier New">x += 50</font> or <font face="Courier New">x = .. + 50</font><br>
+   On the other hand, <font face="Courier New">x = sqrt(x)</font> can't be written with a regular compound assignment operator, but <font face="Courier New">..</font> works perfectly: <font face="Courier New">x = sqrt(..)</font><br><br>
+   <li>This feature will save you from tedious typings or copy-pastings across left and right hand sides.</li>
+   </ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+   <tr><td><ul> <li>You have a vector with a long variable name, if you append a value to it. You may write it in the vector form or use <font face="Courier New">++<br>
+   long_var_name = [long_var_name more_values]<br>
+   long_var_name = long_var_name ++ more_values</font> or<br>
+   <font face="Courier New">long_var_name ++= more_values</font><br><br>
+   But if values are inserted before it, you can't use ++=. Then, instead of typing long_var_name again on the RHS, just<br>
+   <font face="Courier New">long_var_name = [values ..]</font> or<br>
+   <font face="Courier New">long_var_name = values ++ .. </font>
+   will do it.</li>   </ul></td></tr>
+   <tr><td><ul> <li>You want to modify a part of a signal: for example,<br>
+   <font face="Courier New">AUX> x=wave("mop");</font><br> <img src="replicator1.png"><br>
+   To distort the signal from 400 to 500 ms by applying sqrt, do this:<br>
+   <font face="Courier New">AUX> x(400~500) = ...sqrt;</font><br>
+   <img src="replicator2.png"><p></p></li>
+   <li>This is a more efficient way of coding. Internally, the expression <font face="Courier New">x(400~500) = x(400~500).sqrt</font> evaluates <font face="Courier New">x(400~500)</font> twice for the LHS and RHS, but the use of <font face="Courier New">..</font> bypasses one.</li>
+   </ul></td></tr>
+</table>
+</body>
+</html>

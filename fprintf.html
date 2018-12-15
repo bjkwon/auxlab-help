@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AUX function fprintf</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1>fprintf</h1>
+
+<table id="usage"><tr><th>
+y = fprintf ( file,format,... )</th></tr></table>
+
+<font face="Arial"><p>Write formatted data to a file</p></font>
+
+<table id="arguments">
+  <tr>
+    <th>arg</th>
+    <th>type</th>
+    <th>Description</th>
+    <th>Unit or Value scale</th>
+  </tr>
+  <tr><td width="15%"><b><font face="Courier New">file</font></b></td><td width="10%">TXT or SCAL</td><td width="50%"> file name string or file identifier</td><td width="25%"></tr>
+<tr><td><b><font face="Courier New">format</font></b></td><td>TXT</td><td>String that contains the text to be writeen to the file, following the same convention as in C language.</td><td></tr>
+<tr><td><b><font face="Courier New">...</font></b></td><td>...</td><td>n/a</td><td></tr>
+
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Outputs</th></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> is the number of characters written. If an error occurs, <b><font face="Courier New">y</font></b> is negative and one of the following: <br> -1: fopen error <br> -2: invalid file identifier <br> -3: fwrite error<br> -4: fclose error <br> -999: Unknown error</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul><li><b><font face="Courier New">file</font></b> can be either a text of the file name (if an extension is not specified, .txt is added by default) or a file identifier, which is the output of fopen</li><li>When the file name is specified for <b><font face="Courier New">file</font></b>, fprintf opens the file with the mode "at," meaning that the content will be appended to the existing content in the file, writes the content as specified, and closes the file. </li><li>If a file identifier is used for <b><font face="Courier New">file</font></b>, fprintf writes the content to the file stream opened by a prior call to fopen.</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+  
+</table>
+<p></p>
+<table id="notes"><tr><th>See Also</th></tr></table><a href="fopen.html">fopen</a>&nbsp;&#124; <a href="fclose.html">fclose</a>&nbsp;&#124; <a href="sprintf.html">sprintf </a>
+</body>
+</html>

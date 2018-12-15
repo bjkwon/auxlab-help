@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operators + -</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1>+ -</h1>
+
+<table id="usage">
+<tr><td>z = x + y</td></tr>
+<tr><td>z = x - y</td></tr>
+</table>
+<font face="Arial"><p>Arithmetic Plus or Minus</p></font>
+<table id="notes"><tr><th>Commutative</th></tr><tr><td>Yes for + No for -</td></tr></table><p></p>
+<table id="notes"><tr><th>Data Types</th></tr></table>
+<table id="arguments">
+  <tr>
+    <th>Allowed</th>
+    <th>Not allowed</th>
+  </tr>
+  <tr><td width="50%">SCAL, VCT, AUD, TEXT, TSEQ, NUL</td><td width="50%">CLASS, CELL</td></tr>
+</table>
+<p></p>
+<table id="arguments">
+  <tr>
+    <th>x</th>
+    <th>y</th>
+    <th>z</th>
+  </tr>
+  <tr><td width="10%">NUL</td><td width="10%">anything</td><td width="80%">anything</td></tr>
+  <tr><td width="10%">SCAL</td><td width="10%">anything</td><td width="80%">anything</td></tr>
+  <tr><td width="10%">VCT</td><td width="10%">VCT</td><td width="80%">VCT (see below)</td></tr>
+  <tr><td width="10%">VCT</td><td width="10%">AUD</td><td width="80%">AUD (see below)</td></tr>
+  <tr><td width="10%">TSEQ</td><td width="10%">array</td><td width="80%">not allowed</td></tr>
+</table>
+
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul>
+  <li>In the case of SCAL + VCT or SCAL + AUD, the scalar is applied (added) to the entire array.</li> 
+  <li>In the case of VCT + VCT, if the lengths of operands are different, the operation takes place until the two values are available.</li> 
+  <li>In the case of VCT + AUD, if the lengths of operands are different, the operation takes place until the two values are available.</li> 
+  <li>In the case of AUD + AUD, the operation is time-based: i.e., if the signal is available at the particular time, the operation takes place.</li> 
+  <li>In the case of SCAL + TSEQ, the operation applies to the value of the TSEQ: i.e., the output TSEQ has the value added to SCAL at each time point.</li> 
+  <li>In the case of TSEQ + TSEQ, both must have the same number of time points (individual time points don't need to be the same).</li> 
+  <li>When both operands are grouped (i.e., matrix), both must have the equal number of groups(i.e., rows)</li> 
+</ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+   <tr><td><ul>
+   <font face="Courier New">AUX> noise(30)@-10 + tone(200,10)@-10 >>50<br> z =<br>audio (0.0ms~30.0ms) (50.0ms~60.0ms)</font><br><img src="op_plus_1.png" alt="example1"><p></p>
+   <font face="Courier New">AUX> tone(100,100)@-6 + tone(200,100)@-6 >>50<br> z =<br>audio (0.0ms~150.0ms)</font><br><img src="op_plus_2.png" alt="example2"><p></p>
+   </ul></td></tr>
+</table>
+</body>
+</html>

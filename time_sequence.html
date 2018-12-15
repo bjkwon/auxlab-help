@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Time Sequence</title>
+<style>
+#xcom {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1>TSEQ: Time sequence</h1>
+<h2>Introduction</h2>
+<p>A data type TSEQ is an array container consisting of a time point and the data corresponding to the time point.</p>
+<h2>Defining a TSEQ object</h2>
+<p>A TSEQ object has the following form:</p>
+  <table id="xcom">
+	<tr><td>[x][y]</td></tr>
+	</table>	
+<p>where x is the time point vector in milliseconds and y is the data vector. Here x and y must have the same length. In this form, at each time point the data is a scalar. In general, the data do not need to be a scalar; but can be in any form. To define such time sequence,</p>	
+  <table id="xcom">
+	<tr><td>[t1 | y1; t2 | y2; ...]</td></tr>
+	</table>	
+<p>where tn and yn are time marker and the corresponding value array in any length. (note: this is not implemented yet as of AUXLAB 1.47).</p>	
+<h2>Relative TSEQ</h2>
+<p>Sometimes it is very useful to have time values relative to another audio signal. In such cases, define a relative time sequence as follows: </p>
+  <table id="xcom">
+	<tr><td>[x;][y]</td></tr>
+	</table><p></p>	
+<h2>Example 1</h2>
+<p>The amplitude of a tone is scaled with a TSEQ, 0 at t=0, .7 at t=250ms, .3 at t=500ms, and 1 at t=1000ms. The multiplication operation with a TSEQ involves linear interpolation between specified time points. </p>
+  <table id="xcom">
+	<tr><td>AUX> x = tone(500,1000);</td></tr>
+	<tr><td>AUX> ts = [0 250 500 1000][0 .7 .3 1];</td></tr>
+	<tr><td>AUX> y = ts * x;</td></tr>
+	</table><img src="tseq1.png"><table id="xcom">
+	<p></p>	
+<h2>Example 2</h2>
+<p>The same TSEQ as above but the audio signal with a differation duration. Is this what you want?</p>
+  <table id="xcom">
+	<tr><td>AUX> x = tone(500,800);</td></tr>
+	<tr><td>AUX> ts = [0 250 500 1000][0 .7 .3 1];</td></tr>
+	<tr><td>AUX> y = ts * x;</td></tr>
+	</table><img src="tseq2.png"><table id="xcom">
+	<p></p>	
+<h2>Example 3</h2>
+<p>If you wanted to scale the audio with the same relative time course as Example 1, then go with a relative TSEQ.</p>
+  <table id="xcom">
+	<tr><td>AUX> x = tone(500,800);</td></tr>
+	<tr><td>AUX> ts = [0 .25 .5 1;][0 .7 .3 1];</td></tr>
+	<tr><td>AUX> y = ts * x;</td></tr>
+	</table><img src="tseq3.png"><table id="xcom">
+	<p></p>	
+<h2>Example 4</h2>
+<p>To adjust the amplitude of the audio signal with a desired time course in terms of dB, use the @ operator:</p>
+  <table id="xcom">
+	<tr><td>AUX> x = tone(500,800);</td></tr>
+	<tr><td>AUX> ts = [0 .25 .5 1;][-100 -3 -10 0];</td></tr>
+	<tr><td>AUX> y = x @ ts;</td></tr>
+	</table><img src="tseq4.png"><table id="xcom">
+	<p></p>	
+	</body>
+</html>
+
+  

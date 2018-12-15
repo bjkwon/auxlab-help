@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operator ~ time indexing</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1><font face="Courier New"><strong>~ (time-indexing)</strong></font> </h1>
+
+<table id="usage">
+<tr><td>x(t1 ~ t2)</td></tr>
+</table>
+<font face="Arial"><p>Portion of audio <font face="Courier New">x</font> from <font face="Courier New">t1</font> ms to <font face="Courier New">t2</font> ms</p></font>
+<table id="notes"><tr><th>Commutative</th></tr><tr><td>N/A</td></tr></table><p></p>
+<table id="notes"><tr><th>Data Types</th></tr></table>
+<table id="arguments">
+  <tr>
+    <th>x</th>
+    <th>t1</th>
+    <th>t2</th>
+  </tr>
+  <tr><td width="10%">AUD</td><td width="10%">SCAL</td><td width="80%">SCAL</td></tr>
+</table>
+
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul>
+  <li>If <font face="Courier New">t1 > t2</font>, the extracted signal is time-reversed.</li>
+</ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+   <tr><td><ul>Open a .wav file "spring" and extract from 527 ms to 633 ms.<br>
+   <font face="Courier New">AUX> x=wave("spring");<br>
+   <img src="time_indexing1.png" alt=""><p></p>
+   <font face="Courier New">AUX> y=x(527~633);<br>
+   <img src="time_indexing2.png" alt=""><p></p>
+   <tr><td><ul>To time-reverse the sound,<br>
+   <font face="Courier New">AUX> x=x(end~0);<br>
+   <img src="time_indexing3.png" alt=""><br>
+   </ul></td></tr>
+   </ul>
+   </td></tr>
+</table>
+</body>
+</html>

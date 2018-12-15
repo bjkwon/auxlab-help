@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Data types</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1>Data types in AUX</h1>
+
+<font face="Arial"><p>The following data types are used in AUX/AUXLAB:</p></font>
+
+<table  id="notes">
+<tr><td>NUL</td><td>null/empty data</td></tr>
+<tr><td>SCAL</td><td>scalar</td></tr>
+<tr><td>TEXT</td><td>text string</td></tr>
+<tr><td>VCT</td><td>vector; array</td></tr>
+<tr><td>AUD</td><td>audio</td></tr>
+<tr><td>CEL</td><td>cell array</td></tr>
+<tr><td>CLAS</td><td>class; structure</td></tr>
+<tr><td>TSEQ</td><td><a href="time_sequence.html">Time Sequence </a></td></tr>
+<tr><td>HAUD</td><td>Handle to audio playback</td></tr>
+<tr><td>HGO</td><td>Handle to graphic object</td></tr>
+</table>
+<p> <ul>
+<li>Values can be either real or complex.</li>
+<li>Matrix is treated as a "grouped" VCT according to the row.</li>
+<li>The difference between VCT and AUD is that the latter has the information of 1) the sample rate, and 2) the time marker. In addition, one AUD object can have many chunks of audio in different times.</li>
+<li>Another difference: for some functions that do not allow negative values but could be useful in sound processing or computations are treated as an even-function for AUD (for example, the sqrt function), whereas for VCT, it is either an error or produce an imaginary value (i.e., sqrt(-1))</li>
+</p>
+</body>
+</html>
+

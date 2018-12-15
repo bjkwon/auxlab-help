@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AUX function axes</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1>axes</h1>
+
+<table id="usage"><tr><th>
+y = axes ( h_or_pos )<br>y = h_or_pos.axes (  )</th></tr></table>
+
+<font face="Arial"><p>Set the current axes or create a new axes</p></font>
+
+<table id="arguments">
+  <tr>
+    <th>arg</th>
+    <th>type</th>
+    <th>Description</th>
+    <th>Unit or Value scale</th>
+  </tr>
+  <tr><td width="15%"><b><font face="Courier New">h_or_pos</font></b></td><td width="10%">HGO or VECT</td><td width="50%"> handle to the axes or 4-element vector with the position to create a new axes in</td><td width="25%"></tr>
+
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Outputs</th></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> is the handle to the axes object</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul><li>The position is a 4-element vector in proportion to the window size showing the following: top left width height, with the reference of the bottom left corner of the screen.</li><li>This function creates an axes in the current figure window. If no current figure window is available, a new one is created.</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+  <tr><td><ul><li>h = axes([.08 .18 .86 .5]) // create a new axes in the current figure window </li><li>axes(hPrev) // set hPrev as the current axes</li></ul></td></tr>
+</table>
+<p></p>
+<table id="notes"><tr><th>See Also</th></tr></table><a href="figure.html">figure</a>&nbsp;&#124; <a href="plot.html">plot</a>&nbsp;&#124; <a href="text.html">text</a>&nbsp;&#124; <a href="delete.html">delete </a>
+</body>
+</html>

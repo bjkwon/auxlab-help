@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operator : 2</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1><font face="Courier New"><strong>: (indexing)</strong></font> </h1>
+
+<table id="usage">
+<tr><td>a = x(:)</td></tr>
+</table>
+<font face="Arial"><p>"Serialize" the matrix <font face="Courier New">x</font> and make it a vector.</p></font>
+
+<table id="notes"><tr><th>Commutative</th></tr><tr><td>N/A</td></tr></table><p></p>
+<table id="notes"><tr><th>Data Types</th></tr></table>
+<table id="arguments">
+  <tr>
+    <th>x</th>
+    <th></th>
+    <th>z</th>
+  </tr>
+  <tr><td width="10%">VCT</td><td width="10%"></td><td width="80%">VCT</td></tr>
+</table>
+
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul>
+  <li>If <font face="Courier New">x</font> is a vector, it won't have any effect.</li>
+</ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+   <tr><td><ul>
+   <font face="Courier New">AUX> x=(1:6).matrix(2)<br>
+   <font face="Courier New">ans =<br>
+   <font face="Courier New">1 2 3<br>
+   <font face="Courier New">4 5 6<br>
+   <font face="Courier New">AUX> x(:)<br>
+   <font face="Courier New">ans =   1 2 3 4 5<p></p>
+   </ul></td></tr>
+</table>
+</body>
+</html>

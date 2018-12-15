@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AUX vs MATLAB</title>
+<style>
+#main {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+}
+</style>
+</head>
+<body>
+<h1 id="main">AUX vs MATLAB</h1>
+<p id="main">AUX appears similar to MATLAB in the syntax style. But they are fundamentally different, why?</p>
+<p id="main">When describing an audio signal,</p>
+<p id="main">In MATLAB, you consider samples.</p>
+<p id="main">In AUX, you consider the sound as is.</p>
+<p id="main">Suppose you defined signals and assigned them to variables X and Y. Then, you want to combine the two signals.</font></strong></big></p>
+<p id="main">OK, shouldn't it be X+Y?<p></p><p>How innocent, my friend!</p>
+<p id="main">If you careless write X+Y in MATLAB, you will probably get the following:</p>
+<img src="whatisaux_files/image032.jpg" v:shapes="_x0000_s1902" width="248" height="41">
+<p id="main">All operations in MATLAB are done by matrix or vector; i.e., the size of operands must be the same or meet other rules, such as the matrix multiplication rule.</p>
+<p id="main">So your innocent idea of "adding" sounds as is not viable in MATLAB. You need to consider the sounds as vector signals and prepare the size appropriately prior to an operation, such as:</p>
+<p ><font face="Courier New">X+Y(1:length(X))</font></strong></p>
+<p id="main">Of course, here I assumed the length of Y is greater than that of X. If that is not the case, the expression should be Y+X(1:length(Y))</p>
+<p id="main">So, you always need to check the lengths of vectors or sizes of matrices all the time when using in MATLAB. What a pain! Are these considerations really critical in the conception of the sound? Probably not. If all you need is to create the sound and study the perception of it, you really don't need to consider it at a sample-by-sample level.</p>
+<p id="main">In AUX, it is always X+Y. Period. No need to worry about the lengths.</p>
+<p id="main">Wait a minute, what happens if X and Y have different durations?</p>
+<p id="main">You are asking this question because you are probably still thinking about vector/matrix operations as in MATLAB. In AUX, you consider the elements of sound, not vectors/matrix of digital samples.</p>
+<p id="main"><a href="timeshift.html">Click here to continue</a></p>
+</body>
+<footer>
+<i>bjkwon<br>
+Last updated: Feb 1, 2011
+</i></footer>
+</html>

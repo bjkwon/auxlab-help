@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head><title>AUX Function Reference 6 -- Audio playback</title></head>
+<body>
+<h1>Audio Playback Functions</h1>
+In AUXLAB, you can <a href="play.html">play</a> an audio signal, <a href="pause.html">pause</a>, <a href="resume.html">resume</a> or <a href="stop.html">stop</a> it prematurely. Multiple audio playback events can exist concurrently and can be controlled or managed. The handle to audio playback, the output of each play call, is used to specify the particular audio event to handling it. Note: <a href="play.html">play</a> is non-blocking and will return immediately.<p>For example,</p>
+<font face="Courier New">AUX> noi = noise(1000).bpf(500,2000);</font><br>To play just one and only one, no need to have the output<br><font face="Courier New">AUX> noi.play</font><p>But when playing a signal with a long duration, it is necessary to have the output,</p><font face="Courier New">AUX> noi = noise(10000).bpf(500,2000);x = tone(500,10000)@-20;<br>AUX> h=noi.play<br>AUX> h2=x.play</font><br>Then,<font face="Courier New"><br> AUX> h.pause or h2.pause</font><br>or<br><font face="Courier New">AUX> h.stop</font><br>in the middle of the playback will do the trick.<p>The audio handle, h or h2 in this example, contains the information about the audio play back including the progress of the playback and is constantly updated in the background. The user can view the status of the audio event in the variable view window or by retrieving it in the AUXLAB command window.</p>
+</body>
+</html>

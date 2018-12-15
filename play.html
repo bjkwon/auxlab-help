@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AUX function play</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1>play</h1>
+
+<table id="usage"><tr><th>
+y = play ( x,repeat[=1],devID[=""] )<br>y = play ( handle,x,repeat[=1],devID[=""] )<br>y = handle.play ( x,repeat[=1],devID[=""] )</th></tr></table>
+
+<font face="Arial"><p>Audio playback</p></font>
+
+<table id="arguments">
+  <tr>
+    <th>arg</th>
+    <th>type</th>
+    <th>Description</th>
+    <th>Unit or Value scale</th>
+  </tr>
+  <tr><td width="15%"><b><font face="Courier New">handle</font></b></td><td width="10%">HAUD</td><td width="50%">  handle to audio playback</td><td width="25%"></tr>
+<tr><td><b><font face="Courier New">x</font></b></td><td>AUD</td><td>audio signal</td><td></tr>
+<tr><td><b><font face="Courier New">repeat</font></b></td><td>SCAL</td><td>number of repeats </td><td></tr>
+<tr><td><b><font face="Courier New">devID</font></b></td><td>TXT</td><td>string identifier of the playback device (NOT YET IMPLEMENTED--as of AUXLAB 1.44)</td><td></tr>
+
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Outputs</th></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> is either an audio handle, either newly created or existing. <b><font face="Courier New">y</font></b> is -1 if the playback fails or the specified handle is invalid.</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul><li>If devID is not specified, the default device or the last device selected for playback will be used.</li><li>If play is called for the audio handle, <b><font face="Courier New">handle</font></b> is queued in the back of the playback list and played when the existing list is exhausted.<br>If play is called for an audio signal, a new audio handle is generated.</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+  <tr><td><ul><li>To play x (and don't care about asynchronous playing),<br>play(x)</li><li>To play x and, then, y in sequence<br> h=play(x)<br>h.play(y) while x is played.<br>If h.play(y) is given after playing x is done, it doesn't play and returns -1</li></ul></td></tr>
+</table>
+<p></p>
+<table id="notes"><tr><th>See Also</th></tr></table><a href="pause.html">pause</a>&nbsp;&#124; <a href="resume.html">resume</a>&nbsp;&#124; <a href="status.html">status</a>&nbsp;&#124; <a href="stop.html">stop</a>&nbsp;&#124; <a href="qstop.html">qstop </a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>AUX Function Reference 7 -- Graphics</title></head>
+<body>
+<h1>Graphics Functions</h1>
+In addition to displaying the signal as a graph by pressing the enter key in the variable show window, graphic windows can be created and controlled with AUX functions. As of 9/20/2018, while there are five functions--<a href="plot.html">plot</a>, <a href="figure.html">figure</a>, <a href="axes.html">axes</a>, <a href="delete.html">delete</a>, <a href="text.html">text</a>, each graphic object is equipped with numerous properties and the apperanace and display can be controlled by modifying the graphic properties.
+<p>Example</p>
+<font face="Courier New">
+AUX> x=(1:10).sqrt;<br>AUX> hLine=plot(x);</font>// plot returns the handle to the line object<br><font face="Courier New">
+AUX> hAx = hLine.parent;</font>// hAx is the handle to the axes object<br><font face="Courier New">
+AUX> hFig = hAx.parent;</font>// hFig is the handle to the figure object<br><font face="Courier New">
+AUX> hAx.pos(4) /=2;</font>// The axes size adjusted--the height becomes half<br><font face="Courier New">
+AUX> hAx2 = hFig.axes(hAx.pos+[0 .45 0 0]);</font>// A new axis is added to the figure window <br><font face="Courier New">
+AUX> hAx2.plot((1:10).log); </font>// The second plot <br><font face="Courier New">
+AUX> hTxt = hFig.text(.5,.55,"Two plots") </font>// A text added <br><font face="Courier New">
+AUX> hTxt.fontsize(15) </font>// Fonts ize adjusted <br><font face="Courier New">
+</font>
+</body>
+</html>

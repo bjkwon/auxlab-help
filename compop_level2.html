@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Compound Operator @@=</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1><font face="Courier New">@@=</font></h1>
+
+<table id="usage">
+<tr><td>x @= y</td></tr>
+</table>
+<font face="Arial"><p>Compound operator for the level operator @@<br>Also known as relative level operator</p></font>
+<table  id="notes">
+<tr><td><i>Equivalent expression</i></td></tr>
+<tr><td><font face="Courier New">x = x @ x @ y</font></td></tr>
+</table><p></p>
+
+
+<table id="notes"><tr><th>Commutative</th></tr><tr><td>No<td></tr></table><p></p>
+<table id="usage">
+
+<table id="notes"><tr><th>Data Types</th></tr></table>
+
+<table id="arguments">
+  <tr>
+    <th>x</th>
+    <th>y</th>
+  </tr>
+  <tr><td width="10%">AUD</td><td width="10%">SCAL</td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul><font face="Courier New">x @ x @ y</font> literally means the signal <font face="Courier New">x</font> with the level at <font face="Courier New">y</font> dB re. <font face="Courier New">x</font><br>In other words, the signal <font face="Courier New">x</font> with the level adjusted by <font face="Courier New">y</font> dB from its own rms.<br>   
+  Therefore, this is also known as an "incremental" level operator.
+</ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+  <tr><td>Open a .wav file. The RMS level of this audio happens to be -26 dB.</td></tr>
+  <tr><td><font face="Courier New">AUX> x=wave("spring")<br><img src="compo_level2a.png"></font></td></tr>
+  <tr><td>I want to increase its RMS level by 15 dB.</td></tr>
+  <tr><td><font face="Courier New">AUX> x @@= 15<br><img src="compo_level2b.png"></font></td></tr>
+  <tr><td>Oops, we have a peak-clipping situation. A 15-dB increase was too much. Let's go down by 5 dB.</td></tr>
+  <tr><td><font face="Courier New">AUX> x @@= -5<br><img src="compo_level2c.png"></font></td></tr>
+  <tr><td>This looks good!</td></tr>
+</table>
+</body>
+</html>

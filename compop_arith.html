@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Compound Operators += -= *= /=</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1><font face="Courier New">+= -= *= /=</font></h1>
+
+<table id="usage">
+<tr><td>x += y</td></tr>
+<tr><td>x -= y</td></tr>
+<tr><td>x *= y</td></tr>
+<tr><td>x /= y</td></tr>
+</table>
+<font face="Arial"><p>Compound operators for arithmetic operations, + - * and /</p></font>
+<table  id="notes">
+<tr><td><i>Equivalent expressions</i></td></tr>
+<tr><td>x = x + y</td></tr>
+<tr><td>x = x - y</td></tr>
+<tr><td>x = x * y</td></tr>
+<tr><td>x = x / y</td></tr>
+</table><p></p>
+
+
+<table id="notes"><tr><th>Commutative</th></tr><tr><td>No<td></tr></table><p></p>
+<table id="usage">
+
+<table id="notes"><tr><th>Data Types</th></tr></table>
+<table id="arguments">
+  <tr>
+    <th>Allowed</th>
+    <th>Not allowed</th>
+  </tr>
+  <tr><td width="50%">SCAL, VCT, AUD, TEXT, TSEQ, NUL</td><td width="50%">CLASS, CELL</td></tr>
+</table>
+<p></p>
+<table id="arguments">
+  <tr>
+    <th>x</th>
+    <th>y</th>
+    <th>x becomes</th>
+  </tr>
+  <tr><td width="10%">NUL</td><td width="10%">T<sup>*</sup></td><td width="80%">T</td></tr>
+  <tr><td width="10%">SCAL</td><td width="10%">T</td><td width="80%">T</td></tr>
+  <tr><td width="10%">VCT</td><td width="10%">VCT</td><td width="80%">VCT</td></tr>
+  <tr><td width="10%">AUD</td><td width="10%">VCT</td><td width="80%">AUD</td></tr>
+  <tr><td width="10%">VCT</td><td width="10%">AUD</td><td width="80%">AUD</td></tr>
+  <tr><td width="10%">TSEQ</td><td width="10%">VCT</td><td width="80%">TSEQ</td></tr>
+  <tr><td width="10%">TSEQ</td><td width="10%">AUD</td><td width="80%">not allowed</td></tr>
+  <tr><td width="10%">AUD</td><td width="10%">TSEQ</td><td width="80%">AUD</td></tr>
+</table>
+<p></p>* T <i>means an allowed type.</i><p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul>
+</ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+   <tr><td><ul>
+   <font face="Courier New">AUX> x=rand(5)<br>x =<br>0.5853 0.2218 0.6290 0.1231 0.2736<br>
+   AUX> x*=10<br>x =<br>5.8531 2.2182 6.2896 1.2313 2.7363<br>
+   AUX> x=tone(500,100).hann@-20<br>x =<br>audio (0.0ms~100.0ms)<br><img src="compo_arith1.png" alt=""><br>
+   AUX> y=noise(10)@-10>>40<br>y =<br>audio (40.0ms~50.0ms)<br>AUX> x += y<br>x =<br>audio (0.0ms~100.0ms)<br><img src="compo_arith2.png">
+ </font>
+   </ul></td></tr>
+</table>
+</body>
+</html>

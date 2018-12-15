@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operator &lt&gt</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1><font face="Courier New"><strong>&lt&gt</strong></font> </h1>
+
+<table id="usage">
+<tr><td>z = x &lt&gt y</td></tr>
+</table>
+<font face="Arial"><p>Change the duration of an audio signal <font face="Courier New">x</font> by a factor of <font face="Courier New">y</font> without changing the spectrum</p></font>
+<table id="notes"><tr><th>Commutative</th></tr><tr><td>No</td></tr></table><p></p>
+<table id="notes"><tr><th>Data Types</th></tr></table>
+<table id="arguments">
+  <tr>
+    <th>x</th>
+    <th>y</th>
+    <th>z</th>
+  </tr>
+  <tr><td width="10%">AUD</td><td width="10%">SCAL</td><td width="80%">AUD</td></tr>
+</table>
+
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul>
+  <li>This is equivalent to <font face="Courier New">z=tscale(x,y)</font> or <font face="Courier New">z=x.tscale(y)</font></li>
+  <li>The exact rendition of this operation may depend on the algorithm used.</li>
+</ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+   <tr><td><ul>
+   <li>A tone glide from 400 Hz to 1000 Hz with arbitrary amplitude fluctuations.</li>
+   <font face="Courier New">AUX> x=tone([400 1000],1000).sqrt@-3</font><br>
+   <font face="Courier New">AUX> tseq=[0 .2 .3 .7 .8 1;][-100 -6 -30 -10 -5 0];</font><br>
+   <font face="Courier New">AUX> y=(x@tseq).ramp(20)</font><br><img src="tscale1.png" alt=""><p></p>
+   <font face="Courier New">AUX> z=y&lt&gt.8</font><br><img src="tscale2.png" alt=""><p></p>
+   </ul></td></tr>
+</table>
+</body>
+</html>
