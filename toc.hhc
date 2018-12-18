@@ -198,6 +198,8 @@
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="setfs"><param name="Local" value="setfs.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="sprintf"><param name="Local" value="sprintf.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="str2num"><param name="Local" value="str2num.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="_tic"><param name="Local" value="tic.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="_toc"><param name="Local" value="toc.html"></OBJECT>
 		</UL>
 </UL>
 </BODY></HTML>
