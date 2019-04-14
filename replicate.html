@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AUX function toc</title>
+<title>AUX function replicate</title>
 <style>
 
 #usage {
@@ -28,12 +28,12 @@
 </style>
 </head>
 <body>
-<h1>toc</h1>
+<h1>replicate</h1>
 
 <table id="usage"><tr><th>
-y = toc (  )</th></tr></table>
+_handle2 = replicate ( handle )<br>_handle2 = _handle.replicate (  )</th></tr></table>
 
-<font face="Arial"><p>Read elapsed time from stopwatch</p></font>
+<font face="Arial"><p>Copy/replicate the graphic object</p></font>
 
 <table id="arguments">
   <tr>
@@ -42,18 +42,18 @@ y = toc (  )</th></tr></table>
     <th>Description</th>
     <th>Unit or Value scale</th>
   </tr>
-  <tr><td width="15%"><b><font face="Courier New"></font></b></td><td width="10%"></td><td width="50%"> </td><td width="25%"></tr>
+  <tr><td width="15%"><b><font face="Courier New">_handle</font></b></td><td width="10%">HGO</td><td width="50%"> handle to the graphic object to replicate </td><td width="25%"></tr>
 
 </table>
 <p></p>
 <table  id="notes">
   <tr><th>Outputs</th></tr>
-  <tr><td><ul><li><b><font face="Courier New">y</font></b> is the elapsed time in milliseconds since tic was called.</li></ul></td></tr>
+  <tr><td><ul><li><b><font face="Courier New">_handle2</font></b> is the handle to the object replicated from <b><font face="Courier New">_handle</font></b></li></ul></td></tr>
 </table>
 <p></p>
 <table  id="notes">
   <tr><th>Notes</th></tr>
-  <tr><td><ul><li>no argument (Windows only)</li></ul></td></tr>
+  
 </table>
 <p></p>
 <table  id="notes">
@@ -61,6 +61,6 @@ y = toc (  )</th></tr></table>
   
 </table>
 <p></p>
-<table id="notes"><tr><th>See Also</th></tr></table><a href="tic.html">tic </a>
+<table id="notes"><tr><th>See Also</th></tr></table><a href="figure.html">figure</a>&nbsp;&#124; <a href="axes.html">axes</a>&nbsp;&#124; <a href="text.html">text</a>&nbsp;&#124; <a href="delete.html">delete</a>&nbsp;&#124; <a href="line.html">line </a>
 </body>
 </html>
