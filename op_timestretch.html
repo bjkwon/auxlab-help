@@ -28,10 +28,10 @@
 </style>
 </head>
 <body>
-<h1><font face="Courier New"><strong>% (timestretch)</strong></font> </h1>
+<h1><font face="Courier New"><strong>&lt&gt</strong></font> </h1>
 
 <table id="usage">
-<tr><td>z = x % y</td></tr>
+<tr><td>z = x &lt&gt y</td></tr>
 </table>
 <font face="Arial"><p>Change the duration of an audio signal <font face="Courier New">x</font> by a factor of <font face="Courier New">y</font> without changing the pitch</p></font>
 <table id="notes"><tr><th>Commutative</th></tr><tr><td>No</td></tr></table><p></p>
@@ -60,8 +60,8 @@
    <li>A tone glide from 400 Hz to 1000 Hz with arbitrary amplitude fluctuations.</li>
    <font face="Courier New">AUX> x=tone([400 1000],1000).sqrt@-3</font><br>
    <font face="Courier New">AUX> tseq=[0 .2 .3 .7 .8 1;][-100 -6 -30 -10 -5 0];</font><br>
-   <font face="Courier New">AUX> y=(x@tseq).ramp(20)</font><br><img src="tscale1.png" alt=""><p></p>
-   <font face="Courier New">AUX> z=y&lt&gt.8</font><br><img src="tscale2.png" alt=""><p></p>
+   <font face="Courier New">AUX> y=(x@tseq).ramp(20)</font><br><img src="tstretch1.png" alt=""><p></p>
+   <font face="Courier New">AUX> z=y&lt&gt.8<br>AUX> figure("z").children.x.lim=[0 1]</font> // to adjust the xlim the same as y<br><img src="tstretch2.png" alt=""><p></p>
    </ul></td></tr>
 </table>
 </body>

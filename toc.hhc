@@ -28,8 +28,8 @@
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="~ (time-indexing)"><param name="Local" value="op_timeindex.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value=".."><param name="Local" value="op_replicator.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="'"><param name="Local" value="op_tranpose.html"></OBJECT>
-			<LI> <OBJECT type="text/sitemap"><param name="Name" value="% (mod)"><param name="Local" value="op_mod.html"></OBJECT>
-			<LI> <OBJECT type="text/sitemap"><param name="Name" value="% (timestretch)"><param name="Local" value="op_timestretch.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="%"><param name="Local" value="op_mod.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="<>"><param name="Local" value="op_timestretch.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="#"><param name="Local" value="op_sharp.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="^"><param name="Local" value="op_pow.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="@"><param name="Local" value="op_at.html"></OBJECT>
@@ -49,7 +49,7 @@
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="~="><param name="Local" value="compopop_respeed.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="#="><param name="Local" value="compop_sharp.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value=">>="><param name="Local" value="compop_timeshift.html"></OBJECT>
-			<LI> <OBJECT type="text/sitemap"><param name="Name" value="%="><param name="Local" value="compopop_timestretch.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="<>="><param name="Local" value="compopop_timestretch.html"></OBJECT>
 		</UL>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Signal/Vector Generation">	<param name="Local" value="generation.html">	</OBJECT>
