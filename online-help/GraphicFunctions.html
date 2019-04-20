@@ -1,0 +1,74 @@
+﻿<html>
+	
+<head>
+	<title>Graphic Functions</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.5.0.497">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "AUXLAB.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("GraphicFunctions");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Graphic Functions</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="stop.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="axes.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">Graphics Functions</span></span></h1>
+<p class="rvps2"><span class="rvts19">In addition to displaying the signal as a graph by pressing the enter key in the variable show window, graphic windows can be created and controlled with AUX functions. As of 9/20/2018, while there are five functions--</span><a class="rvts30" href="plot.html">plot</a><span class="rvts19">, </span><a class="rvts30" href="figure.html">figure</a><span class="rvts19">, </span><a class="rvts30" href="axes.html">axes</a><span class="rvts19">, </span><a class="rvts30" href="delete.html">delete</a><span class="rvts19">, </span><a class="rvts30" href="text.html">text</a><span class="rvts19">, each graphic object is equipped with numerous properties and the apperanace and display can be controlled by modifying the graphic properties.</span></p>
+<p class="rvps6"><span class="rvts19">Example</span></p>
+<p class="rvps2"><span class="rvts21">AUX&gt; x=(1:10).sqrt;</span><br/><span class="rvts21">AUX&gt; hLine=plot(x);</span><span class="rvts19">// plot returns the handle to the line object</span><br/><span class="rvts21">AUX&gt; hAx = hLine.parent;</span><span class="rvts19">// hAx is the handle to the axes object</span><br/><span class="rvts21">AUX&gt; hFig = hAx.parent;</span><span class="rvts19">// hFig is the handle to the figure object</span><br/><span class="rvts21">AUX&gt; hAx.pos(4) /=2;</span><span class="rvts19">// The axes size adjusted--the height becomes half</span><br/><span class="rvts21">AUX&gt; hAx2 = hFig.axes(hAx.pos+[0 .45 0 0]);</span><span class="rvts19">// A new axis is added to the figure window</span><br/><span class="rvts21">AUX&gt; hAx2.plot((1:10).log); </span><span class="rvts19">// The second plot</span><br/><span class="rvts21">AUX&gt; hTxt = hFig.text(.5,.55,"Two plots") </span><span class="rvts19">// A text added</span><br/><span class="rvts21">AUX&gt; hTxt.fontsize(15) </span><span class="rvts19">// Fonts ize adjusted</span></p>
+<p></p>
+<p class="rvps8"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="http://www.helpndoc.com/create-epub-ebooks">Generate EPub eBooks with ease</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 4/15/2019 by BJ Kwon. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

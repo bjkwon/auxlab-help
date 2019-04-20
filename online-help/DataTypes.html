@@ -1,0 +1,142 @@
+﻿<html>
+	
+<head>
+	<title>Data Types</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.5.0.497">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "AUXLAB.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("DataTypes");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Data Types</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="SystemRequirements.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="TimeSequence.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">Data types in AUX</span></span></h1>
+<p class="rvps6"><span class="rvts13">The following data types are used in AUX/AUXLAB:</span></p>
+<div class="rvps2"><a name="notes"></a>
+<table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts17">NUL</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">null/empty data</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts17">SCAL</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">scalar</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts17">TEXT</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">text string</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts17">VCT</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">vector; array</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts17">AUD</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">audio</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts17">CEL</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">cell array</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts17">CLAS</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">class; structure</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts17">TSEQ</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><a class="rvts18" href="TimeSequence.html">Time Sequence</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts17">HAUD</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">Handle to audio playback</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts17">HGO</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">Handle to graphic object</span></p>
+</td>
+</tr>
+</table>
+</div>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside; list-style-type: disc;">
+<li class="rvps7" style="margin-left: 0px"><span class="rvts19">Values can be either real or complex.</span></li>
+<li class="rvps7" style="margin-left: 0px"><span class="rvts19">Matrix is treated as a "grouped" VCT according to the row.</span></li>
+<li class="rvps7" style="margin-left: 0px"><span class="rvts19">The difference between VCT and AUD is that the latter has the information of 1) the sample rate, and 2) the time marker. In addition, one AUD object can have many chunks of audio in different times.</span></li>
+<li class="rvps7" style="margin-left: 0px"><span class="rvts19">Another difference: for some functions that do not allow negative values but could be useful in sound processing or computations are treated as an even-function for AUD (for example, the sqrt function), whereas for VCT, it is either an error or produce an imaginary value (i.e., sqrt(-1))</span></li>
+</ul>
+<p></p>
+<p class="rvps8"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="http://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Produce Kindle eBooks easily</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 4/15/2019 by BJ Kwon. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

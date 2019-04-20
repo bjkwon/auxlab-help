@@ -1,0 +1,1280 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<title>AUXLAB- Table of Contents</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.5.0.497">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/silver-theme/jquery-ui-1.8.12.custom.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/dynatree/chm/ui.dynatree.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="css/toc.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#tabs .ui-widget-header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.dynatree.min.js"></script>
+	<script type="text/javascript" src="js/hndjsse.js"></script>
+	<script type="text/javascript">
+	
+		window.bSearchDataLoaded = false;
+		var sHelpIdToActivate = '';
+	
+		$(document).ready(function()
+		{
+			var sAnchorName = '';
+			try { sAnchorName = top.location.href.substring(top.location.href.lastIndexOf("#") + 1, top.location.href.length); }
+			catch(err) { sAnchorName = ''; }
+			var nSelectedTab = 0;
+			if (sAnchorName == '_index') nSelectedTab = 1
+			else if (sAnchorName == '_search') nSelectedTab = 2;			
+			$("#tabs").tabs({
+				selected: nSelectedTab,
+				select: function(event, ui) { HideKwPopup(); }
+			});
+			
+			// Toc
+			if ($("#tab-toc").length) {
+				$("#tab-toc").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#tab-keywords").length && $("#tab-keywords").dynatree && $("#tab-keywords").dynatree("getTree") && $("#tab-keywords").dynatree("getTree").activateKey)
+							$("#tab-keywords").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+				// Expand all nodes if required
+				$("#tab-toc").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				// Select the active help id
+				if (sHelpIdToActivate != '') $("#tab-toc").dynatree("getTree").activateKey(sHelpIdToActivate);
+			}
+			
+			// Keywords
+			
+			if ($("#tab-keywords").length) {
+				$("#tab-keywords").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onClick: function(node, event){
+						HideKwPopup();
+						if (node.data && node.data.click)
+						{
+							var aRefList = null;
+							eval('aRefList=' + node.data.click);
+							if (ShowKwPopup(node.li, aRefList))
+							{
+								if ($("#tab-toc") && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").activateKey)
+									$("#tab-toc").dynatree("getTree").activateKey(null);
+								if(node.data.href && node.data.href != '#'){
+									window.open(node.data.href, node.data.target);
+								}
+							}
+						}
+					}
+				});
+				// Expand all nodes if required
+				$("#tab-keywords").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				}
+			
+			// Load search data
+			(function() {
+				var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
+				se.src = 'js/hndsd.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
+			})();
+		});
+		
+		$('body').click(function() {
+			HideKwPopup();
+		});
+		
+		function SelectTocItem(sHelpId)
+		{
+			if ($("#tab-toc").length && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").getNodeByKey) {
+				$("#tab-toc").dynatree("getTree").getNodeByKey(sHelpId).activateSilently();
+			}
+			else {
+				sHelpIdToActivate = sHelpId;
+			}
+		}
+		
+		function HideKwPopup()
+		{
+			if($("#popupMenu")) $("#popupMenu").remove();
+		}
+		
+		function ShowKwPopup(oSender, aLinks)
+		{
+			HideKwPopup();
+			if (!aLinks || !aLinks.length || aLinks.length == 0) return false
+			else if (aLinks.length == 1) return true
+			else
+			{
+				var oParentDiv = document.createElement("DIV");
+				oParentDiv.id = "popupMenu";
+				var oLink = null;
+				// Close button
+				oLink = document.createElement("SPAN");
+				oLink.className = "close-button";
+				oLink.innerHTML = "X";
+				oLink.href = "#";
+				oLink.onclick = HideKwPopup;
+				oParentDiv.appendChild(oLink);
+				// Items
+				for (var nCnt=0; nCnt<aLinks.length; nCnt++)
+				{
+					oLink = document.createElement("A");
+					oLink.innerHTML = aLinks[nCnt][0];
+					oLink.href = aLinks[nCnt][1];
+					oLink.target = "FrameMain";
+					oLink.onclick = HideKwPopup;
+					oParentDiv.appendChild(oLink);
+				}
+				document.body.appendChild(oParentDiv);
+				var pos = $(oSender).offset(); 
+				var height = $(oSender).height();
+				$(oParentDiv).css({
+					"left": (pos.left+20) + "px",
+					"top": (pos.top + height + 5) + "px"
+				});
+				$(oParentDiv).show();
+				return false;
+			}
+		}
+		
+		function PerformSearch()
+		{
+			if (!window.bSearchDataLoaded) {
+				$("#search_results").html("Search engine data hasn't been fully loaded yet or an error occurred while loading it. This usually happens when documentation is browsed locally.");
+				return;
+			}
+			sValue = $("#search_value").val();
+			$("#search_results").html('Searching...');
+			var oSearchEngine = new HndJsSe;
+			oSearchEngine.ParseInput(sValue);			
+			oSearchEngine.PerformSearch();
+			if (!oSearchEngine.aResults || !oSearchEngine.aResults.length)
+			{
+				$("#search_results").html('No results found.');
+			}
+			else
+			{
+				$("#search_results").html('<div id="search_results_content"></div>');
+				var oUl = $("#search_results_content").append("<ul id='lr'></ul>").find("ul");
+				for (var nCnt = 0; nCnt < oSearchEngine.aResults.length; nCnt++)
+				{
+					if (oSearchEngine.aResults[nCnt][0] < aTl.length)
+					{
+						oUl.append("<li><a href='" + aTl[oSearchEngine.aResults[nCnt][0]][0] + "?search=" + escape(sValue) + "' target='FrameMain'>" + unescape(aTl[oSearchEngine.aResults[nCnt][0]][1]) + "</a></li>");
+					}
+				}
+				// Tree
+				$("#search_results_content").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#search_results_content") && $("#search_results_content").dynatree && $("#search_results_content").dynatree("getTree") && $("#search_results_content").dynatree("getTree").activateKey)
+							$("#search_results_content").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+	<div id="tabs">
+		<ul>
+			<li><a href="#tab-toc">Contents</a></li>
+			<li><a href="#tab-keywords">Index</a></li>
+			<li><a href="#tab-search">Search</a></li>
+			</ul>
+		<div id="tab-toc">
+			<ul id="toc" class="">
+
+				<li class="folder" id="Introduction" data="">
+							<a
+							href="Introduction.html"
+							target="FrameMain">
+								Introduction</a>
+
+				<ul><li class="" id="Credits" data="">
+							<a
+							href="Credits.html"
+							target="FrameMain">
+								Credits</a>
+
+				</li><li class="" id="SystemRequirements" data="">
+							<a
+							href="SystemRequirements.html"
+							target="FrameMain">
+								System Requirements</a>
+
+				</li></ul></li><li class="folder" id="DataTypes" data="">
+							<a
+							href="DataTypes.html"
+							target="FrameMain">
+								Data Types</a>
+
+				<ul><li class="" id="TimeSequence" data="">
+							<a
+							href="TimeSequence.html"
+							target="FrameMain">
+								Time Sequence</a>
+
+				</li></ul></li><li class="folder" id="Operators" data="">
+							<a
+							href="Operators.html"
+							target="FrameMain">
+								Operators</a>
+
+				<ul><li class="" id="Newtopic" data="">
+							<a
+							href="Newtopic.html"
+							target="FrameMain">
+								+ -</a>
+
+				</li><li class="" id="Newtopic1" data="">
+							<a
+							href="Newtopic1.html"
+							target="FrameMain">
+								*</a>
+
+				</li><li class="" id="Newtopic2" data="">
+							<a
+							href="Newtopic2.html"
+							target="FrameMain">
+								**</a>
+
+				</li><li class="" id="Newtopic3" data="">
+							<a
+							href="Newtopic3.html"
+							target="FrameMain">
+								++</a>
+
+				</li><li class="" id="Newtopic4" data="">
+							<a
+							href="Newtopic4.html"
+							target="FrameMain">
+								:</a>
+
+				</li><li class="" id="indexing" data="">
+							<a
+							href="indexing.html"
+							target="FrameMain">
+								: (indexing)</a>
+
+				</li><li class="" id="timeindexing" data="">
+							<a
+							href="timeindexing.html"
+							target="FrameMain">
+								~ (time-indexing)</a>
+
+				</li><li class="" id="Newtopic5" data="">
+							<a
+							href="Newtopic5.html"
+							target="FrameMain">
+								..</a>
+
+				</li><li class="" id="Newtopic6" data="">
+							<a
+							href="Newtopic6.html"
+							target="FrameMain">
+								'</a>
+
+				</li><li class="" id="Newtopic7" data="">
+							<a
+							href="Newtopic7.html"
+							target="FrameMain">
+								%</a>
+
+				</li><li class="" id="Newtopic8" data="">
+							<a
+							href="Newtopic8.html"
+							target="FrameMain">
+								&lt;&gt;</a>
+
+				</li><li class="" id="Newtopic9" data="">
+							<a
+							href="Newtopic9.html"
+							target="FrameMain">
+								#</a>
+
+				</li><li class="" id="Newtopic10" data="">
+							<a
+							href="Newtopic10.html"
+							target="FrameMain">
+								^</a>
+
+				</li><li class="" id="Newtopic11" data="">
+							<a
+							href="Newtopic11.html"
+							target="FrameMain">
+								@</a>
+
+				</li><li class="" id="Newtopic12" data="">
+							<a
+							href="Newtopic12.html"
+							target="FrameMain">
+								&gt;&gt;</a>
+
+				</li><li class="" id="stereo" data="">
+							<a
+							href="stereo.html"
+							target="FrameMain">
+								stereo</a>
+
+				</li><li class="" id="Newtopic13" data="">
+							<a
+							href="Newtopic13.html"
+							target="FrameMain">
+								~</a>
+
+				</li><li class="" id="Newtopic14" data="">
+							<a
+							href="Newtopic14.html"
+							target="FrameMain">
+								-&gt;</a>
+
+				</li></ul></li><li class="folder" id="CompoundOperators" data="">
+							<a
+							href="CompoundOperators.html"
+							target="FrameMain">
+								Compound Operators</a>
+
+				<ul><li class="" id="Newtopic15" data="">
+							<a
+							href="Newtopic15.html"
+							target="FrameMain">
+								+= -= *= /=</a>
+
+				</li><li class="" id="Newtopic16" data="">
+							<a
+							href="Newtopic16.html"
+							target="FrameMain">
+								++=</a>
+
+				</li><li class="" id="Newtopic17" data="">
+							<a
+							href="Newtopic17.html"
+							target="FrameMain">
+								@=</a>
+
+				</li><li class="" id="Newtopic18" data="">
+							<a
+							href="Newtopic18.html"
+							target="FrameMain">
+								@@=</a>
+
+				</li><li class="" id="Newtopic19" data="">
+							<a
+							href="Newtopic19.html"
+							target="FrameMain">
+								-&gt;=</a>
+
+				</li><li class="" id="Newtopic20" data="">
+							<a
+							href="Newtopic20.html"
+							target="FrameMain">
+								~=</a>
+
+				</li><li class="" id="Newtopic21" data="">
+							<a
+							href="Newtopic21.html"
+							target="FrameMain">
+								#=</a>
+
+				</li><li class="" id="Newtopic22" data="">
+							<a
+							href="Newtopic22.html"
+							target="FrameMain">
+								&gt;&gt;=</a>
+
+				</li><li class="" id="Newtopic23" data="">
+							<a
+							href="Newtopic23.html"
+							target="FrameMain">
+								&lt;&gt;=</a>
+
+				</li></ul></li><li class="folder" id="SignalVectorGeneration" data="">
+							<a
+							href="SignalVectorGeneration.html"
+							target="FrameMain">
+								Signal/Vector Generation</a>
+
+				<ul><li class="" id="cell" data="">
+							<a
+							href="cell.html"
+							target="FrameMain">
+								cell</a>
+
+				</li><li class="" id="dc" data="">
+							<a
+							href="dc.html"
+							target="FrameMain">
+								dc</a>
+
+				</li><li class="" id="fm" data="">
+							<a
+							href="fm.html"
+							target="FrameMain">
+								fm</a>
+
+				</li><li class="" id="gnoise" data="">
+							<a
+							href="gnoise.html"
+							target="FrameMain">
+								gnoise</a>
+
+				</li><li class="" id="input" data="">
+							<a
+							href="input.html"
+							target="FrameMain">
+								input</a>
+
+				</li><li class="" id="irand" data="">
+							<a
+							href="irand.html"
+							target="FrameMain">
+								irand</a>
+
+				</li><li class="" id="noise" data="">
+							<a
+							href="noise.html"
+							target="FrameMain">
+								noise</a>
+
+				</li><li class="" id="ones" data="">
+							<a
+							href="ones.html"
+							target="FrameMain">
+								ones</a>
+
+				</li><li class="" id="rand" data="">
+							<a
+							href="rand.html"
+							target="FrameMain">
+								rand</a>
+
+				</li><li class="" id="randperm" data="">
+							<a
+							href="randperm.html"
+							target="FrameMain">
+								randperm</a>
+
+				</li><li class="" id="silence" data="">
+							<a
+							href="silence.html"
+							target="FrameMain">
+								silence</a>
+
+				</li><li class="" id="sprintf" data="">
+							<a
+							href="sprintf.html"
+							target="FrameMain">
+								sprintf</a>
+
+				</li><li class="" id="str2num" data="">
+							<a
+							href="str2num.html"
+							target="FrameMain">
+								str2num</a>
+
+				</li><li class="" id="tone" data="">
+							<a
+							href="tone.html"
+							target="FrameMain">
+								tone</a>
+
+				</li><li class="" id="wave" data="">
+							<a
+							href="wave.html"
+							target="FrameMain">
+								wave</a>
+
+				</li><li class="" id="zeros" data="">
+							<a
+							href="zeros.html"
+							target="FrameMain">
+								zeros</a>
+
+				</li></ul></li><li class="folder" id="ModificationofSignalVector" data="">
+							<a
+							href="ModificationofSignalVector.html"
+							target="FrameMain">
+								Modification of Signal/Vector</a>
+
+				<ul><li class="" id="audio" data="">
+							<a
+							href="audio.html"
+							target="FrameMain">
+								audio</a>
+
+				</li><li class="" id="blackman" data="">
+							<a
+							href="blackman.html"
+							target="FrameMain">
+								blackman</a>
+
+				</li><li class="" id="bpf" data="">
+							<a
+							href="bpf.html"
+							target="FrameMain">
+								bpf</a>
+
+				</li><li class="" id="bsf" data="">
+							<a
+							href="bsf.html"
+							target="FrameMain">
+								bsf</a>
+
+				</li><li class="" id="filt" data="">
+							<a
+							href="filt.html"
+							target="FrameMain">
+								filt</a>
+
+				</li><li class="" id="filtfilt" data="">
+							<a
+							href="filtfilt.html"
+							target="FrameMain">
+								filtfilt</a>
+
+				</li><li class="" id="hamming" data="">
+							<a
+							href="hamming.html"
+							target="FrameMain">
+								hamming</a>
+
+				</li><li class="" id="hann" data="">
+							<a
+							href="hann.html"
+							target="FrameMain">
+								hann</a>
+
+				</li><li class="" id="hpf" data="">
+							<a
+							href="hpf.html"
+							target="FrameMain">
+								hpf</a>
+
+				</li><li class="" id="interp" data="">
+							<a
+							href="interp.html"
+							target="FrameMain">
+								interp</a>
+
+				</li><li class="" id="lpf" data="">
+							<a
+							href="lpf.html"
+							target="FrameMain">
+								lpf</a>
+
+				</li><li class="" id="matrix" data="">
+							<a
+							href="matrix.html"
+							target="FrameMain">
+								matrix</a>
+
+				</li><li class="" id="movespec" data="">
+							<a
+							href="movespec.html"
+							target="FrameMain">
+								movespec</a>
+
+				</li><li class="" id="pitchscale" data="">
+							<a
+							href="pitchscale.html"
+							target="FrameMain">
+								pitchscale</a>
+
+				</li><li class="" id="ramp" data="">
+							<a
+							href="ramp.html"
+							target="FrameMain">
+								ramp</a>
+
+				</li><li class="" id="respeed" data="">
+							<a
+							href="respeed.html"
+							target="FrameMain">
+								respeed</a>
+
+				</li><li class="" id="sam" data="">
+							<a
+							href="sam.html"
+							target="FrameMain">
+								sam</a>
+
+				</li><li class="" id="sort" data="">
+							<a
+							href="sort.html"
+							target="FrameMain">
+								sort</a>
+
+				</li><li class="" id="timestretch" data="">
+							<a
+							href="timestretch.html"
+							target="FrameMain">
+								timestretch</a>
+
+				</li><li class="" id="vector" data="">
+							<a
+							href="vector.html"
+							target="FrameMain">
+								vector</a>
+
+				</li></ul></li><li class="folder" id="ComputationFunctions" data="">
+							<a
+							href="ComputationFunctions.html"
+							target="FrameMain">
+								Computation Functions</a>
+
+				<ul><li class="" id="atleast" data="">
+							<a
+							href="atleast.html"
+							target="FrameMain">
+								atleast</a>
+
+				</li><li class="" id="atmost" data="">
+							<a
+							href="atmost.html"
+							target="FrameMain">
+								atmost</a>
+
+				</li><li class="" id="begint" data="">
+							<a
+							href="begint.html"
+							target="FrameMain">
+								begint</a>
+
+				</li><li class="" id="cumsum" data="">
+							<a
+							href="cumsum.html"
+							target="FrameMain">
+								cumsum</a>
+
+				</li><li class="" id="diff" data="">
+							<a
+							href="diff.html"
+							target="FrameMain">
+								diff</a>
+
+				</li><li class="" id="dur" data="">
+							<a
+							href="dur.html"
+							target="FrameMain">
+								dur</a>
+
+				</li><li class="" id="endt" data="">
+							<a
+							href="endt.html"
+							target="FrameMain">
+								endt</a>
+
+				</li><li class="" id="envelope" data="">
+							<a
+							href="envelope.html"
+							target="FrameMain">
+								envelope</a>
+
+				</li><li class="" id="envelope1" data="">
+							<a
+							href="envelope1.html"
+							target="FrameMain">
+								envelope</a>
+
+				</li><li class="" id="fft" data="">
+							<a
+							href="fft.html"
+							target="FrameMain">
+								fft</a>
+
+				</li><li class="" id="hilbert" data="">
+							<a
+							href="hilbert.html"
+							target="FrameMain">
+								hilbert</a>
+
+				</li><li class="" id="ifft" data="">
+							<a
+							href="ifft.html"
+							target="FrameMain">
+								ifft</a>
+
+				</li><li class="" id="left" data="">
+							<a
+							href="left.html"
+							target="FrameMain">
+								left</a>
+
+				</li><li class="" id="length" data="">
+							<a
+							href="length.html"
+							target="FrameMain">
+								length</a>
+
+				</li><li class="" id="max" data="">
+							<a
+							href="max.html"
+							target="FrameMain">
+								max</a>
+
+				</li><li class="" id="min" data="">
+							<a
+							href="min.html"
+							target="FrameMain">
+								min</a>
+
+				</li><li class="" id="right" data="">
+							<a
+							href="right.html"
+							target="FrameMain">
+								right</a>
+
+				</li><li class="" id="rms" data="">
+							<a
+							href="rms.html"
+							target="FrameMain">
+								rms</a>
+
+				</li><li class="" id="rmsall" data="">
+							<a
+							href="rmsall.html"
+							target="FrameMain">
+								rmsall</a>
+
+				</li><li class="" id="size" data="">
+							<a
+							href="size.html"
+							target="FrameMain">
+								size</a>
+
+				</li><li class="" id="sort1" data="">
+							<a
+							href="sort1.html"
+							target="FrameMain">
+								sort</a>
+
+				</li><li class="" id="std" data="">
+							<a
+							href="std.html"
+							target="FrameMain">
+								std</a>
+
+				</li><li class="" id="sum" data="">
+							<a
+							href="sum.html"
+							target="FrameMain">
+								sum</a>
+
+				</li></ul></li><li class="folder" id="MathFunctions" data="">
+							<a
+							href="MathFunctions.html"
+							target="FrameMain">
+								Math Functions</a>
+
+				<ul><li class="" id="abs" data="">
+							<a
+							href="abs.html"
+							target="FrameMain">
+								abs</a>
+
+				</li><li class="" id="acos" data="">
+							<a
+							href="acos.html"
+							target="FrameMain">
+								acos</a>
+
+				</li><li class="" id="angle" data="">
+							<a
+							href="angle.html"
+							target="FrameMain">
+								angle</a>
+
+				</li><li class="" id="asin" data="">
+							<a
+							href="asin.html"
+							target="FrameMain">
+								asin</a>
+
+				</li><li class="" id="atan" data="">
+							<a
+							href="atan.html"
+							target="FrameMain">
+								atan</a>
+
+				</li><li class="" id="ceil" data="">
+							<a
+							href="ceil.html"
+							target="FrameMain">
+								ceil</a>
+
+				</li><li class="" id="conj" data="">
+							<a
+							href="conj.html"
+							target="FrameMain">
+								conj</a>
+
+				</li><li class="" id="cos" data="">
+							<a
+							href="cos.html"
+							target="FrameMain">
+								cos</a>
+
+				</li><li class="" id="exp" data="">
+							<a
+							href="exp.html"
+							target="FrameMain">
+								exp</a>
+
+				</li><li class="" id="fix" data="">
+							<a
+							href="fix.html"
+							target="FrameMain">
+								fix</a>
+
+				</li><li class="" id="floor" data="">
+							<a
+							href="floor.html"
+							target="FrameMain">
+								floor</a>
+
+				</li><li class="" id="imag" data="">
+							<a
+							href="imag.html"
+							target="FrameMain">
+								imag</a>
+
+				</li><li class="" id="log" data="">
+							<a
+							href="log.html"
+							target="FrameMain">
+								log</a>
+
+				</li><li class="" id="log10" data="">
+							<a
+							href="log10.html"
+							target="FrameMain">
+								log10</a>
+
+				</li><li class="" id="mod" data="">
+							<a
+							href="mod.html"
+							target="FrameMain">
+								mod</a>
+
+				</li><li class="" id="pow" data="">
+							<a
+							href="pow.html"
+							target="FrameMain">
+								pow</a>
+
+				</li><li class="" id="real" data="">
+							<a
+							href="real.html"
+							target="FrameMain">
+								real</a>
+
+				</li><li class="" id="round" data="">
+							<a
+							href="round.html"
+							target="FrameMain">
+								round</a>
+
+				</li><li class="" id="sign" data="">
+							<a
+							href="sign.html"
+							target="FrameMain">
+								sign</a>
+
+				</li><li class="" id="sin" data="">
+							<a
+							href="sin.html"
+							target="FrameMain">
+								sin</a>
+
+				</li><li class="" id="sqrt" data="">
+							<a
+							href="sqrt.html"
+							target="FrameMain">
+								sqrt</a>
+
+				</li><li class="" id="tan" data="">
+							<a
+							href="tan.html"
+							target="FrameMain">
+								tan</a>
+
+				</li></ul></li><li class="folder" id="TimeSequenceFunctions" data="">
+							<a
+							href="TimeSequenceFunctions.html"
+							target="FrameMain">
+								Time-Sequence Functions</a>
+
+				<ul><li class="" id="tsq_gettimes" data="">
+							<a
+							href="tsq_gettimes.html"
+							target="FrameMain">
+								tsq_gettimes</a>
+
+				</li><li class="" id="tsq_getvalues" data="">
+							<a
+							href="tsq_getvalues.html"
+							target="FrameMain">
+								tsq_getvalues</a>
+
+				</li><li class="" id="tsq_isrel" data="">
+							<a
+							href="tsq_isrel.html"
+							target="FrameMain">
+								tsq_isrel</a>
+
+				</li><li class="" id="tsq_settimes" data="">
+							<a
+							href="tsq_settimes.html"
+							target="FrameMain">
+								tsq_settimes</a>
+
+				</li><li class="" id="tsq_setvalues" data="">
+							<a
+							href="tsq_setvalues.html"
+							target="FrameMain">
+								tsq_setvalues</a>
+
+				</li></ul></li><li class="folder" id="AudioplaybackFunctions" data="">
+							<a
+							href="AudioplaybackFunctions.html"
+							target="FrameMain">
+								Audio playback Functions</a>
+
+				<ul><li class="" id="pause" data="">
+							<a
+							href="pause.html"
+							target="FrameMain">
+								pause</a>
+
+				</li><li class="" id="play" data="">
+							<a
+							href="play.html"
+							target="FrameMain">
+								play</a>
+
+				</li><li class="" id="qstop" data="">
+							<a
+							href="qstop.html"
+							target="FrameMain">
+								qstop</a>
+
+				</li><li class="" id="resume" data="">
+							<a
+							href="resume.html"
+							target="FrameMain">
+								resume</a>
+
+				</li><li class="" id="status" data="">
+							<a
+							href="status.html"
+							target="FrameMain">
+								status</a>
+
+				</li><li class="" id="stop" data="">
+							<a
+							href="stop.html"
+							target="FrameMain">
+								stop</a>
+
+				</li></ul></li><li class="folder" id="GraphicFunctions" data="">
+							<a
+							href="GraphicFunctions.html"
+							target="FrameMain">
+								Graphic Functions</a>
+
+				<ul><li class="" id="axes" data="">
+							<a
+							href="axes.html"
+							target="FrameMain">
+								axes</a>
+
+				</li><li class="" id="delete" data="">
+							<a
+							href="delete.html"
+							target="FrameMain">
+								delete</a>
+
+				</li><li class="" id="figure" data="">
+							<a
+							href="figure.html"
+							target="FrameMain">
+								figure</a>
+
+				</li><li class="" id="line" data="">
+							<a
+							href="line.html"
+							target="FrameMain">
+								line</a>
+
+				</li><li class="" id="plot" data="">
+							<a
+							href="plot.html"
+							target="FrameMain">
+								plot</a>
+
+				</li><li class="" id="repaint" data="">
+							<a
+							href="repaint.html"
+							target="FrameMain">
+								repaint</a>
+
+				</li><li class="" id="replicate" data="">
+							<a
+							href="replicate.html"
+							target="FrameMain">
+								replicate</a>
+
+				</li><li class="" id="text" data="">
+							<a
+							href="text.html"
+							target="FrameMain">
+								text</a>
+
+				</li></ul></li><li class="folder" id="LogicalFunctions" data="">
+							<a
+							href="LogicalFunctions.html"
+							target="FrameMain">
+								Logical Functions</a>
+
+				<ul><li class="" id="and" data="">
+							<a
+							href="and.html"
+							target="FrameMain">
+								and</a>
+
+				</li><li class="" id="isaudio" data="">
+							<a
+							href="isaudio.html"
+							target="FrameMain">
+								isaudio</a>
+
+				</li><li class="" id="isbool" data="">
+							<a
+							href="isbool.html"
+							target="FrameMain">
+								isbool</a>
+
+				</li><li class="" id="iscell" data="">
+							<a
+							href="iscell.html"
+							target="FrameMain">
+								iscell</a>
+
+				</li><li class="" id="isclass" data="">
+							<a
+							href="isclass.html"
+							target="FrameMain">
+								isclass</a>
+
+				</li><li class="" id="isempty" data="">
+							<a
+							href="isempty.html"
+							target="FrameMain">
+								isempty</a>
+
+				</li><li class="" id="isstereo" data="">
+							<a
+							href="isstereo.html"
+							target="FrameMain">
+								isstereo</a>
+
+				</li><li class="" id="isstring" data="">
+							<a
+							href="isstring.html"
+							target="FrameMain">
+								isstring</a>
+
+				</li><li class="" id="isvector" data="">
+							<a
+							href="isvector.html"
+							target="FrameMain">
+								isvector</a>
+
+				</li><li class="" id="or" data="">
+							<a
+							href="or.html"
+							target="FrameMain">
+								or</a>
+
+				</li></ul></li><li class="folder" id="FileHandlingFunctions" data="">
+							<a
+							href="FileHandlingFunctions.html"
+							target="FrameMain">
+								File Handling Functions</a>
+
+				<ul><li class="" id="dir" data="">
+							<a
+							href="dir.html"
+							target="FrameMain">
+								dir</a>
+
+				</li><li class="" id="fclose" data="">
+							<a
+							href="fclose.html"
+							target="FrameMain">
+								fclose</a>
+
+				</li><li class="" id="fdelete" data="">
+							<a
+							href="fdelete.html"
+							target="FrameMain">
+								fdelete</a>
+
+				</li><li class="" id="file" data="">
+							<a
+							href="file.html"
+							target="FrameMain">
+								file</a>
+
+				</li><li class="" id="fopen" data="">
+							<a
+							href="fopen.html"
+							target="FrameMain">
+								fopen</a>
+
+				</li><li class="" id="fprintf" data="">
+							<a
+							href="fprintf.html"
+							target="FrameMain">
+								fprintf</a>
+
+				</li><li class="" id="include" data="">
+							<a
+							href="include.html"
+							target="FrameMain">
+								include</a>
+
+				</li><li class="" id="wavwrite" data="">
+							<a
+							href="wavwrite.html"
+							target="FrameMain">
+								wavwrite</a>
+
+				</li></ul></li><li class="folder" id="MiscellaneousFunctions" data="">
+							<a
+							href="MiscellaneousFunctions.html"
+							target="FrameMain">
+								Miscellaneous Functions</a>
+
+				<ul><li class="" id="clear" data="">
+							<a
+							href="clear.html"
+							target="FrameMain">
+								clear</a>
+
+				</li><li class="" id="eval" data="">
+							<a
+							href="eval.html"
+							target="FrameMain">
+								eval</a>
+
+				</li><li class="" id="getfs" data="">
+							<a
+							href="getfs.html"
+							target="FrameMain">
+								getfs</a>
+
+				</li><li class="" id="input1" data="">
+							<a
+							href="input1.html"
+							target="FrameMain">
+								input</a>
+
+				</li><li class="" id="inputdlg" data="">
+							<a
+							href="inputdlg.html"
+							target="FrameMain">
+								inputdlg</a>
+
+				</li><li class="" id="msgbox" data="">
+							<a
+							href="msgbox.html"
+							target="FrameMain">
+								msgbox</a>
+
+				</li><li class="" id="setfs" data="">
+							<a
+							href="setfs.html"
+							target="FrameMain">
+								setfs</a>
+
+				</li><li class="" id="sprintf1" data="">
+							<a
+							href="sprintf1.html"
+							target="FrameMain">
+								sprintf</a>
+
+				</li><li class="" id="str2num1" data="">
+							<a
+							href="str2num1.html"
+							target="FrameMain">
+								str2num</a>
+
+				</li><li class="" id="_tic" data="">
+							<a
+							href="_tic.html"
+							target="FrameMain">
+								_tic</a>
+
+				</li><li class="" id="_toc" data="">
+							<a
+							href="_toc.html"
+							target="FrameMain">
+								_toc</a>
+
+				</li></ul></li></ul>
+		</div>
+		
+		<div id="tab-keywords">
+			<ul id="keywords">
+
+				</ul>
+		</div>
+		
+		<div id="tab-search">
+			<form onsubmit="PerformSearch(); return false;">
+				<label for="search_value">Search:</label>
+				<input id="search_value" name="search_value"></input>
+				<input type="submit" value="Search"/>
+			</form>
+			<div id="search_results"></div>
+		</div>
+		
+		</div>
+    
+</body>
+
+</html>
+

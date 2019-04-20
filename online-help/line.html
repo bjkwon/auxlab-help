@@ -1,0 +1,174 @@
+﻿<html>
+	
+<head>
+	<title>line</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.5.0.497">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "AUXLAB.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("line");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">line</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="GraphicFunctions.html">Graphic Functions</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="GraphicFunctions.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="figure.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="plot.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">line</span></span></h1>
+<div class="rvps2"><a name="usage"></a>
+<table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #ff7f50; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts23">y = line ( x,y[=""] )</span><br/><span class="rvts23">y = line ( handle,x,y[=""] )</span><br/><span class="rvts23">y = handle.line ( x,y[=""] )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps6"><span class="rvts13">Generate a line object in the designated axes</span></p>
+<div class="rvps2"><a name="arguments"></a>
+<table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts24">arg</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts24">type</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts24">Description</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts24">Unit or Value scale</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle" style="width: 15%;"><p class="rvps2"><span class="rvts23">handle</span></p>
+</td>
+<td valign="middle" style="width: 10%;"><p class="rvps2"><span class="rvts17">HGO</span></p>
+</td>
+<td valign="middle" style="width: 50%;"><p class="rvps2"><span class="rvts17">handle to the axes</span></p>
+</td>
+<td valign="middle" style="width: 25%;"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts23">x</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">VECT or AUD</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">x-data</span></p>
+</td>
+<td valign="middle"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts23">y</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">VECT or AUD</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">y-data</span></p>
+</td>
+<td valign="middle"><br/>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts24">Outputs</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside; list-style-type: disc;">
+<li class="rvps7" style="margin-left: 0px"><span class="rvts23">y</span><span class="rvts17"> is the handle to the line object</span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts24">Notes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside; list-style-type: disc;">
+<li class="rvps7" style="margin-left: 0px"><span class="rvts17">This is a low-level version of the plot function.</span></li>
+<li class="rvps7" style="margin-left: 0px"><span class="rvts17">This simply adds a line object to the axes, as opposed to following the "nextplot" property in the plot function.</span></li>
+<li class="rvps7" style="margin-left: 0px"><span class="rvts17">If </span><span class="rvts23">handle</span><span class="rvts17"> is omitted, this function creates a new figure window and plots</span></li>
+<li class="rvps7" style="margin-left: 0px"><span class="rvts17">If </span><span class="rvts23">y</span><span class="rvts17"> is specified, </span><span class="rvts23">y</span><span class="rvts17"> is plotted as a function of </span><span class="rvts23">x</span><span class="rvts17">.</span></li>
+<li class="rvps7" style="margin-left: 0px"><span class="rvts17">If </span><span class="rvts23">y</span><span class="rvts17"> is omitted, </span><span class="rvts23">x</span><span class="rvts17"> is plotted with the index (if non-audio) or the time (if audio) on the x-axis.</span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts24">Examples</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps2"><a name="notes"></a>
+<table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts24">See Also</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><a class="rvts30" href="figure.html">figure</a><span class="rvts19">&nbsp;| </span><a class="rvts30" href="axes.html">axes</a><span class="rvts19">&nbsp;| </span><a class="rvts30" href="text.html">text</a><span class="rvts19">&nbsp;| </span><a class="rvts30" href="delete.html">delete</a><span class="rvts19">&nbsp;| </span><a class="rvts30" href="plot.html">plot</a></p>
+<p></p>
+<p class="rvps8"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="http://www.helpndoc.com/create-epub-ebooks">Full-featured EBook editor</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 4/15/2019 by BJ Kwon. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

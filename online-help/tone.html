@@ -1,0 +1,175 @@
+﻿<html>
+	
+<head>
+	<title>tone</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.5.0.497">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "AUXLAB.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("tone");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">tone</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="SignalVectorGeneration.html">Signal/Vector Generation</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="SignalVectorGeneration.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="str2num.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="wave.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">tone</span></span></h1>
+<div class="rvps2"><a name="usage"></a>
+<table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #ff7f50; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts23">y = tone ( freq,duration,phase[=0] )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps6"><span class="rvts13">Generate a pure tone</span></p>
+<div class="rvps2"><a name="arguments"></a>
+<table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts24">arg</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts24">type</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts24">Description</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts24">Unit or Value scale</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle" style="width: 15%;"><p class="rvps2"><span class="rvts23">freq</span></p>
+</td>
+<td valign="middle" style="width: 10%;"><p class="rvps2"><span class="rvts17">SCAL or VCT</span></p>
+</td>
+<td valign="middle" style="width: 50%;"><p class="rvps2"><span class="rvts17">frequency</span></p>
+</td>
+<td valign="middle" style="width: 25%;"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts23">duration</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">SCAL</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">duration</span></p>
+</td>
+<td valign="middle"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts23">phase</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">SCAL</span></p>
+</td>
+<td valign="middle"><p class="rvps2"><span class="rvts17">initial phase (0 to 1)</span></p>
+</td>
+<td valign="middle"><br/>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts24">Outputs</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside; list-style-type: disc;">
+<li class="rvps7" style="margin-left: 0px"><span class="rvts23">y</span><span class="rvts17"> is a pure tone.</span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts24">Notes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside; list-style-type: disc;">
+<li class="rvps7" style="margin-left: 0px"><span class="rvts17">If </span><span class="rvts23">freq</span><span class="rvts17"> is a two-element vector, a tone glide is generated with beginning and ending frequencies, as specified.</span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts24">Examples</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside; list-style-type: disc;">
+<li class="rvps7" style="margin-left: 0px"><span class="rvts17">tone(100, 50, .25) // 100-Hz, 50-ms tone with a starting phase of 90°</span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps2"><a name="notes"></a>
+<table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts24">See Also</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p></p>
+<p class="rvps8"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="http://www.helpndoc.com">Easy EPub and documentation editor</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 4/15/2019 by BJ Kwon. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

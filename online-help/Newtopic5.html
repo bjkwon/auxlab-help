@@ -1,0 +1,168 @@
+﻿<html>
+	
+<head>
+	<title>..</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.5.0.497">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "AUXLAB.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Newtopic5");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">..</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Operators.html">Operators</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Operators.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="timeindexing.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Newtopic6.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts25">..</span></span></h1>
+<div class="rvps2"><a name="usage"></a>
+<table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #ff7f50; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts23">x = any expression with ..</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts23">x(id) = any expression with ..</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts23">x(id1:id2) = any expression with ..</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts23">x(id1:id2,jd1:jd2) = any expression with ..</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts23">x(t1~t2) = any expression with ..</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps6"><span class="rvts13">Replicator; Replicate what's in the left hand side to the right hand side</span></p>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts24">Commutative</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts17">N/A</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts24">Data Types</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps6"><span class="rvts19">This applies to multiple cases of expressions, not necessarily tied to one data type.</span></p>
+<div class="rvps2"><a name="arguments"></a>
+<table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td><br/>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts24">Notes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside; list-style-type: disc;">
+<li class="rvps7" style="margin-left: 0px"><span class="rvts13">Whatever is on the left hand side is being replicated to the right hand side with </span><span class="rvts26">..</span><span class="rvts13"> . Therefore,</span><br/><span class="rvts21">very_long_variable_name = any_function(..)</span><br/><span class="rvts13">is equivalent to:</span><br/><span class="rvts21">very_long_variable_name = any_function(very_long_variable_name)</span></li>
+<li class="rvps7" style="margin-left: 0px"><span class="rvts13">The dot (.) notation also applies; therefore, the following is also an equivalent statement:</span><br/><span class="rvts21">very_long_variable_name = ...any_function</span><br/><span class="rvts13">as long as </span><span class="rvts21">any_function</span><span class="rvts13"> supports the object function style.</span></li>
+<li class="rvps7" style="margin-left: 0px"><span class="rvts13">Conceptually, you might understand this as a sort of an advanced compound assignment operator:</span><br/><span class="rvts21">x = x + 50</span><span class="rvts13"> can be written as either </span><span class="rvts21">x += 50</span><span class="rvts13"> or </span><span class="rvts21">x = .. + 50</span><br/><span class="rvts13">On the other hand, </span><span class="rvts21">x = sqrt(x)</span><span class="rvts13"> can't be written with a regular compound assignment operator, but </span><span class="rvts21">..</span><span class="rvts13"> works perfectly: </span><span class="rvts21">x = sqrt(..)</span><br/><span class="rvts13"><br/></span></li>
+<li class="rvps7" style="margin-left: 0px"><span class="rvts13">This feature will save you from tedious typings or copy-pastings across left and right hand sides.</span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps2"><a name="notes"></a>
+<table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts24">Examples</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside; list-style-type: disc;">
+<li class="rvps7" style="margin-left: 0px"><span class="rvts17">You have a vector with a long variable name, if you append a value to it. You may write it in the vector form or use </span><span class="rvts21">++</span><br/><span class="rvts21">long_var_name = [long_var_name more_values]</span><br/><span class="rvts21">long_var_name = long_var_name ++ more_values</span><span class="rvts17"> or</span><br/><span class="rvts21">long_var_name ++= more_values</span><br/><span class="rvts17"></span><br/><span class="rvts17">But if values are inserted before it, you can't use ++=. Then, instead of typing long_var_name again on the RHS, just</span><br/><span class="rvts21">long_var_name = [values ..]</span><span class="rvts17"> or</span><br/><span class="rvts21">long_var_name = values ++ .. </span><span class="rvts17">will do it.</span></li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside; list-style-type: disc;">
+<li class="rvps7" style="margin-left: 0px"><span class="rvts17">You want to modify a part of a signal: for example,</span><br/><span class="rvts21">AUX&gt; x=wave("mop");</span></li>
+</ul>
+<p class="rvps7"><img alt="" style="vertical-align: text-bottom;" src="lib/replicator1.png"/><br/><span class="rvts17">To distort the signal from 400 to 500 ms by applying sqrt, do this:</span><br/><span class="rvts21">AUX&gt; x(400~500) = ...sqrt;</span></p>
+<p class="rvps7"><img alt="" style="vertical-align: text-bottom;" src="lib/replicator2.png"/></p>
+<ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside; list-style-type: disc;">
+<li class="rvps7" style="margin-left: 0px"><span class="rvts17">This is a more efficient way of coding. Internally, the expression </span><span class="rvts21">x(400~500) = x(400~500).sqrt</span><span class="rvts17"> evaluates </span><span class="rvts21">x(400~500)</span><span class="rvts17"> twice for the LHS and RHS, but the use of </span><span class="rvts21">..</span><span class="rvts17"> bypasses one.</span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<p></p>
+<p class="rvps8"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="http://www.helpndoc.com/help-authoring-tool">Full-featured multi-format Help generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 4/15/2019 by BJ Kwon. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

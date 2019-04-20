@@ -1,0 +1,205 @@
+﻿<html>
+	
+<head>
+	<title>Time Sequence</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.5.0.497">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "AUXLAB.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("TimeSequence");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Time Sequence</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="DataTypes.html">Data Types</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="DataTypes.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="DataTypes.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Operators.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">TSEQ: Time sequence</span></span></h1>
+<h2 class="rvps9"><span class="rvts0"><span class="rvts20">Introduction</span></span></h2>
+<p class="rvps6"><span class="rvts19">A data type TSEQ is an array container consisting of a time point and the data corresponding to the time point.</span></p>
+<h2 class="rvps9"><span class="rvts0"><span class="rvts20">Defining a TSEQ object</span></span></h2>
+<p class="rvps6"><span class="rvts19">A TSEQ object has the following form:</span></p>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts21">[x][y]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps6"><span class="rvts19">where x is the time point vector in milliseconds and y is the data vector. Here x and y must have the same length. In this form, at each time point the data is a scalar. In general, the data do not need to be a scalar; but can be in any form. To define such time sequence,</span></p>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts21">[t1 | y1; t2 | y2; ...]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps6"><span class="rvts19">where tn and yn are time marker and the corresponding value array in any length. (note: this is not implemented yet as of AUXLAB 1.47).</span></p>
+<h2 class="rvps9"><span class="rvts0"><span class="rvts20">Relative TSEQ</span></span></h2>
+<p class="rvps6"><span class="rvts19">Sometimes it is very useful to have time values relative to another audio signal. In such cases, define a relative time sequence as follows:</span></p>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts21">[x;][y]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="rvps9"><span class="rvts0"><span class="rvts20">Example 1</span></span></h2>
+<p class="rvps6"><span class="rvts19">The amplitude of a tone is scaled with a TSEQ, 0 at t=0, .7 at t=250ms, .3 at t=500ms, and 1 at t=1000ms. The multiplication operation with a TSEQ involves linear interpolation between specified time points.</span></p>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts21">AUX&gt; x = tone(500,1000);</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts21">AUX&gt; ts = [0 250 500 1000][0 .7 .3 1];</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts21">AUX&gt; y = ts * x;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><img alt="" style="vertical-align: text-bottom;" src="lib/tseq1.png"/></p>
+<h2 class="rvps9"><span class="rvts0"><span class="rvts22">Example 2</span></span></h2>
+<p class="rvps6"><span class="rvts21">The same TSEQ as above but the audio signal with a differation duration. Is this what you want?</span></p>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts21">AUX&gt; x = tone(500,800);</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts21">AUX&gt; ts = [0 250 500 1000][0 .7 .3 1];</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts21">AUX&gt; y = ts * x;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><img alt="" style="vertical-align: text-bottom;" src="lib/tseq2.png"/></p>
+<h2 class="rvps9"><span class="rvts0"><span class="rvts22">Example 3</span></span></h2>
+<p class="rvps6"><span class="rvts21">If you wanted to scale the audio with the same relative time course as Example 1, then go with a relative TSEQ.</span></p>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts21">AUX&gt; x = tone(500,800);</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts21">AUX&gt; ts = [0 .25 .5 1;][0 .7 .3 1];</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts21">AUX&gt; y = ts * x;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><img alt="" style="vertical-align: text-bottom;" src="lib/tseq3.png"/></p>
+<h2 class="rvps9"><span class="rvts0"><span class="rvts22">Example 4</span></span></h2>
+<p class="rvps6"><span class="rvts21">To adjust the amplitude of the audio signal with a desired time course in terms of dB, use the @ operator:</span></p>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts21">AUX&gt; x = tone(500,800);</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts21">AUX&gt; ts = [0 .25 .5 1;][-100 -3 -10 0];</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle"><p class="rvps2"><span class="rvts21">AUX&gt; y = x @ ts;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><img alt="" style="vertical-align: text-bottom;" src="lib/tseq4.png"/></p>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td><br/>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td><br/>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td><br/>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps2"><a name="xcom"></a>
+<table width="100%" border="0" cellpadding="1" cellspacing="-1" style="border-width: 0px; background-color: #f0e68c; border-collapse: collapse;">
+<tr valign="top">
+<td><br/>
+</td>
+</tr>
+</table>
+</div>
+<p></p>
+<p class="rvps8"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="http://www.helpndoc.com">Easy CHM and documentation editor</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 4/15/2019 by BJ Kwon. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+
