@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AUX function toc</title>
+<title>AUX function conv</title>
 <style>
 
 #usage {
@@ -28,12 +28,12 @@
 </style>
 </head>
 <body>
-<h1>toc</h1>
+<h1>conv</h1>
 
 <table id="usage"><tr><th>
-y = toc (  )</th></tr></table>
+y = conv ( x,y )<br>y = x.conv ( y )</th></tr></table>
 
-<font face="Arial"><p>Read elapsed time from stopwatch</p></font>
+<font face="Arial"><p>Convolute the two arrays</p></font>
 
 <table id="arguments">
   <tr>
@@ -42,18 +42,19 @@ y = toc (  )</th></tr></table>
     <th>Description</th>
     <th>Unit or Value scale</th>
   </tr>
-  <tr><td width="15%"><b><font face="Courier New"></font></b></td><td width="10%"></td><td width="50%"> </td><td width="25%"></tr>
+  <tr><td width="15%"><b><font face="Courier New">x</font></b></td><td width="10%">VCT or AUDIO</td><td width="50%">  the array or signal</td><td width="25%"></tr>
+<tr><td><b><font face="Courier New">y</font></b></td><td>VCT or AUDIO</td><td>the array or signal</td><td></tr>
 
 </table>
 <p></p>
 <table  id="notes">
   <tr><th>Outputs</th></tr>
-  <tr><td><ul><li><b><font face="Courier New">y</font></b> is the elapsed time in milliseconds since tic was called.</li></ul></td></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> is the convolution of <b><font face="Courier New">x</font></b> and <b><font face="Courier New">y</font></b>.</li></ul></td></tr>
 </table>
 <p></p>
 <table  id="notes">
   <tr><th>Notes</th></tr>
-  <tr><td><ul><li>no argument (Windows only)</li></ul></td></tr>
+  <tr><td><ul><li>Both parameters should be a vector (not a matrix)</li></ul></td></tr>
 </table>
 <p></p>
 <table  id="notes">
@@ -61,6 +62,6 @@ y = toc (  )</th></tr></table>
   
 </table>
 <p></p>
-<table id="notes"><tr><th>See Also</th></tr></table><a href="tic.html">tic </a>
+<table id="notes"><tr><th>See Also</th></tr></table><a href=".html"> </a>
 </body>
 </html>

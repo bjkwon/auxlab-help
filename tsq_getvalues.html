@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AUX function toc</title>
+<title>AUX function tsq_getvalues</title>
 <style>
 
 #usage {
@@ -28,12 +28,12 @@
 </style>
 </head>
 <body>
-<h1>toc</h1>
+<h1>tsq_getvalues</h1>
 
 <table id="usage"><tr><th>
-y = toc (  )</th></tr></table>
+y = tsq_getvalues ( x )<br>y = x.tsq_getvalues (  )</th></tr></table>
 
-<font face="Arial"><p>Read elapsed time from stopwatch</p></font>
+<font face="Arial"><p>Retrieves the value(s) of the time sequence at each time point</p></font>
 
 <table id="arguments">
   <tr>
@@ -42,18 +42,18 @@ y = toc (  )</th></tr></table>
     <th>Description</th>
     <th>Unit or Value scale</th>
   </tr>
-  <tr><td width="15%"><b><font face="Courier New"></font></b></td><td width="10%"></td><td width="50%"> </td><td width="25%"></tr>
+  <tr><td width="15%"><b><font face="Courier New">x</font></b></td><td width="10%">TSEQ</td><td width="50%"> time_sequence_input</td><td width="25%"></tr>
 
 </table>
 <p></p>
 <table  id="notes">
   <tr><th>Outputs</th></tr>
-  <tr><td><ul><li><b><font face="Courier New">y</font></b> is the elapsed time in milliseconds since tic was called.</li></ul></td></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> is a matrix, where the value(s) at time point is shown in each row.</li></ul></td></tr>
 </table>
 <p></p>
 <table  id="notes">
   <tr><th>Notes</th></tr>
-  <tr><td><ul><li>no argument (Windows only)</li></ul></td></tr>
+  
 </table>
 <p></p>
 <table  id="notes">
@@ -61,6 +61,6 @@ y = toc (  )</th></tr></table>
   
 </table>
 <p></p>
-<table id="notes"><tr><th>See Also</th></tr></table><a href="tic.html">tic </a>
+<table id="notes"><tr><th>See Also</th></tr></table><a href="istseq.html">istseq</a>&nbsp;&#124; <a href="tsq_isrel.html">tsq_isrel</a>&nbsp;&#124; <a href="tsq_gettimes.html">tsq_gettimes</a>&nbsp;&#124; <a href="tsq_settimes.html">tsq_settimes</a>&nbsp;&#124; <a href="tsq_setvalues.html">tsq_setvalues </a>
 </body>
 </html>

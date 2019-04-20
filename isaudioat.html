@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AUX function interp</title>
+<title>AUX function isaudioat</title>
 <style>
 
 #usage {
@@ -28,12 +28,12 @@
 </style>
 </head>
 <body>
-<h1>interp</h1>
+<h1>isaudioat</h1>
 
 <table id="usage"><tr><th>
-y = interp ( x,y,q )<br>y = x.interp ( y,q )</th></tr></table>
+y = isaudioat ( x,t )<br>y = x.isaudioat ( t )</th></tr></table>
 
-<font face="Arial"><p>Convolute the two arrays</p></font>
+<font face="Arial"><p>Checks if the audio signal is present (i.e., not "null") at the specified time point</p></font>
 
 <table id="arguments">
   <tr>
@@ -42,25 +42,24 @@ y = interp ( x,y,q )<br>y = x.interp ( y,q )</th></tr></table>
     <th>Description</th>
     <th>Unit or Value scale</th>
   </tr>
-  <tr><td width="15%"><b><font face="Courier New">x</font></b></td><td width="10%">VCT</td><td width="50%">  the x array</td><td width="25%"></tr>
-<tr><td><b><font face="Courier New">y</font></b></td><td>VCT</td><td>the y array</td><td></tr>
-<tr><td><b><font face="Courier New">q</font></b></td><td>SCL or VCT</td><td>the proving value(s) that you want to interpolate</td><td></tr>
+  <tr><td width="15%"><b><font face="Courier New">x</font></b></td><td width="10%">AUD</td><td width="50%">  audio signal</td><td width="25%"></tr>
+<tr><td><b><font face="Courier New">t</font></b></td><td>SCAL</td><td>time</td><td></tr>
 
 </table>
 <p></p>
 <table  id="notes">
   <tr><th>Outputs</th></tr>
-  <tr><td><ul><li><b><font face="Courier New">y</font></b> is the interpolated version of <b><font face="Courier New">q</font></b>. The length of <b><font face="Courier New">y</font></b> is the same as that of <b><font face="Courier New">q</font></b>.</li></ul></td></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> is logical indicating whether the signal is not null at the point of <b><font face="Courier New">x</font></b>.</li></ul></td></tr>
 </table>
 <p></p>
 <table  id="notes">
   <tr><th>Notes</th></tr>
-  <tr><td><ul><li><b><font face="Courier New">x</font></b> and <b><font face="Courier New">y</font></b> must be the same length.</li><li><b><font face="Courier New">q</font></b> can be either a scalar or vector</li></ul></td></tr>
+  
 </table>
 <p></p>
 <table  id="notes">
   <tr><th>Examples</th></tr>
-  
+  <tr><td><ul><li>x=noise(300)@-20>>100; </li><li>x.isnull(50) &rarr; false.</li><li>x.isnull(200) &rarr; true.</li></ul></td></tr>
 </table>
 <p></p>
 <table id="notes"><tr><th>See Also</th></tr></table><a href=".html"> </a>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operator #</title>
+<style>
+
+#usage {
+	text-align: left;
+    font-family: "Courier New", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: coral;
+}
+#arguments {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#notes {
+	text-align: left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: khaki;
+}
+</style>
+</head>
+<body>
+<h1><font face="Courier New"><strong>#</strong></font> </h1>
+
+<table id="usage">
+<tr><td>z = x # y</td></tr>
+</table>
+<font face="Arial"><p>Change the pitch of an audio signal without changing the duration<font face="Courier New">x</font> by <font face="Courier New">y</font> semitones without changing the duration</p></font>
+<table id="notes"><tr><th>Commutative</th></tr><t    <th>y</th>
+r><td>No</td></tr></table><p></p>
+<table id="notes"><tr><th>Data Types</th></tr></table>
+<table id="arguments">
+  <tr>
+    <th>x</th>
+    <th>z</th>
+  </tr>
+  <tr><td width="10%">AUD</td><td width="10%">SCAL</td><td width="80%">AUD</td></tr>
+</table>
+
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul>
+  <li>This is equivalent to <font face="Courier New">z=pitchscale(x,y)</font> or <font face="Courier New">z=x.pitchscale(y)</font></li>
+  <li>See the function description for pitchscale for more information</li>
+</ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+   <tr><td><ul>
+   <font face="Courier New">AUX> x=tone(500,50).sqrt@-6</font><br><img src="fscale1.png" alt=""><p></p>
+   <font face="Courier New">AUX> y=x # 1.5 // all frequencies increased by a factor of 1.5</font><br><img src="fscale2.png" alt=""><p></p>
+   </ul></td></tr>
+</table>
+</body>
+</html>

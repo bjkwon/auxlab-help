@@ -28,7 +28,9 @@
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="~ (time-indexing)"><param name="Local" value="op_timeindex.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value=".."><param name="Local" value="op_replicator.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="'"><param name="Local" value="op_tranpose.html"></OBJECT>
-			<LI> <OBJECT type="text/sitemap"><param name="Name" value="%"><param name="Local" value="op_mod.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="% (mod)"><param name="Local" value="op_mod.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="% (timestretch)"><param name="Local" value="op_timestretch.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="#"><param name="Local" value="op_sharp.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="^"><param name="Local" value="op_pow.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="@"><param name="Local" value="op_at.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value=">>"><param name="Local" value="op_timeshift.html"></OBJECT>
@@ -43,9 +45,11 @@
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="++="><param name="Local" value="compop_elong.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="@="><param name="Local" value="compop_level1.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="@@="><param name="Local" value="compop_level2.html"></OBJECT>
-			<LI> <OBJECT type="text/sitemap"><param name="Name" value=">>="><param name="Local" value="compop_timeshift.html"></OBJECT>
-			<LI> <OBJECT type="text/sitemap"><param name="Name" value="~="><param name="Local" value="compopop_interp.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="->="><param name="Local" value="compopop_movespec.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="~="><param name="Local" value="compopop_respeed.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="#="><param name="Local" value="compop_sharp.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value=">>="><param name="Local" value="compop_timeshift.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="%="><param name="Local" value="compopop_timestretch.html"></OBJECT>
 		</UL>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Signal/Vector Generation">	<param name="Local" value="generation.html">	</OBJECT>
@@ -76,7 +80,6 @@
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="bsf"><param name="Local" value="bsf.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="filt"><param name="Local" value="filt.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="filtfilt"><param name="Local" value="filtfilt.html"></OBJECT>
-			<LI> <OBJECT type="text/sitemap"><param name="Name" value="fscale"><param name="Local" value="fscale.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="hamming"><param name="Local" value="hamming.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="hann"><param name="Local" value="hann.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="hpf"><param name="Local" value="hpf.html"></OBJECT>
@@ -84,15 +87,19 @@
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="lpf"><param name="Local" value="lpf.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="matrix"><param name="Local" value="matrix.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="movespec"><param name="Local" value="movespec.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="pitchscale"><param name="Local" value="pitchscale.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="ramp"><param name="Local" value="ramp.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="respeed"><param name="Local" value="respeed.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="sam"><param name="Local" value="sam.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="sort"><param name="Local" value="sort.html"></OBJECT>
-			<LI> <OBJECT type="text/sitemap"><param name="Name" value="tscale"><param name="Local" value="tscale.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="timestretch"><param name="Local" value="timestretch.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="vector"><param name="Local" value="vector.html"></OBJECT>
 		</UL>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Computation Functions">	<param name="Local" value="computation.html">	</OBJECT>
 		<UL>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="atleast"><param name="Local" value="atleast.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="atmost"><param name="Local" value="atmost.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="begint"><param name="Local" value="begint.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="cumsum"><param name="Local" value="cumsum.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="diff"><param name="Local" value="diff.html"></OBJECT>
@@ -142,6 +149,15 @@
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="tan"><param name="Local" value="tan.html"></OBJECT>
 		</UL>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Time-Sequence Functions">	<param name="Local" value="tseqs.html">	</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="tsq_gettimes"><param name="Local" value="tsq_gettimes.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="tsq_getvalues"><param name="Local" value="tsq_getvalues.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="tsq_isrel"><param name="Local" value="tsq_isrel.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="tsq_settimes"><param name="Local" value="tsq_settimes.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="tsq_setvalues"><param name="Local" value="tsq_setvalues.html"></OBJECT>
+		</UL>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Audio playback Functions">	<param name="Local" value="audioplayback.html">	</OBJECT>
 		<UL>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="pause"><param name="Local" value="pause.html"></OBJECT>
@@ -157,7 +173,10 @@
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="axes"><param name="Local" value="axes.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="delete"><param name="Local" value="delete.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="figure"><param name="Local" value="figure.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="line"><param name="Local" value="line.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="plot"><param name="Local" value="plot.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="repaint"><param name="Local" value="repaint.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="replicate"><param name="Local" value="replicate.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="text"><param name="Local" value="text.html"></OBJECT>
 		</UL>
 	<LI> <OBJECT type="text/sitemap">
