@@ -3,27 +3,33 @@ How to make help files (html and pdf)
 1. Make chm
 2. Import chm in helpndoc
 3. Export into pdf and html
+==========================================
 
+0. Before running HTML help Workshop
+	* To edit the content of an existing file, go to the "helpfiles-ready" directory, find the .txt file and edit it
+	* To create a new .txt file, use an existing file as a template and produce it. 
+		Or, to create many .txt files, run auxhtmlhelp and create all .txt files of "registed" help items with empty content and use the ones necessary as a barebone.
+	* To update the "registration" of help items, edit init.cpp in the auxhtmlhelp project.
 
 1. How to make chm
-a. Run HTML help Workshop
-b. Open toc.hhc
-c. File->Compile... and specify (desired_path)\auxlab.hhp as the project files
-d. auxlab.chm is generated in (desired_path).
+	a. Run HTML help Workshop
+	b. Open toc.hhc
+	c. File->Compile... and specify (desired_path)\auxlab.hhp as the project files
+	d. auxlab.chm is generated in (desired_path).
 
 2. How to import chm in helpndoc
-a. Run Helpndoc
-b. Import auxlab.chm
-c. Change "Title of this help project" to "AUXLAB"
-d. Edit "Copyright © <Dates> by <Authors>. All Rights Reserved."
+	a. Run Helpndoc
+	b. Import auxlab.chm
+	c. Change "Title of this help project" to "AUXLAB"
+	d. Edit "Copyright © <Dates> by <Authors>. All Rights Reserved."
 
 Before going into e., edit toc.hhc
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="_tic"><param name="Local" value="tic.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="_toc"><param name="Local" value="toc.html"></OBJECT>
-here, change "tic" to "_tic" (the same for toc). This is necessary to avoid name conflict toc.html, because Helpndoc always generates toc.html
+here, change "tic" to "_tic" and "toc" to "_toc". This is necessary to avoid name conflict toc.html, because Helpndoc always generates toc.html
 
 e. Generate Help --- HTML documentation
-	Copy created html files to your own folder (for me, it's c:\Users\bjehk\Dropbox\DOCS\helpndoc\html\)
+	Copy created html files to your own folder (for my Surface Pro 4, it's c:\Users\bjehk\Dropbox\DOCS\helpndoc\html\)
 	Note that these html files are different from the html files HTML help Workshop used to create chm, even though file names are the same.
     Update the entire html files to auxlab.org/help and auditorypro.com/help/auxlab	
 f. Generate Help --- pdf documentation
