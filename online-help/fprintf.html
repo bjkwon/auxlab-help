@@ -96,7 +96,7 @@
 </td>
 <td valign="middle"><p class="rvps2"><span class="rvts17">TXT</span></p>
 </td>
-<td valign="middle"><p class="rvps2"><span class="rvts17">String that contains the text to be writeen to the file, following the same convention as in C language.</span></p>
+<td valign="middle"><p class="rvps2"><span class="rvts17">Formatted text to write to the file, following the same convention as in C language.</span></p>
 </td>
 <td valign="middle"><br/>
 </td>
@@ -136,6 +136,8 @@
 <li class="rvps7" style="margin-left: 0px"><span class="rvts23">file</span><span class="rvts17"> can be either a text of the file name (if an extension is not specified, .txt is added by default) or a file identifier, which is the output of fopen</span></li>
 <li class="rvps7" style="margin-left: 0px"><span class="rvts17">When the file name is specified for </span><span class="rvts23">file</span><span class="rvts17">, fprintf opens the file with the mode "at," meaning that the content will be appended to the existing content in the file, writes the content as specified, and closes the file.</span></li>
 <li class="rvps7" style="margin-left: 0px"><span class="rvts17">If a file identifier is used for </span><span class="rvts23">file</span><span class="rvts17">, fprintf writes the content to the file stream opened by a prior call to fopen.</span></li>
+<li class="rvps7" style="margin-left: 0px"><span class="rvts17">If </span><span class="rvts23">file</span><span class="rvts17">, is zero, the content is sent to the console output.</span></li>
+
 </ul>
 </td>
 </tr>
@@ -146,6 +148,13 @@
 <td valign="middle"><p class="rvps2"><span class="rvts24">Examples</span></p>
 </td>
 </tr>
+<tr valign="top">
+<td valign="middle"><ul style="text-indent: 0px; margin-left: 0px; list-style-position: inside; list-style-type: disc;">
+<li class="rvps7" style="margin-left: 0px"><span class="rvts17">To write (append at the end) an integer  </span>
+<span class="rvts23">val</span><span class="rvts17"> to the file </span><span class="rvts23">log.txt</span>:<br><span class="rvts21" style="margin-left: 10px">AUX&gt; fprintf("log.txt","%d\n", val)</span></li>
+<li class="rvps7" style="margin-left: 0px"><span class="rvts17">Integers from 1 through 10 are summed consecutively. To create a file </span><span class="rvts23">log.txt</span>
+<span class="rvts17">and write each integer and the cumulative sum:</span><br><span class="rvts21" style="margin-left: 10px">AUX&gt; sum=0;fd=fopen("log.txt","wt);</span><br><span class="rvts21" style="margin-left: 10px">AUX&gt; for k=1:10, sum += k; fprintf(fd,"%d %d\n", k, sum); end</span><br><span class="rvts21" style="margin-left: 10px">AUX&gt; fclose(fd)</span></li>
+<li class="rvps7" style="margin-left: 0px"><span class="rvts17">To make a formatted string output and show it on the console (this is useful inside a UDF):</span><br><span class="rvts21" style="margin-left: 10px">AUX&gt; fprintf(0,"%d\n", val)</span></li>
 </table>
 </div>
 <div class="rvps2"><a name="notes"></a>
@@ -158,13 +167,12 @@
 </div>
 <p class="rvps2"><a class="rvts30" href="fopen.html">fopen</a><span class="rvts19">&nbsp;| </span><a class="rvts30" href="fclose.html">fclose</a><span class="rvts19">&nbsp;| </span><a class="rvts30" href="sprintf.html">sprintf</a></p>
 <p></p>
-<p class="rvps8"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="http://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Free Kindle producer</a></p>
 </div>
 	
 	<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 4/15/2019 by BJ Kwon. All Rights Reserved.</div>
+				Copyright &copy; 4/20/2019 by BJ Kwon. All Rights Reserved.</div>
 		</div>
 	</body>
 	
