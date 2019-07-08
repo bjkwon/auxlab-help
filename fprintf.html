@@ -43,7 +43,7 @@ y = fprintf ( file,format,... )</th></tr></table>
     <th>Unit or Value scale</th>
   </tr>
   <tr><td width="15%"><b><font face="Courier New">file</font></b></td><td width="10%">TXT or SCAL</td><td width="50%"> file name string or file identifier</td><td width="25%"></tr>
-<tr><td><b><font face="Courier New">format</font></b></td><td>TXT</td><td>String that contains the text to be writeen to the file, following the same convention as in C language.</td><td></tr>
+<tr><td><b><font face="Courier New">format</font></b></td><td>TXT</td><td>Formatted text to write to the file, following the same convention as in C language.</td><td></tr>
 <tr><td><b><font face="Courier New">...</font></b></td><td>...</td><td>n/a</td><td></tr>
 
 </table>
@@ -55,12 +55,12 @@ y = fprintf ( file,format,... )</th></tr></table>
 <p></p>
 <table  id="notes">
   <tr><th>Notes</th></tr>
-  <tr><td><ul><li><b><font face="Courier New">file</font></b> can be either a text of the file name (if an extension is not specified, .txt is added by default) or a file identifier, which is the output of fopen</li><li>When the file name is specified for <b><font face="Courier New">file</font></b>, fprintf opens the file with the mode "at," meaning that the content will be appended to the existing content in the file, writes the content as specified, and closes the file. </li><li>If a file identifier is used for <b><font face="Courier New">file</font></b>, fprintf writes the content to the file stream opened by a prior call to fopen.</li></ul></td></tr>
+  <tr><td><ul><li>if <b><font face="Courier New">file</font></b> is zero, the content is sent to the console output.</li><li><b><font face="Courier New">file</font></b> can be either a text of the file name (if an extension is not specified, .txt is added by default) or a file identifier, which is the output of fopen</li><li>When the file name is specified for <b><font face="Courier New">file</font></b>, fprintf opens the file with the mode "at," meaning that the content will be appended to the existing content in the file, writes the content as specified, and closes the file. </li><li>If a file identifier is used for <b><font face="Courier New">file</font></b>, fprintf writes the content to the file stream opened by a prior call to fopen.</li></ul></td></tr>
 </table>
 <p></p>
 <table  id="notes">
   <tr><th>Examples</th></tr>
-  
+  <tr><td><ul><li>To write (append at the end) an integer <font face="Courier New">val</font> to the file <font face="Courier New">log.txt</font>; if the file is not found, create one:<br>  <font face="Courier New">AUX&gt; fprintf("log.txt","%d\n", val)</font><br></li><li>Integers from 1 through 10 are summed consecutively. To create a file <font face="Courier New">log.txt</font>, and write each integer and the cumulative sum:<br> <font face="Courier New">AUX> sum=0; fd=fopen("log.txt","wt); for k=1:10, sum += k; fprintf(fd,"%d %d\n", k, sum); end, fclose(fd)</font></li><li>To make a formatted string output and show it on the console (this is useful inside a UDF):<br> <font face="Courier New"><b>AUX&gt; fprintf(0,"%d\n", val)</font></b><br></li></ul></td></tr>
 </table>
 <p></p>
 <table id="notes"><tr><th>See Also</th></tr></table><a href="fopen.html">fopen</a>&nbsp;&#124; <a href="fclose.html">fclose</a>&nbsp;&#124; <a href="sprintf.html">sprintf </a>

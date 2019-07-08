@@ -8,7 +8,7 @@ How to make help files (html and pdf)
 0. Before running HTML help Workshop
 	* To edit the content of an existing file, go to the "helpfiles-ready" directory, find the .txt file and edit it
 	* To create a new .txt file, use an existing file as a template and produce it. 
-		Or, to create many .txt files, run auxhtmlhelp and create all .txt files of "registed" help items with empty content and use the ones necessary as a barebone.
+		Or, to create many .txt files, run auxhtmlhelp and create all .txt files of "registered" help items with empty content and use the ones necessary as a barebone.
 	* To update the "registration" of help items, edit init.cpp in the auxhtmlhelp project.
 
 1. How to make chm
