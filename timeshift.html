@@ -2,30 +2,7 @@
 <html>
 <head>
 <title>timeshift operator >></title>
-<style>
-#main {
-	text-align: left;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-}
-</style>
-</head>
-<body>
-<h1 id="main">Timeshift operation in AUX</h1>
-<p id="main">Suppose you have a 25-Hz tone with the duration of half second.</p>
-<p id="main">Then you have another tone, octave higher, with the duration of 250 ms, but it starts 100 ms after the first tone ends.</p>
-<p id="main">The first one is</p>
-<img src="timeshift_files/image004.jpg" v:shapes="_x0000_s1037" width="562" height="150">
-<p id="main">In AUX this is</p>
-<p><big><strong><font face="Courier New" color="blue">tone(25,500)</font></strong></big></p>
-<p id="main">meaning that it is 25 Hz with the duration of 500 ms.</p>
-<p id="main">The second tone is</p>
-<img src="timeshift_files/image006.jpg" v:shapes="_x0000_s1039" width="562" height="150">
-<p id="main">In AUX this is</p>
-<p><big><strong><font face="Courier New" color="blue">tone(25,500) >> 600</font></strong></big></p>
-<p id="main">meaning that it is 50 Hz with the duration of 250 ms and it starts at 600 ms.</p>
+<link rel="stylesheet" type="text/css" href="auxhelp.css">
 <p id="main">"<font face="Courier New">&gt;&gt;</font></strong>" is the "time-shift" operator, indicating that the signal starts at the specified time point.</p>
 <p id="main">So if you need to "add" these two sounds, just add them like this:</p>
 <p><big><strong><font face="Courier New" color="blue">tone(25,500) + tone(25,500) >> 600</font></strong></big></p>

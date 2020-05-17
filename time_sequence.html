@@ -2,30 +2,7 @@
 <html>
 <head>
 <title>Time Sequence</title>
-<style>
-#xcom {
-	text-align: left;
-    font-family: "Courier New", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    background-color: khaki;
-}
-</style>
-</head>
-<body>
-<h1>TSEQ: Time sequence</h1>
-<h2>Introduction</h2>
-<p>A data type TSEQ is an array container consisting of a time point and the data corresponding to the time point.</p>
-<h2>Defining a TSEQ object</h2>
-<p>A TSEQ object has the following form:</p>
-  <table id="xcom">
-	<tr><td>[x][y]</td></tr>
-	</table>	
-<p>where x is the time point vector in milliseconds and y is the data vector. Here x and y must have the same length. In this form, at each time point the data is a scalar. In general, the data do not need to be a scalar; but can be in any form. To define such time sequence,</p>	
-  <table id="xcom">
-	<tr><td>[t1 | y1; t2 | y2; ...]</td></tr>
-	</table>	
-<p>where tn and yn are time marker and the corresponding value array in any length. (note: this is not implemented yet as of AUXLAB 1.47).</p>	
+<link rel="stylesheet" type="text/css" href="auxhelp.css">
 <h2>Relative TSEQ</h2>
 <p>Sometimes it is very useful to have time values relative to another audio signal. In such cases, define a relative time sequence as follows: </p>
   <table id="xcom">
