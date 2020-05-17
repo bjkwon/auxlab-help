@@ -1,0 +1,17 @@
+[FUNCTION NAME] wavwrite
+[STATIC] 0
+[FUNCTION DESCRIPTION] Generate a .wav file from the audio signal
+[PARAMETERS] x filename opt
+[PARAM TYPE DELIM BY TAB] AUDIO	STR	STR
+[PARAM DESCRIPTION--MULTILINES] 
+.wav audio file name
+file encoding format 
+[PARAM UNIT--MULTILINES]
+
+n/a
+[NOTES] If #p2 doesn't indicate the extension, .wav is used.
+#p3 is one of the following <ul><li>"8" 8-bit PCM</li><li>"16" 16-bit PCM (default)</li><li>"24" 24-bit PCM</li><li>"32" 32-bit PCM</li><li>"alaw" a-law encoding</li><li>"ulaw" &mu;-law encoding</li><li>"adpcm1" ADPCM encoding 1</li><li>"adpcm2" ADPCM encoding 2</li></ul>
+[EXAMPLES] 
+[SEE ALSO] wave
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] The output #q1, if specified, is the audio signal #p1.

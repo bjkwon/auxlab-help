@@ -1,0 +1,13 @@
+[FUNCTION NAME] contig
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Fill in all null portions with zeros and make the audio signal contiguous.
+[PARAMETERS]  x
+[PARAM TYPE DELIM BY TAB]  AUD
+[PARAM DESCRIPTION--MULTILINES]  audio signal
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  
+[EXAMPLES]  
+[ALGORITHM]  
+[SEE ALSO] nullin 
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is a time-contiguous version of #p1, i.e., all null portions filled in with zeros.

@@ -1,0 +1,13 @@
+[FUNCTION NAME] figure
+[STATIC] 1
+[FUNCTION DESCRIPTION] Get the handle of an existing figure window or create a blank figure window
+[PARAMETERS] h_or_pos
+[PARAM TYPE DELIM BY TAB] HGO or VECT
+[PARAM DESCRIPTION--MULTILINES] handle to the figure window or 4-element vector with the position to create a new figure at
+[PARAM UNIT--MULTILINES] n/a
+[NOTES] The position is a 4-element vector in pixel count showing the following: top left width height, with the reference of the top left corner of the screen.
+[EXAMPLES] 
+[ALGORITHM]
+[SEE ALSO] plot axes text delete
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the handle to the figure window

@@ -1,0 +1,15 @@
+[FUNCTION NAME] sprintf
+[STATIC] 1
+[FUNCTION DESCRIPTION] Generate a formatted text 
+[PARAMETERS]  format ...
+[PARAM TYPE DELIM BY TAB]  TXT	...
+[PARAM DESCRIPTION--MULTILINES]  String that contains the text to be writeen to the file, following the same convention as in C language.
+n/a
+[PARAM UNIT--MULTILINES]  
+n/a
+[NOTES]  
+[EXAMPLES]  
+[ALGORITHM]  
+[SEE ALSO]  fprintf
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is TXT containing the formatted text.

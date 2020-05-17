@@ -1,0 +1,12 @@
+[FUNCTION NAME] noise
+[STATIC] 1
+[FUNCTION DESCRIPTION] Generate a white noise signal
+[PARAMETERS] duration
+[PARAM TYPE DELIM BY TAB] SCAL
+[PARAM DESCRIPTION--MULTILINES] duration of the signal to generate
+[PARAM UNIT--MULTILINES] millisecond
+[NOTES] The random signal is generated from a uniform distribution.
+[EXAMPLES]
+[SEE ALSO]  gnoise
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is uniform white noise (random numbers from a uniform distribution) with amplitude bound between -1 and 1.

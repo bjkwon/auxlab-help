@@ -1,0 +1,18 @@
+[FUNCTION NAME] interp
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Convolute the two arrays
+[PARAMETERS]  x y q
+[PARAM TYPE DELIM BY TAB]  VCT	VCT	SCL or VCT
+[PARAM DESCRIPTION--MULTILINES]  the x array
+the y array
+the proving value(s) that you want to interpolate
+[PARAM UNIT--MULTILINES]  
+
+n/a
+[NOTES]  #p1 and #p2 must be the same length.
+#p3 can be either a scalar or vector
+[EXAMPLES]
+[SEE ALSO]  
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the interpolated version of #p3. The length of #q1 is the same as that of #p3.

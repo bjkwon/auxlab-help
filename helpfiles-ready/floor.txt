@@ -1,0 +1,14 @@
+[FUNCTION NAME] floor
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Round toward negative infinity
+[PARAMETERS]  x
+[PARAM TYPE DELIM BY TAB]    SCAL, VCT or AUDIO
+[PARAM DESCRIPTION--MULTILINES]  n/a
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  
+[EXAMPLES]  floor(3.99) &rarr; 3
+floor(-3.99) &rarr; -4
+[SEE ALSO]  ceil fix round
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is a "round-down" version of #p1.

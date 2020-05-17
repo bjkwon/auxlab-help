@@ -1,0 +1,15 @@
+[FUNCTION NAME] msgbox
+[STATIC] 1
+[FUNCTION DESCRIPTION] Display a messagebox
+[PARAMETERS] format arg
+[PARAM TYPE DELIM BY TAB] TEXT	anything ...
+[PARAM DESCRIPTION--MULTILINES] printf-style format
+variables
+[PARAM UNIT--MULTILINES]
+n/a
+[NOTES]
+[EXAMPLES] for k=1:100, value = 2^k; if value > 1000 msgbox("2 raised by the power of %%d is greater than 1000.", k); break; end; end
+[ALGORITHM]
+[SEE ALSO] input inputdlg
+[OUTPUT ARGS BY TAB]
+[OUTPUT ARGS--MULTILINES] No output

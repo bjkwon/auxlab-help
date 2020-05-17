@@ -1,0 +1,13 @@
+[FUNCTION NAME] istseq
+[STATIC] 0
+[FUNCTION DESCRIPTION] Checks if the input is a time-sequence.
+[PARAMETERS]  x
+[PARAM TYPE DELIM BY TAB]  anything
+[PARAM DESCRIPTION--MULTILINES]  
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES] Audio signals are considered a time sequence. 
+[EXAMPLES]  
+[ALGORITHM]  
+[SEE ALSO]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is true if #p1 is a time-sequence.

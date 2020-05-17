@@ -1,0 +1,15 @@
+[FUNCTION NAME] std
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Calculates the standard deviation
+[PARAMETERS]  x w=0
+[PARAM TYPE DELIM BY TAB]  VCT or AUDIO	SCAL
+[PARAM DESCRIPTION--MULTILINES]  the input array
+weight, 0: normalized by the (size-1) of the input, 1: normalized by the size of the input
+[PARAM UNIT--MULTILINES] 
+n/a 
+[NOTES]  
+[EXAMPLES]  
+[SEE ALSO]  sum
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is SCAL or grouped SCAL

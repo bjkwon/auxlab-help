@@ -1,0 +1,14 @@
+[FUNCTION NAME] conj
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Complex conjugate
+[PARAMETERS]  cx
+[PARAM TYPE DELIM BY TAB]  SCAL or VCT or AUDIO
+[PARAM DESCRIPTION--MULTILINES]  complex value(s)
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  
+[EXAMPLES]  conj(3+2*sqrt(-1)) &rarr; 3-2*i
+(3+2*sqrt(-1)).conj &rarr; 3-2*i
+[SEE ALSO]  imag real
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is complex conjugate of #p1.

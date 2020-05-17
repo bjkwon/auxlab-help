@@ -1,0 +1,13 @@
+[FUNCTION NAME] size
+[STATIC] 0
+[FUNCTION DESCRIPTION] Get the dimension of the matrix.
+[PARAMETERS] x
+[PARAM TYPE DELIM BY TAB] STR AUD VCT SCL CEL
+[PARAM DESCRIPTION--MULTILINES] input array
+[PARAM UNIT--MULTILINES] n/a
+[NOTES] For an array, first element of the output is one.
+[EXAMPLES] 
+[ALGORITHM]
+[SEE ALSO] length
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is a two-element vector showing the count of row and column, respectively.

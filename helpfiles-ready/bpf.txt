@@ -1,0 +1,27 @@
+[FUNCTION NAME] bpf
+[STATIC] 0
+[FUNCTION DESCRIPTION] IIR, band-pass filtering; Apply a band-pass filter to the audio signal
+[PARAMETERS] x fcut1 fcut2 order=8 type=1 dBpass=.5 dBstop=-40
+[PARAM TYPE DELIM BY TAB] AUDIO	SCAL	SCAL	SCAL	SCAL	SCAL	SCAL
+[PARAM DESCRIPTION--MULTILINES] audio signal
+cut-off frequency1
+cut-off frequency2
+order of the IIR filter
+IIR filter type (1: Butterworth, 2: Chebyshev, 3: Elliptic)
+Passband ripple allowed
+Stopband attenuation
+[PARAM UNIT--MULTILINES]
+Hz
+Hz
+
+
+dB
+dB
+[NOTES] The output is not normalized; i.e., the rms of #p1 is adjusted according to the filter gain.
+#p2 and #p3 should be less than the Nyquist frequency. 
+IIR filter coefficients are designed by the specification <b>requested</b> in the argument list, <b>but not guranteed</b>. The user is responsible for making sure the output follows the spec.
+[EXAMPLES] bpf(x, 2000, 4000)
+[SEE ALSO] hpf bpf bsf 
+[ALGORITHM] <a href="http://www.moshier.net/ellfdoc.html" target="_blank">ELLF Digital Filter Calculator </a>
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is a bandpass-filterd version of #p1.

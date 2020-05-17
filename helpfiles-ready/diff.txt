@@ -1,0 +1,17 @@
+[FUNCTION NAME] diff
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Calculates the n-th difference between adjacent elements of #p1
+[PARAMETERS]  x n=1
+[PARAM TYPE DELIM BY TAB]  VCT or AUDIO	SCAL
+[PARAM DESCRIPTION--MULTILINES]  the array or signal
+skip count
+[PARAM UNIT--MULTILINES]  
+n/a
+[NOTES]  If #p1 is a matrix, #q1 is a matrix of row-wise operations
+[EXAMPLES]  a=1:5; a.diff &rarr; [1 1 1 1] 
+a.diff(2) &rarr; [2 2 2]
+s=(1:12).matrix(3); s(2,:) *= 10; ss.diff &rarr; <br> ans = <br>1 1 1<br>10 10 10<br>1 1 1
+[SEE ALSO]  cumsum
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the array of n-th order difference.

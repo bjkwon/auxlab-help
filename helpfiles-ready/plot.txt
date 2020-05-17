@@ -1,0 +1,35 @@
+[FUNCTION NAME] plot
+[STATIC] 2
+[FUNCTION DESCRIPTION] Plot the data
+[PARAMETERS]  _handle x y="" opt=""
+[PARAM TYPE DELIM BY TAB] HGO	VECT or AUD	VECT or AUD	TXT
+[PARAM DESCRIPTION--MULTILINES] handle to the figure window or the axes 
+x-data
+y-data
+plot option string--specifying color marker and line style (see notes)
+[PARAM UNIT--MULTILINES]
+
+
+n/a
+[NOTES] If #p1 is omitted, this function creates a new figure window and plots 
+If #p3 is specified, #p3 is plotted as a function of #p2.
+If #p3 is omitted, #p2 is plotted with the index (if non-audio) or the time (if audio) on the x-axis.
+#p4 is a text not exceeding 4 characters specifying the color, the marker type and the line style.<br>Color: r(ed) g(reen) b(lue) y(ellow) c(yan) m(agenta) h(white) (blac)k<br>Marker: o circle s square . point * asterisk x cross + plussign d diamond ^ upward-pointingtriangle v downward-pointingtriangle > right-pointingtriangle < left-pointingtriangle<br>Linestyle: - solid : dotted -- dashed -. dash-dot
+The default marker type is . (point)
+The default line style is solid, but if only the marker type is specified, the line style will become none (i.e., in order to make the line tyle none, specify ".")
+The default color is blue
+All the other graphic properties can be directly manipulated with the relevant member variables.
+[EXAMPLES] plot(x) // plot x with the default parameters
+plot(x,y) // plot y as a function of x with the default parameters
+plot(x,"r") // plot x with the red line
+plot(x,"o") // plot x with the marker "o" and no line
+plot(x,"*":) // plot x with the marker "*" and dotted line
+plot(x,y,"o") // plot y as a function of x with the marker "o" and no line
+plot(x,y,"*:") // plot y as a function of x with the marker "*" and dotted line
+plot(h,x) // plot x in h (either a figure window handle or axes handle)
+plot(h,x,y) 
+plot(h,x,y,"r") 
+[ALGORITHM]
+[SEE ALSO] figure axes text delete line
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the handle to the line object 

@@ -1,0 +1,17 @@
+[FUNCTION NAME] timestretch
+[OPERATOR] %
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Stretch the audio in time without changing the pitch or the spectrum
+[PARAMETERS]  x factor
+[PARAM TYPE DELIM BY TAB]  AUD	SCL or TSQ 
+[PARAM DESCRIPTION--MULTILINES]  Audio signal
+The time stretch factor  
+[PARAM UNIT--MULTILINES]  
+n/a; greater than 1 means the duration of the audio is made longer
+[NOTES] The audio extends in time by the factor of #p1--e.g.,  x % 1.5 means the new duration is 1.5 times the old one
+Do not put a percentage value for #p1.
+[EXAMPLES]  
+[ALGORITHM]  This is based on the WSOLA algorithm (http://www.audiolabs-erlangen.de/resources/MIR/TSMtoolbox/)
+[SEE ALSO] respeed pitchscale movespec 
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is AUD or VCT

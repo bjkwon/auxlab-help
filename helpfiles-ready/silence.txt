@@ -1,0 +1,12 @@
+[FUNCTION NAME] silence
+[STATIC] 1
+[FUNCTION DESCRIPTION] Generate a silence signal
+[PARAMETERS] duration
+[PARAM TYPE DELIM BY TAB] SCAL
+[PARAM DESCRIPTION--MULTILINES] duration of the signal to generate
+[PARAM UNIT--MULTILINES] millisecond
+[NOTES] zeros generates a non-audio vector; silence generates an audio signal
+[EXAMPLES]
+[SEE ALSO] dc zeros
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is AUDIO with zero values.

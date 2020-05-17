@@ -1,0 +1,13 @@
+[FUNCTION NAME] stop
+[STATIC] 0
+[FUNCTION DESCRIPTION] Stop an on-going audio playback
+[PARAMETERS] h
+[PARAM TYPE DELIM BY TAB] AUDIOHANDLE
+[PARAM DESCRIPTION--MULTILINES] Audio playback event handle to stop
+[PARAM UNIT--MULTILINES] n/a
+[NOTES] The audio playback fades out (i.e., "ramps" out) with a cosine amplitude function for 350 milliseconds.
+[EXAMPLES]
+[ALGORITHM]
+[SEE ALSO] play qstop pause resume status 
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the audio playback handle

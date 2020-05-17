@@ -1,0 +1,17 @@
+[FUNCTION NAME] pitchscale
+[OPERATOR] #
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Rescale the pitch of the audio without changing the duration
+[PARAMETERS]  x factor
+[PARAM TYPE DELIM BY TAB]  AUD	SCL or TSQ 
+[PARAM DESCRIPTION--MULTILINES]  Audio signal
+The pitch stretch factor; 
+[PARAM UNIT--MULTILINES]  
+greater than 1 means higher pitch
+[NOTES] For #p1=1.06 the pitch is adjusted up by one semitone.
+Similiar to respeed, but the duration is retained in pitchscale
+[EXAMPLES]  
+[ALGORITHM]  This is based on the WSOLA algorithm (http://www.audiolabs-erlangen.de/resources/MIR/TSMtoolbox/)
+[SEE ALSO] respeed timestretch movespec 
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is AUD or VCT

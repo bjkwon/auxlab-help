@@ -1,0 +1,12 @@
+[FUNCTION NAME] gnoise
+[STATIC] 1
+[FUNCTION DESCRIPTION] Generate a white noise signal with a Gaussian distribution
+[PARAMETERS] duration
+[PARAM TYPE DELIM BY TAB] SCAL
+[PARAM DESCRIPTION--MULTILINES] duration of the signal to generate
+[PARAM UNIT--MULTILINES] millisecond
+[NOTES] Unlike noise, the amplitude of gnoise is not bounded between -1 and 1. &rarr; Scale down the output appropriately to avoid clipping at &plusmn;1.
+[EXAMPLES]
+[SEE ALSO]  noise
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is Gaussian white noise (random numbers from a Gaussian distribution).

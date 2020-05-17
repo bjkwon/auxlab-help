@@ -1,0 +1,19 @@
+[FUNCTION NAME] text
+[STATIC] 2
+[FUNCTION DESCRIPTION] Display a text in the figure window or axes.
+[PARAMETERS] _h pos_x pos_y text
+[PARAM TYPE DELIM BY TAB] HGO	SCAL	SCAL	TXT
+[PARAM DESCRIPTION--MULTILINES] Graphic handle, either figure or axes handle
+x position proportion of the window or axes 
+y position proportion of the window or axes 
+Text to display
+[PARAM UNIT--MULTILINES]
+
+
+n/a
+[NOTES] If #p1 is omitted, the text is displayed in the current figure window. If the current figure window doesn't exist, it creates one.
+[EXAMPLES] text(.5, .5, "hello world!") // hello world! is displayed at the center point in the current window (left-aligned)
+[ALGORITHM]
+[SEE ALSO] figure plot axes delete
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the handle to the text displayed.

@@ -1,0 +1,13 @@
+[FUNCTION NAME] clear
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Clear the variable (or the member variable) from the workspace
+[PARAMETERS]  x
+[PARAM TYPE DELIM BY TAB]  
+[PARAM DESCRIPTION--MULTILINES]  any variable or a member variable of a class variable
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  
+[EXAMPLES]  a.clear or clear(a)&rarr; clear the variable a<br>a.obj.clear or clear(a.obj) &rarr; clear the member obj from the class variable a
+[ALGORITHM]  
+[SEE ALSO]  
+[OUTPUT ARGS BY TAB] 
+[OUTPUT ARGS--MULTILINES] No output

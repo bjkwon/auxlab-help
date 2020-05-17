@@ -1,0 +1,13 @@
+[FUNCTION NAME] str2num
+[STATIC] 0
+[FUNCTION DESCRIPTION] Read a string and convert it to a numerical array.
+[PARAMETERS] str
+[PARAM TYPE DELIM BY TAB] STR
+[PARAM DESCRIPTION--MULTILINES] String (it must not have a non-numerical character)
+[PARAM UNIT--MULTILINES] n/a
+[NOTES] If there's a non-numerical character, an empty array will be returned.
+[EXAMPLES]
+[ALGORITHM]
+[SEE ALSO] eval sprintf
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is an array from the string #p1.

@@ -1,0 +1,18 @@
+[FUNCTION NAME] respeed
+[OPERATOR] ~
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Resample the sound (and keep the sample rate); equivalent to a playback of the audio at a higher/lower speed in a tape player. 
+[PARAMETERS]  x factor
+[PARAM TYPE DELIM BY TAB]  AUD	SCL or TSQ 
+[PARAM DESCRIPTION--MULTILINES]  Audio signal
+The factor to increase the speed of the playback
+[PARAM UNIT--MULTILINES]  
+greater than 1 means higher pitch/shorter duration
+[NOTES]  This changes the number of samples in an audio signal. Internally, the signal is treated as if it was resampled. Note that this does not mean the change of sampling rate in the AUXLAB environment.
+The audio compresses in time by the factor of #p1 and its spectrum expands by the factor of #p1.
+Similiar to pitchscale, but the duration changes in respeed
+[EXAMPLES]  
+[ALGORITHM]  The library from <a href="http://www.mega-nerd.com/SRC/">Secret Rabbit Code (aka libsamplerate)</a> is used. 
+[SEE ALSO] timestretch pitchscale movespec 
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is AUD or VCT

@@ -1,0 +1,15 @@
+[FUNCTION NAME] tsq_settimes
+[STATIC] 0
+[FUNCTION DESCRIPTION] Retrieves time points of a time sequence
+[PARAMETERS] x time_points
+[PARAM TYPE DELIM BY TAB] TSEQ	VCT
+[PARAM DESCRIPTION--MULTILINES] time_sequence_input
+An array of time point values; 
+[PARAM UNIT--MULTILINES] N/A
+milliseconds or none (for relative time base)
+[NOTES] To update a millisecond-based input time sequence with relative time based time points, define a new time sequence with relative time base and use tsq_gettimes to pull up that relative time base and use it as the argument (This is only a temporary hack; a better policy should be in place in the future. 3/11/2019).
+[EXAMPLES]
+[ALGORITHM]
+[SEE ALSO] istseq tsq_isrel tsq_gettimes tsq_getvalues tsq_setvalues 
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is #p1, modified with the given parameter.

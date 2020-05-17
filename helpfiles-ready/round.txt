@@ -1,0 +1,16 @@
+[FUNCTION NAME] round
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Round to nearest decimal or integer
+[PARAMETERS]  x
+[PARAM TYPE DELIM BY TAB]    SCAL, VCT or AUDIO
+[PARAM DESCRIPTION--MULTILINES]  n/a
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  
+[EXAMPLES]  round(2.6) &rarr; 3
+round(2.4) &rarr; 2
+round(-2.6) &rarr; -3
+round(-2.4) &rarr; -2
+[SEE ALSO]  ceil fix floor
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is a "half-round-up" version of #p1.

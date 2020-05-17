@@ -1,0 +1,13 @@
+[FUNCTION NAME] fdelete
+[STATIC] 1
+[FUNCTION DESCRIPTION] Delete a file
+[PARAMETERS] filename
+[PARAM TYPE DELIM BY TAB] STR
+[PARAM DESCRIPTION--MULTILINES] The file name to delete
+[PARAM UNIT--MULTILINES] n/a
+[NOTES] The file name may include the path.
+[EXAMPLES] fdelete("c:\delete.me")
+[ALGORITHM]
+[SEE ALSO] fopen fprintf fclose
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is 1 for success, 0 for failure.

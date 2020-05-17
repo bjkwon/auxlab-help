@@ -1,0 +1,17 @@
+[FUNCTION NAME] tone
+[STATIC] 1
+[FUNCTION DESCRIPTION] Generate a pure tone
+[PARAMETERS] freq duration phase=0
+[PARAM TYPE DELIM BY TAB] SCAL or VCT	SCAL	SCAL
+[PARAM DESCRIPTION--MULTILINES] frequency
+duration
+initial phase (0 to 1)
+[PARAM UNIT--MULTILINES]  Hz
+millisecond
+.5 for 180°; 1 for 360°
+[NOTES] If #p1 is a two-element vector, a tone glide is generated with beginning and ending frequencies, as specified.
+[EXAMPLES] tone(100, 50, .25) // 100-Hz, 50-ms tone with a starting phase of 90°
+[SEE ALSO]
+
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is a pure tone.

@@ -1,0 +1,13 @@
+[FUNCTION NAME] exp
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Exponential
+[PARAMETERS]  x
+[PARAM TYPE DELIM BY TAB]    SCAL, VCT or AUDIO
+[PARAM DESCRIPTION--MULTILINES]  n/a
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  
+[EXAMPLES]  exp(1) &rarr; 2.71828 &larr; e
+[SEE ALSO]  log 
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the exponential <i>e</i><sup>#p1</sup>

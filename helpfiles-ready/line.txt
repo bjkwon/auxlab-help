@@ -1,0 +1,21 @@
+[FUNCTION NAME] line
+[STATIC] 2
+[FUNCTION DESCRIPTION] Generate a line object in the designated axes
+[PARAMETERS]  _handle x y=""
+[PARAM TYPE DELIM BY TAB] HGO	VECT or AUD	VECT or AUD
+[PARAM DESCRIPTION--MULTILINES] handle to the axes 
+x-data
+y-data
+[PARAM UNIT--MULTILINES]
+
+n/a
+[NOTES]  This is a low-level version of the plot function. 
+This simply adds a line object to the axes, as opposed to following the "nextplot" property in the plot function.
+If #p1 is omitted, this function creates a new figure window and plots 
+If #p3 is specified, #p3 is plotted as a function of #p2.
+If #p3 is omitted, #p2 is plotted with the index (if non-audio) or the time (if audio) on the x-axis.
+[EXAMPLES]
+[ALGORITHM]
+[SEE ALSO] figure axes text delete plot
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the handle to the line object 

@@ -1,0 +1,14 @@
+[FUNCTION NAME] dur
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Get the duration of an audio
+[PARAMETERS]  x
+[PARAM TYPE DELIM BY TAB]  AUD
+[PARAM DESCRIPTION--MULTILINES]  audio input
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]	 Operation executed by chunk
+[EXAMPLES] tone(40,100).dur &rarr; 100 (constant) <br>
+(tone(40,100)>>1000).dur &rarr; 1000: 100 (time sequence)
+[ALGORITHM]
+[SEE ALSO] begint endt
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is a T-sequence showing the duration of audio #p1. #q1 is a constant if there's a single signal chunk and tmark is 0.

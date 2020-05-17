@@ -1,0 +1,20 @@
+[FUNCTION NAME] filt
+[STATIC] 0
+[FUNCTION DESCRIPTION] 1-D digital filter
+[PARAMETERS] x num den[=1] initial[=(empty)]
+[PARAM TYPE DELIM BY TAB] AUD or VECT	VECT	VECT	VECT
+[PARAM DESCRIPTION--MULTILINES] Input data
+Numerator coefficients of rational transfer function
+Denominator coefficients of rational transfer function
+Initial condition, a vector of max(num.length, den.length)-1
+[PARAM UNIT--MULTILINES] 
+
+
+n/a
+[NOTES] For a grouped or "2-D" array, filtering takes place for each group.
+[EXAMPLES]
+[ALGORITHM]
+[SEE ALSO] filtfilt 
+[OUTPUT ARGS BY TAB] y	final
+[OUTPUT ARGS--MULTILINES] #q1 is filtered data.
+#q2 is the final condition after filtering

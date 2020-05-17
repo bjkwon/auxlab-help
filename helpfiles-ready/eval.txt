@@ -1,0 +1,13 @@
+[FUNCTION NAME] eval
+[STATIC] 1
+[FUNCTION DESCRIPTION]  Execute AUXLAB expression in text string
+[PARAMETERS]  expression
+[PARAM TYPE DELIM BY TAB]  TXT
+[PARAM DESCRIPTION--MULTILINES]  String that contains a valid AUXLAB expression.
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  Similar to the eval function in MATLAB
+[EXAMPLES]  
+[ALGORITHM]  
+[SEE ALSO]  
+[OUTPUT ARGS BY TAB] n/a
+[OUTPUT ARGS--MULTILINES] n/a

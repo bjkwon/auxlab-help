@@ -1,0 +1,13 @@
+[FUNCTION NAME] vector
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Convert an audio signal to a non-audio vector
+[PARAMETERS]  x
+[PARAM TYPE DELIM BY TAB]  AUDIO
+[PARAM DESCRIPTION--MULTILINES]  
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES] This is used when hacking some aux functions requiring a non-audio vector argument
+[EXAMPLES]  
+[SEE ALSO]  audio
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is 

@@ -1,0 +1,18 @@
+[FUNCTION NAME] atmost
+[STATIC] 0
+[FUNCTION DESCRIPTION] Apply an upper limit to the input; make it "at most" this value
+[PARAMETERS] x limit
+[PARAM TYPE DELIM BY TAB] SCAL or VCT	SCAL or VCT
+[PARAM DESCRIPTION--MULTILINES] the input value or array
+the limit to impose
+[PARAM UNIT--MULTILINES]
+n/a
+[NOTES] For a matrix input, a row-wise operation is applied. That is, if limit is a scalar, it is applied to all rows; if it is a vector, each value in the limit vector is applied to each row until it is no longer available.
+[EXAMPLES] x=[2 9 3 4]
+x.atmost(5) =<br>2 5 3 4<br>
+x=[2 9 3 4; 23 8 1 70; 201 400 623 300];
+x.atmost([5 50 500]) =<br>2 5 3 4<br>23 8 1 50<br>201 400 600 300<p>
+[ALGORITHM]
+[SEE ALSO] atleast max min 
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the matrix, vector, or scalar of the same size as #p1

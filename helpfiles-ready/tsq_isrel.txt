@@ -1,0 +1,13 @@
+[FUNCTION NAME] tsq_isrel
+[STATIC] 0
+[FUNCTION DESCRIPTION] Checks if the input, a time-sequence, is relative time based.
+[PARAMETERS] x
+[PARAM TYPE DELIM BY TAB] TSEQ
+[PARAM DESCRIPTION--MULTILINES] time_sequence_input
+[PARAM UNIT--MULTILINES] N/A
+[NOTES] If the input argument is not time sequence, it returns false.
+[EXAMPLES]
+[ALGORITHM]
+[SEE ALSO] istseq tsq_gettimes tsq_settimes tsq_getvalues tsq_setvalues 
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is 1 (true) or 0 (false)

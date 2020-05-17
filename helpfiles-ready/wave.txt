@@ -1,0 +1,13 @@
+[FUNCTION NAME] wave
+[STATIC] 1
+[FUNCTION DESCRIPTION] Open a .wav file
+[PARAMETERS] filename
+[PARAM TYPE DELIM BY TAB] STR
+[PARAM DESCRIPTION--MULTILINES] the name of the file to open.
+[PARAM UNIT--MULTILINES]
+[NOTES] If the extension is not specified, .wav is used.
+If path is not included, the current folder (the same directory as AUXLAB)
+[EXAMPLES] wave ("c:\soundData\specialnoise")
+[SEE ALSO] wavwrite
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is an audio signal retried from the file #p1.

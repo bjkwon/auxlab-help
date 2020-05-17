@@ -1,0 +1,15 @@
+[FUNCTION NAME] nullin
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Insert time markers in an audio signal
+[PARAMETERS]  x p
+[PARAM TYPE DELIM BY TAB]  AUD	TSEQ, VECT, or SCAL
+[PARAM DESCRIPTION--MULTILINES]  audio signal
+Time sequence with desired tmarks. Values of the sequence are ignored. 
+[PARAM UNIT--MULTILINES]  n/a
+n/a
+[NOTES]  #p1 can be a vector with time points in milliseconds.
+[EXAMPLES]  
+[ALGORITHM]  
+[SEE ALSO]  contig
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is an audio signal from #p1 with time markers as specified.

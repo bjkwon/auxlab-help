@@ -1,0 +1,13 @@
+[FUNCTION NAME] status
+[STATIC] 0
+[FUNCTION DESCRIPTION] Displays the status of the audio playback handle
+[PARAMETERS] h
+[PARAM TYPE DELIM BY TAB] AUDIOHANDLE
+[PARAM DESCRIPTION--MULTILINES] Audio playback event handle
+[PARAM UNIT--MULTILINES] n/a
+[NOTES]
+[EXAMPLES]
+[ALGORITHM]
+[SEE ALSO]
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is an object variable showing the status of the audio handle.

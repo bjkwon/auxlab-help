@@ -1,0 +1,16 @@
+[FUNCTION NAME] movespec
+[OPERATOR] ->
+[STATIC] 0
+[FUNCTION DESCRIPTION] Shift the spectrum in the frequency domain
+[PARAMETERS] x freq
+[PARAM TYPE DELIM BY TAB] AUD	VCT
+[PARAM DESCRIPTION--MULTILINES] audio signal
+how much the signal is shifted by frequency 
+[PARAM UNIT--MULTILINES] n/a
+Hz
+[NOTES] This function shifts the frequencies all harmonic components; i.e., do not use this function to change the pitch. 
+[EXAMPLES] See op_movespec.html
+[ALGORITHM]
+[SEE ALSO] fscale
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is audio with the same duration as #p1

@@ -1,0 +1,13 @@
+[FUNCTION NAME] toc
+[STATIC] 1
+[FUNCTION DESCRIPTION] Read elapsed time from stopwatch
+[PARAMETERS]  
+[PARAM TYPE DELIM BY TAB]  
+[PARAM DESCRIPTION--MULTILINES] 
+[PARAM UNIT--MULTILINES]  
+[NOTES] no argument (Windows only)
+[EXAMPLES]  
+[ALGORITHM]  
+[SEE ALSO]  tic
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the elapsed time in milliseconds since tic was called.

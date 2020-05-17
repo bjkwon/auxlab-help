@@ -1,0 +1,17 @@
+[FUNCTION NAME] atleast
+[STATIC] 0
+[FUNCTION DESCRIPTION] Apply a lower limit to the input; make it "at least" this value
+[PARAMETERS] x limit
+[PARAM TYPE DELIM BY TAB] SCAL or VCT	SCAL or VCT
+[PARAM DESCRIPTION--MULTILINES] the input value or array
+the limit to impose
+[PARAM UNIT--MULTILINES]
+n/a
+[NOTES]For a matrix input, a row-wise operation is applied. That is, if limit is a scalar, it is applied to all rows; if it is a vector, each value in the limit vector is applied to each row until it is no longer available.
+[EXAMPLES] x=[2 9 3 4; 23 8 1 70; 201 400 623 300];
+x.atleast(10) =<br>10 10 10 10<br>23 10 10 70<br>201 400 623 300<p>
+x.atleast([3.5 10 250]) =<br>3.5 9 3.5 4<br>23 10 10 70<br>250 400 623 300<p>
+[ALGORITHM] 
+[SEE ALSO] atmost max min 
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the matrix, vector, or scalar of the same size as #p1

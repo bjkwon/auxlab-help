@@ -1,0 +1,13 @@
+[FUNCTION NAME] randperm
+[STATIC] 0
+[FUNCTION DESCRIPTION]   Random permutation of the integers from 1 to #p1
+[PARAMETERS] n 
+[PARAM TYPE DELIM BY TAB]  SCAL
+[PARAM DESCRIPTION--MULTILINES]  the upper limit of the range, or the size of the array to create
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  
+[EXAMPLES]  
+[SEE ALSO]  irand rand
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is an array of integers between 1 and #p1 in a random order

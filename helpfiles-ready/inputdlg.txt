@@ -1,0 +1,15 @@
+[FUNCTION NAME] inputdlg
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Create a simple message dialog box with OK and cancel buttons and an edit box for user input.
+[PARAMETERS]  title content
+[PARAM TYPE DELIM BY TAB]  TEXT	TEXT
+[PARAM DESCRIPTION--MULTILINES]  The title of the dialog box
+The content to display in the dialog box. May use the printf format
+[PARAM UNIT--MULTILINES]  
+n/a
+[NOTES]  This does not return until the user responds with OK or cancel.
+[EXAMPLES]  
+[ALGORITHM]  
+[SEE ALSO]  input
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the string typed by the user.

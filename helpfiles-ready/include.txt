@@ -1,0 +1,13 @@
+[FUNCTION NAME] include
+[STATIC] 1
+[FUNCTION DESCRIPTION]  Run a script
+[PARAMETERS]  filename
+[PARAM TYPE DELIM BY TAB]  TXT
+[PARAM DESCRIPTION--MULTILINES]  file name
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  This is simply to run a batch AUX script, which is different running a UDF (user-defined function).
+[EXAMPLES]  
+[ALGORITHM]  
+[SEE ALSO]  
+[OUTPUT ARGS BY TAB] 
+[OUTPUT ARGS--MULTILINES] No output

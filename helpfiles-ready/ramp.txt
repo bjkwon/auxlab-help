@@ -1,0 +1,14 @@
+[FUNCTION NAME] ramp
+[STATIC] 0
+[FUNCTION DESCRIPTION] Smooth out beginning and ending portions of the audio signal; Apply the cosine square envelope
+[PARAMETERS] x dur_ramp
+[PARAM TYPE DELIM BY TAB] AUDIO	SCAL
+[PARAM DESCRIPTION--MULTILINES] audio signal
+ramping duration (i.e., duration to smooth out) 
+[PARAM UNIT--MULTILINES]
+millisecond
+[NOTES] Ramping is applied only to the portions specified by #p2 . Windowing functions, such as hann hamming or blackmand, apply the window for the whole duration.
+[EXAMPLES] tone(440,100).ramp(40)
+[SEE ALSO]  hann hamming blackman
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is an audio signal with fade-in and fade-out.

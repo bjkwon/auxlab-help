@@ -1,0 +1,15 @@
+[FUNCTION NAME] tsq_setvalues
+[STATIC] 0
+[FUNCTION DESCRIPTION] Sets the value(s) of the time sequence at each time point
+[PARAMETERS] x data
+[PARAM TYPE DELIM BY TAB] TSEQ	MATX
+[PARAM DESCRIPTION--MULTILINES] time_sequence_input
+The data (or the values) of the time sequence; Each group(each row) represents the data at each time point
+[PARAM UNIT--MULTILINES] N/A
+N/A
+[NOTES]
+[EXAMPLES]
+[ALGORITHM]
+[SEE ALSO] istseq tsq_isrel tsq_gettimes tsq_settimes tsq_getvalues 
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is #p1, modified with the given parameter

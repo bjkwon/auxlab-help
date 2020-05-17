@@ -1,0 +1,20 @@
+[FUNCTION NAME] fm
+[STATIC] 1
+[FUNCTION DESCRIPTION] Generate a frequency-modulated tone signal
+[PARAMETERS] freq1 freq2 mod_rate duration phase=0
+[PARAM TYPE DELIM BY TAB] SCAL	SCAL	SCAL	SCAL	SCAL
+[PARAM DESCRIPTION--MULTILINES] FM swing from
+FM swing to
+how many times the frequency will swing 
+duration of the signal to generate
+The initial modulation phase between 0 and 1
+[PARAM UNIT--MULTILINES] Hz
+Hz
+Hz
+milliseconds
+.5 is 180 °; 1 is 360 °
+[NOTES]
+[EXAMPLES]
+[SEE ALSO] 
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is a frequency-modulated tone.

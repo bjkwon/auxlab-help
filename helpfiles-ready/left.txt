@@ -1,0 +1,13 @@
+[FUNCTION NAME] left
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Extract the left channel from a stereo audio
+[PARAMETERS]  x
+[PARAM TYPE DELIM BY TAB]  AUDIO
+[PARAM DESCRIPTION--MULTILINES]  audio signal
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  If #p1 is not stereo, the function returns #p1
+[EXAMPLES]  [.2*tone(400,100); .1*noise(300)].left // the 400-Hz tone channel is extracted
+[SEE ALSO]  
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the left channel of #p1.

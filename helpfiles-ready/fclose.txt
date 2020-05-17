@@ -1,0 +1,13 @@
+[FUNCTION NAME] fclose
+[STATIC] 1
+[FUNCTION DESCRIPTION] Closes a file stream specified by the file identifier 
+[PARAMETERS] file_id
+[PARAM TYPE DELIM BY TAB]  SCAL
+[PARAM DESCRIPTION--MULTILINES] File identifier from the fopen call  
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  
+[EXAMPLES]  
+[ALGORITHM]  
+[SEE ALSO] fopen fprintf
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is SCAL. 0 for success, -1 for failure.

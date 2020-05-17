@@ -1,0 +1,15 @@
+[FUNCTION NAME] fft
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Computes the FFT of the array
+[PARAMETERS]  x n=(size_of_x)
+[PARAM TYPE DELIM BY TAB]  VCT or AUDIO	SCAL
+[PARAM DESCRIPTION--MULTILINES]  the array
+FFT size
+[PARAM UNIT--MULTILINES]  
+n/a
+[NOTES]  
+[EXAMPLES]  
+[SEE ALSO]  ifft
+[ALGORITHM]  <a href="http://www.fftw.org/">FFTW</a>
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is complex array of size #p2

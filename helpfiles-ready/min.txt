@@ -1,0 +1,21 @@
+[FUNCTION NAME] min
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Minimum element of an array if there is a single array argument; the minimum value from all values in the arguments
+[PARAMETERS]  x1 x2 ...
+[PARAM TYPE DELIM BY TAB]  SCAL or VCT	SCAL or VCT	...
+[PARAM DESCRIPTION--MULTILINES]  
+
+...
+[PARAM UNIT--MULTILINES]  
+
+...
+[NOTES]  
+[EXAMPLES]  a=[8 2 4 6]; min(a) or a.min &rarr; 2
+b=[3 0 -1]; min(a,b) or a.min(b) &rarr; -1
+Multiple output [a,b]=(1:10:120).matrix(3).max() returns
+a=<br>1<br>41<br>81<br><br>b=<br>1<br>1<br>1<br>
+[SEE ALSO]  max
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y	id
+[OUTPUT ARGS--MULTILINES] #q1 is the minimum element.
+#q2 is the index of the minimum element found first. 

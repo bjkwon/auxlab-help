@@ -1,0 +1,15 @@
+[FUNCTION NAME] fopen
+[STATIC] 1
+[FUNCTION DESCRIPTION]  Opens a file with the given mode
+[PARAMETERS]  filename mode
+[PARAM TYPE DELIM BY TAB]  TXT	TXT
+[PARAM DESCRIPTION--MULTILINES] Name of the file to open
+File open mode, such as "r" "w" "a" 
+[PARAM UNIT--MULTILINES]  
+n/a
+[NOTES] Internally, the C fopen function is called with the given arguments. This means that this follows all the conventions in C language.
+[EXAMPLES]  
+[ALGORITHM]  
+[SEE ALSO] fclose fprintf fread fwrite 
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is SCAL indicating the file identifier. #q1 is -1 if there's an error.

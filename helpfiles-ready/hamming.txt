@@ -1,0 +1,15 @@
+[FUNCTION NAME] hamming
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Apply a hamming window
+[PARAMETERS]  x
+[PARAM TYPE DELIM BY TAB]  AUDIO or VCT
+[PARAM DESCRIPTION--MULTILINES]  Signal to apply the windowing to
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  
+[EXAMPLES]  hamming(ones(128)) or ones(128).hann: 128-pt hamming window
+hamming(dc(100)) or dc(100).hamming: 100-ms hamming window
+hamming(tone(500,100)) or tone(500,100).hamming: hamming window applied to a 500-Hz, 100-ms tone
+[SEE ALSO]  hann blackman
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is #p1 with a hamming window applied. 

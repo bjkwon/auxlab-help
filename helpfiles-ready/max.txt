@@ -1,0 +1,21 @@
+[FUNCTION NAME] max
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Maximum element of an array if there is a single array argument; the maximum value from all values in the arguments
+[PARAMETERS]  x1 x2 ...
+[PARAM TYPE DELIM BY TAB]  SCAL or VCT	SCAL or VCT	...
+[PARAM DESCRIPTION--MULTILINES]  
+
+...
+[PARAM UNIT--MULTILINES]  
+
+...
+[NOTES]  Row-wise operation
+[EXAMPLES]  a=[8 2 4 6]; max(a) or a.max &rarr; 8
+b=[3 9 -1]; max(a,b) or a.max(b) &rarr; 9
+Multiple output [a,b]=(1:10:120).matrix(3).max() returns
+a=<br>31<br>71<br>111<br><br>b=<br>4<br>4<br>4<br>
+[SEE ALSO]  min
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y	id
+[OUTPUT ARGS--MULTILINES] #q1 is the maximum element.
+#q2 is the index of the maximum element found first. 

@@ -1,0 +1,22 @@
+[FUNCTION NAME] fprintf
+[STATIC] 1
+[FUNCTION DESCRIPTION] Write formatted data to a file
+[PARAMETERS] file format ...
+[PARAM TYPE DELIM BY TAB] TXT or SCAL	TXT	...
+[PARAM DESCRIPTION--MULTILINES] file name string or file identifier
+Formatted text to write to the file, following the same convention as in C language.
+n/a
+[PARAM UNIT--MULTILINES] 
+
+n/a
+[NOTES] if #p1 is zero, the content is sent to the console output.
+#p1 can be either a text of the file name (if an extension is not specified, .txt is added by default) or a file identifier, which is the output of fopen
+When the file name is specified for #p1, fprintf opens the file with the mode "at," meaning that the content will be appended to the existing content in the file, writes the content as specified, and closes the file. 
+If a file identifier is used for #p1, fprintf writes the content to the file stream opened by a prior call to fopen.
+[EXAMPLES] To open the file (if file is not found, create one) and write an integer <font face="Courier New">val</font> at the end of the file <font face="Courier New">log.txt</font>; if the file is not found, create one:<br>  <font face="Courier New">AUX> fprintf("log.txt","%%d\n", val)</font><br>
+Integers from 1 through 10 are summed consecutively. To create a file <font face="Courier New">val</font> to the file <font face="Courier New">log.txt</font>, and write each integer and the cumulative sum:<br> <font face="Courier New">AUX> sum=0; fd=fopen("log.txt","wt); for k=1:10, sum += k; fprintf(fd,"%%d %%d\n", k, sum); end, fclose(fd)</font>
+To make a formatted string output and show it on the console (this is useful inside a UDF):<br> <font face="Courier New">AUX> fprintf(0,"%%d\n", val)</font><br>
+[ALGORITHM]
+[SEE ALSO] fopen fclose sprintf 
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the number of characters written. If an error occurs, #q1 is negative and one of the following: <br> -1: fopen error <br> -2: invalid file identifier <br> -3: fwrite error<br> -4: fclose error <br> -999: Unknown error

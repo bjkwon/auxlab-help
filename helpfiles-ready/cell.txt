@@ -1,0 +1,13 @@
+[FUNCTION NAME] cell
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Create a cell array with specified blank elements
+[PARAMETERS]  n
+[PARAM TYPE DELIM BY TAB]  SCL
+[PARAM DESCRIPTION--MULTILINES]  Number of blank elements 
+[PARAM UNIT--MULTILINES]  
+[NOTES]  
+[EXAMPLES]  
+[ALGORITHM]  
+[SEE ALSO]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is a cell array with blank elements.

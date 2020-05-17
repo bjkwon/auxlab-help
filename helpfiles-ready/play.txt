@@ -1,0 +1,21 @@
+[FUNCTION NAME] play
+[STATIC] 2
+[FUNCTION DESCRIPTION]  Audio playback 
+[PARAMETERS]  _handle x repeat=1 devID="" 
+[PARAM TYPE DELIM BY TAB]  HAUD	AUD	SCAL	TXT
+[PARAM DESCRIPTION--MULTILINES]  handle to audio playback
+audio signal
+number of repeats 
+string identifier of the playback device (NOT YET IMPLEMENTED--as of AUXLAB 1.44)
+[PARAM UNIT--MULTILINES]  
+
+
+n/a
+[NOTES]  If devID is not specified, the default device or the last device selected for playback will be used.
+If play is called for the audio handle, #p1 is queued in the back of the playback list and played when the existing list is exhausted.<br>If play is called for an audio signal, a new audio handle is generated.
+[EXAMPLES]  To play x (and don't care about asynchronous playing),<br>play(x)
+To play x and, then, y in sequence<br> h=play(x)<br>h.play(y) while x is played.<br>If h.play(y) is given after playing x is done, it doesn't play and returns -1
+[ALGORITHM]  
+[SEE ALSO]  pause resume status stop qstop 
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is either an audio handle, either newly created or existing. #q1 is -1 if the playback fails or the specified handle is invalid.

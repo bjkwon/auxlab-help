@@ -1,0 +1,13 @@
+[FUNCTION NAME] angle
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Returns the phase angles
+[PARAMETERS]  Z
+[PARAM TYPE DELIM BY TAB]  SCAL or VCT or AUDIO
+[PARAM DESCRIPTION--MULTILINES]  complex value(s)
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  
+[EXAMPLES]  
+[SEE ALSO]  abs atan
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the phase angles of #p1 in radian.

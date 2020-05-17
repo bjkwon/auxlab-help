@@ -1,0 +1,13 @@
+[FUNCTION NAME] isempty
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Checks whether the input array is empty.
+[PARAMETERS]  x
+[PARAM TYPE DELIM BY TAB]  anything
+[PARAM DESCRIPTION--MULTILINES]  
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  For a time-seq variable, the array can have zero length but shouldn't be considered empty because it carries the tmark information.
+[EXAMPLES]  
+[SEE ALSO]  
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is true if the input is empty.

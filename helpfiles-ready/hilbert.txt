@@ -1,0 +1,13 @@
+[FUNCTION NAME] hilbert
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Computes the hilbert transform of the array--90 &deg; shift version; the imaginary part of the analytic signal
+[PARAMETERS]  x
+[PARAM TYPE DELIM BY TAB]  AUDIO
+[PARAM DESCRIPTION--MULTILINES]  the audio signal
+[PARAM UNIT--MULTILINES]  
+[NOTES]  
+[EXAMPLES]  
+[SEE ALSO]  envelope
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the 90 &deg;-shift version of #p1.

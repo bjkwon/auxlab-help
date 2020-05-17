@@ -1,0 +1,13 @@
+[FUNCTION NAME] imag
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Imaginary part of complex number
+[PARAMETERS]  Z
+[PARAM TYPE DELIM BY TAB]  SCAL or VCT or AUDIO
+[PARAM DESCRIPTION--MULTILINES]  complex value(s)
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  
+[EXAMPLES]  (3).imag &rarr; 0<br>(2+sqrt(-1)).imag &rarr; 1
+[SEE ALSO]  conj real abs angle
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the imaginary part of #p1

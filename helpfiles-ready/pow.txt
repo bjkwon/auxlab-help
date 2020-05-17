@@ -1,0 +1,15 @@
+[FUNCTION NAME] pow
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Raise to power
+[PARAMETERS]  x y
+[PARAM TYPE DELIM BY TAB]    SCAL, VCT or AUDIO	SCAL
+[PARAM DESCRIPTION--MULTILINES]  n/a
+n/a
+[PARAM UNIT--MULTILINES]  n/a
+n/a
+[NOTES]  base raised to the power exponent; base<sup>power</sup>
+[EXAMPLES]  
+[SEE ALSO]  log 
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the exponential <i>#p1<sup>#p2</sup></i>

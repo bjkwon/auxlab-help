@@ -1,0 +1,15 @@
+[FUNCTION NAME] axes
+[STATIC] 0
+[FUNCTION DESCRIPTION] Set the current axes or create a new axes
+[PARAMETERS] h_or_pos
+[PARAM TYPE DELIM BY TAB] HGO or VECT
+[PARAM DESCRIPTION--MULTILINES] handle to the axes or 4-element vector with the position to create a new axes in
+[PARAM UNIT--MULTILINES] n/a
+[NOTES] The position is a 4-element vector in proportion to the window size showing the following: top left width height, with the reference of the bottom left corner of the screen.
+This function creates an axes in the current figure window. If no current figure window is available, a new one is created.
+[EXAMPLES] h = axes([.08 .18 .86 .5]) // create a new axes in the current figure window 
+axes(hPrev) // set hPrev as the current axes
+[ALGORITHM]
+[SEE ALSO] figure plot text delete
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the handle to the axes object 

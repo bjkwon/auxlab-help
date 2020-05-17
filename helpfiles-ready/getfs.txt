@@ -1,0 +1,13 @@
+[FUNCTION NAME] getfs
+[STATIC] 1
+[FUNCTION DESCRIPTION] Retrieve the sample rate in the AUXLAB workspace.
+[PARAMETERS] 
+[PARAM TYPE DELIM BY TAB]
+[PARAM DESCRIPTION--MULTILINES]
+[PARAM UNIT--MULTILINES]
+[NOTES] no argument
+[EXAMPLES]
+[ALGORITHM]
+[SEE ALSO] setfs
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the sample rate in the AUXLAB workspace.

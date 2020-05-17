@@ -1,0 +1,15 @@
+[FUNCTION NAME] cumsum
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Cumulative sum
+[PARAMETERS]  x
+[PARAM TYPE DELIM BY TAB]  SCAL
+[PARAM DESCRIPTION--MULTILINES] the array  
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  If #p1 is a matrix, #q1 is a matrix of row-wise operations
+[EXAMPLES]  [1 2 3 4 5].cumsum &rarr; [1 3 6 10 15]
+(1:12).matrix(3).cumsum &rarr; 
+ans = <br>1 3 6 10<br>5 11 18 26<br>9 19 30 42
+[SEE ALSO]  diff reshape
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the cumulative sum of #p1.

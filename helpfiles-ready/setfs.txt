@@ -1,0 +1,13 @@
+[FUNCTION NAME] setfs
+[STATIC] 1
+[FUNCTION DESCRIPTION] Adjusts the sample rate to the specified value
+[PARAMETERS] new_Fs
+[PARAM TYPE DELIM BY TAB] SCL
+[PARAM DESCRIPTION--MULTILINES] The new sample rate
+[PARAM UNIT--MULTILINES] Hz (must be 500 Hz and over)
+[NOTES] The usage of this function is limited to the user-defined functions or the auxcon module. In general, it is better to use a hook command (as in #setfs 16000), because it involves UI and expressions. This will not update existing variables according to the new sample rate, as done by the hook command, so this functionality is pretty limited.
+[EXAMPLES]
+[ALGORITHM]
+[SEE ALSO]
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is undefined. Don't try to use it, as in setfs(16000)+1

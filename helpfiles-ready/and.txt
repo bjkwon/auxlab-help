@@ -1,0 +1,15 @@
+[FUNCTION NAME] and
+[STATIC] 0
+[FUNCTION DESCRIPTION] Point-wise boolean operation && for two arguments; Check if all logical elements are true.
+[PARAMETERS] b1 b2
+[PARAM TYPE DELIM BY TAB] LOGICAL VCT or SCL 	LOGICAL VCT or SCL
+[PARAM DESCRIPTION--MULTILINES] Logical array or logical scalar
+Logical array or logical scalar
+[PARAM UNIT--MULTILINES] 
+n/a
+[NOTES] If two arguments have different length, the boolean operation is applied only to the common length.
+[EXAMPLES]
+[ALGORITHM]
+[SEE ALSO] or
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is a logical array for two arguments with the length of a shorter argument or a logical scalar for one argument.

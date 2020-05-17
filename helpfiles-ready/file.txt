@@ -1,0 +1,14 @@
+[FUNCTION NAME] file
+[STATIC] 1
+[FUNCTION DESCRIPTION]  Read from a file
+[PARAMETERS]  filename
+[PARAM TYPE DELIM BY TAB]  TEXT
+[PARAM DESCRIPTION--MULTILINES]  the name of the file to read
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  Currently .txt, .wav. .mp3, .aiff files are allowed
+For .txt file, each line of the file is read and made into each item of a cell array
+[EXAMPLES]  
+[ALGORITHM]  
+[SEE ALSO] wave  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is either a cell array (for a .txt file), or an audio signal (for an audio file)

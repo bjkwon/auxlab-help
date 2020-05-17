@@ -1,0 +1,15 @@
+[FUNCTION NAME] conv
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Convolute the two arrays
+[PARAMETERS]  x y
+[PARAM TYPE DELIM BY TAB]  VCT or AUDIO	VCT or AUDIO
+[PARAM DESCRIPTION--MULTILINES]  the array or signal
+the array or signal
+[PARAM UNIT--MULTILINES]  
+n/a
+[NOTES]  Both parameters should be a vector (not a matrix)
+[EXAMPLES]
+[SEE ALSO]  
+[ALGORITHM]  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the convolution of #p1 and #p2.

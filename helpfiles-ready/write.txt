@@ -1,0 +1,15 @@
+[FUNCTION NAME] write
+[STATIC] 0
+[FUNCTION DESCRIPTION] Write data into a text file; write audio data to a .wav or .mp3 file
+[PARAMETERS] x filename
+[PARAM TYPE DELIM BY TAB]  AUD VCT or CELL	TEXT
+[PARAM DESCRIPTION--MULTILINES]  data to write into the file
+the name of the file to write
+[PARAM UNIT--MULTILINES]  n/a
+n/a
+[NOTES]  For .txt file, data is written row-wise, except for a cell array written on each row representing the item
+[EXAMPLES]  
+[ALGORITHM]  
+[SEE ALSO] wavwrite file  
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 #p1

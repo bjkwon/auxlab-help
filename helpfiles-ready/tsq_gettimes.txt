@@ -1,0 +1,13 @@
+[FUNCTION NAME] tsq_gettimes
+[STATIC] 0
+[FUNCTION DESCRIPTION] Retrieves time points of a time sequence
+[PARAMETERS] x
+[PARAM TYPE DELIM BY TAB] TSEQ
+[PARAM DESCRIPTION--MULTILINES] time_sequence_input
+[PARAM UNIT--MULTILINES] N/A
+[NOTES] If the input time sequence is relative time based, the output is the relative time point values, which can be used for tsq_settimes to specify relative time points (This is only a temporary hack; a better policy should be in place in the future. 3/11/2019)
+[EXAMPLES]
+[ALGORITHM]
+[SEE ALSO] istseq tsq_isrel tsq_settimes tsq_getvalues  tsq_setvalues 
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is a vector of time points of the input time sequence

@@ -1,0 +1,17 @@
+[FUNCTION NAME] filtfilt
+[STATIC] 0
+[FUNCTION DESCRIPTION] Zero-phase digital filtering
+[PARAMETERS] x num den
+[PARAM TYPE DELIM BY TAB] AUD or VECT	VECT	VECT
+[PARAM DESCRIPTION--MULTILINES] Input data
+Numerator coefficients of rational transfer function
+Denominator coefficients of rational transfer function
+[PARAM UNIT--MULTILINES]
+
+n/a
+[NOTES] For a grouped or "2-D" array, filtering takes place for each group.
+[EXAMPLES]
+[ALGORITHM]
+[SEE ALSO]		filt
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is filtered data.

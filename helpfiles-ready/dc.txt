@@ -1,0 +1,12 @@
+[FUNCTION NAME] dc
+[STATIC] 1
+[FUNCTION DESCRIPTION] Generate a dc signal	(constant amplitude at the full scale)
+[PARAMETERS] duration
+[PARAM TYPE DELIM BY TAB] SCAL
+[PARAM DESCRIPTION--MULTILINES] duration of the signal to generate
+[PARAM UNIT--MULTILINES] millisecond
+[NOTES] Although this is not technically "sound", this is treated as an audio signal.
+[EXAMPLES]
+[SEE ALSO] ones silence zeros
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is an audio signal (not really) of all values of one with the duration #p1 milliseconds.

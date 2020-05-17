@@ -1,0 +1,16 @@
+[FUNCTION NAME] dir
+[STATIC] 1
+[FUNCTION DESCRIPTION] Retrieve the files in the specified directory
+[PARAMETERS] s
+[PARAM TYPE DELIM BY TAB] STR
+[PARAM DESCRIPTION--MULTILINES] File name with or without a wild card, or directory
+[PARAM UNIT--MULTILINES] n/a
+[NOTES]
+[EXAMPLES] y = dir ("c:\Temp\auxlab\1.42\") or <br>
+y = dir ("c:\Temp\auxlab\1.42\*.ini") <br>
+y{1} =<br> .bytes = 1341<br> .date = "06/18/2018, 04:18:28"<br> .ext = ".ini"<br> .isdir = (logical) 0<br> .name = "auxcon32.AUDITORY"<br> .path = "C:\Temp\auxlab\1.42\"<br>
+y{2} =<br> .bytes = 160<br> .date = "06/18/2018, 04:22:06"<br> .ext = ".ini"<br> .isdir = (logical) 0<br> .name = "auxlab32.AUDITORY"<br> .path = "C:\Temp\auxlab\1.42\"
+[ALGORITHM]
+[SEE ALSO]
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is a cell array showing the directory contents. Each cell is a directory class with the following members: name, ext, path, isdir, date, and bytes.

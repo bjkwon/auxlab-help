@@ -1,0 +1,19 @@
+[FUNCTION NAME] sam
+[STATIC] 0
+[FUNCTION DESCRIPTION] Apply Sinusoidal-Amplitude-Modulation to an audio signal.
+[PARAMETERS] x rate depth=1 phase=0
+[PARAM TYPE DELIM BY TAB] AUD	SCAL	SCAL	SCAL
+[PARAM DESCRIPTION--MULTILINES] audio signal
+modulation frequency
+degree of modulation, 0 (no modulation) to 1 (full modulation)
+initial AM phase (0 to 1)
+[PARAM UNIT--MULTILINES] 
+Hz
+
+.5 is 180 °; 1 is 360 °
+[NOTES]
+[EXAMPLES]
+[SEE ALSO]
+
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is AUDIO with sinusoidally amplitude modulation of #p1

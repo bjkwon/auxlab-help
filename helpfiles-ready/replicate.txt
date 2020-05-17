@@ -1,0 +1,13 @@
+[FUNCTION NAME] replicate
+[STATIC] 2
+[FUNCTION DESCRIPTION] Copy/replicate the graphic object
+[PARAMETERS]  _handle
+[PARAM TYPE DELIM BY TAB] HGO
+[PARAM DESCRIPTION--MULTILINES] handle to the graphic object to replicate 
+[PARAM UNIT--MULTILINES] n/a
+[NOTES] 
+[EXAMPLES] 
+[ALGORITHM]
+[SEE ALSO] figure axes text delete line
+[OUTPUT ARGS BY TAB] _handle2
+[OUTPUT ARGS--MULTILINES] #q1 is the handle to the object replicated from #p1

@@ -1,0 +1,13 @@
+[FUNCTION NAME] delete
+[STATIC] 0
+[FUNCTION DESCRIPTION]  Delete the graphic object
+[PARAMETERS] object 
+[PARAM TYPE DELIM BY TAB]  HGO
+[PARAM DESCRIPTION--MULTILINES]  The graphic handle to the object to delete
+[PARAM UNIT--MULTILINES]  n/a
+[NOTES]  Upon success, the variable #p1 will become empty.
+[EXAMPLES]  
+[ALGORITHM]  
+[SEE ALSO]  figure plot axes text 
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is empty.

@@ -1,0 +1,13 @@
+[FUNCTION NAME] tic
+[STATIC] 1
+[FUNCTION DESCRIPTION] Start stopwatch timer
+[PARAMETERS]  
+[PARAM TYPE DELIM BY TAB]  
+[PARAM DESCRIPTION--MULTILINES] 
+[PARAM UNIT--MULTILINES]  
+[NOTES] no argument (Windows only)
+[EXAMPLES]  
+[ALGORITHM]  
+[SEE ALSO]  toc
+[OUTPUT ARGS BY TAB] y
+[OUTPUT ARGS--MULTILINES] #q1 is the value of the internal timer.  You should not rely on the meaning of this value.
