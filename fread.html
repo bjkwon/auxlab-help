@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AUX function fread</title>
+<link rel="stylesheet" type="text/css" href="auxhelp.css">
+</head>
+<body>
+<h1>fread</h1>
+
+<table id="usage"><tr><th>
+y = fread ( file_id,precision )<br>y = file_id.fread ( precision )</th></tr></table>
+
+<font face="Arial"><p>Read a binary file</p></font>
+
+<table id="arguments">
+  <tr>
+    <th>arg</th>
+    <th>type</th>
+    <th>Description</th>
+    <th>Unit or Value scale</th>
+  </tr>
+  <tr><td width="15%"><b><font face="Courier New">file_id</font></b></td><td width="10%">file_id</td><td width="50%"> file identifier from fopen</td><td width="25%"></tr>
+<tr><td><b><font face="Courier New">precision</font></b></td><td>TXT</td><td>string of precision; see below </td><td></tr>
+
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Outputs</th></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> is the data (non-audio). If an error occurs, <b><font face="Courier New">y</font></b> is null.</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul><li>This function reads a binary file and returns the data read according to <b><font face="Courier New">precision</font></b> specified below.</li><li><b><font face="Courier New">precision</font></b> is one of the following: "int8" "uint8" "int16" "uint16" "int32" "uint32" "int64" "uint64" "float" and "double"</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+  
+</table>
+<p></p>
+<table id="notes"><tr><th>See Also</th></tr></table><a href="fopen.html">fopen</a>&nbsp;&#124; <a href="fclose.html">fclose</a>&nbsp;&#124; <a href="fwrite.html">fwrite </a>
+</body>
+</html>

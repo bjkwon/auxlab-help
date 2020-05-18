@@ -202,8 +202,11 @@
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="file"><param name="Local" value="file.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="fopen"><param name="Local" value="fopen.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="fprintf"><param name="Local" value="fprintf.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="fread"><param name="Local" value="fread.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="fwrite"><param name="Local" value="fwrite.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="include"><param name="Local" value="include.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="wavwrite"><param name="Local" value="wavwrite.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="write"><param name="Local" value="write.html"></OBJECT>
 		</UL>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Miscellaneous Functions">	<param name="Local" value="misc.html">	</OBJECT>
@@ -217,8 +220,8 @@
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="setfs"><param name="Local" value="setfs.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="sprintf"><param name="Local" value="sprintf.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="str2num"><param name="Local" value="str2num.html"></OBJECT>
-			<LI> <OBJECT type="text/sitemap"><param name="Name" value="_tic"><param name="Local" value="tic.html"></OBJECT>
-			<LI> <OBJECT type="text/sitemap"><param name="Name" value="_toc"><param name="Local" value="toc.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="_tic"><param name="Local" value="_tic.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="_toc"><param name="Local" value="_toc.html"></OBJECT>
 		</UL>
 </UL>
 </BODY></HTML>

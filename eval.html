@@ -8,7 +8,7 @@
 <h1>eval</h1>
 
 <table id="usage"><tr><th>
-n/a = eval ( expression )</th></tr></table>
+y = eval ( expression )</th></tr></table>
 
 <font face="Arial"><p>Execute AUXLAB expression in text string</p></font>
 
@@ -25,12 +25,12 @@ n/a = eval ( expression )</th></tr></table>
 <p></p>
 <table  id="notes">
   <tr><th>Outputs</th></tr>
-  <tr><td><ul><li>n/a</li></ul></td></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> is null if there's no error in <b><font face="Courier New">expression</font></b>. <b><font face="Courier New">y</font></b> is the error message if there is an error.</li></ul></td></tr>
 </table>
 <p></p>
 <table  id="notes">
   <tr><th>Notes</th></tr>
-  <tr><td><ul><li>Similar to the eval function in MATLAB</li></ul></td></tr>
+  <tr><td><ul><li><b><font face="Courier New">expression</font></b> may have multiple expressions. </li><li>If the execution of <b><font face="Courier New">expression</font></b> is successful, the output is NULL, and the variables are defined in the workspace as specified in <b><font face="Courier New">expression</font></b>.</li><li>If an error occurs in <b><font face="Courier New">expression</font></b>, eval gracefully returns with the error message as the output, instead of a raised exception. This ensures the continued execution of multiple expressions even if there is an error. This feature is useful when multiple expressions must be executed in sequence in a udf; for example, an automatic batch test.</li></ul></td></tr>
 </table>
 <p></p>
 <table  id="notes">

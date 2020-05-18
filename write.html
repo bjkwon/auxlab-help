@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AUX function write</title>
+<link rel="stylesheet" type="text/css" href="auxhelp.css">
+</head>
+<body>
+<h1>write</h1>
+
+<table id="usage"><tr><th>
+y = write ( x,filename )<br>y = x.write ( filename )</th></tr></table>
+
+<font face="Arial"><p>Write data into a text file; write audio data to a .wav or .mp3 file</p></font>
+
+<table id="arguments">
+  <tr>
+    <th>arg</th>
+    <th>type</th>
+    <th>Description</th>
+    <th>Unit or Value scale</th>
+  </tr>
+  <tr><td width="15%"><b><font face="Courier New">x</font></b></td><td width="10%">AUD VCT or CELL</td><td width="50%">  data to write into the file</td><td width="25%"></tr>
+<tr><td><b><font face="Courier New">filename</font></b></td><td>TEXT</td><td>the name of the file to write</td><td></tr>
+
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Outputs</th></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> <b><font face="Courier New">x</font></b></li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul><li>For .txt file, data is written row-wise, except for a cell array written on each row representing the item</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+  
+</table>
+<p></p>
+<table id="notes"><tr><th>See Also</th></tr></table><a href="wavwrite.html">wavwrite</a>&nbsp;&#124; <a href="file.html">file </a>
+</body>
+</html>

@@ -8,7 +8,7 @@
 <h1>filt</h1>
 
 <table id="usage"><tr><th>
-y = filt ( x,num,den )<br>y = x.filt ( num,den )</th></tr></table>
+[y, final] = filt ( x,num,den[[=1]],initial[[=(empty)]] )<br>[y, final] = x.filt ( num,den[[=1]],initial[[=(empty)]] )</th></tr></table>
 
 <font face="Arial"><p>1-D digital filter</p></font>
 
@@ -21,13 +21,14 @@ y = filt ( x,num,den )<br>y = x.filt ( num,den )</th></tr></table>
   </tr>
   <tr><td width="15%"><b><font face="Courier New">x</font></b></td><td width="10%">AUD or VECT</td><td width="50%"> Input data</td><td width="25%"></tr>
 <tr><td><b><font face="Courier New">num</font></b></td><td>VECT</td><td>Numerator coefficients of rational transfer function</td><td></tr>
-<tr><td><b><font face="Courier New">den</font></b></td><td>VECT</td><td>Denominator coefficients of rational transfer function</td><td></tr>
+<tr><td><b><font face="Courier New">den[</font></b></td><td>VECT</td><td>Denominator coefficients of rational transfer function</td><td></tr>
+<tr><td><b><font face="Courier New">initial[</font></b></td><td>VECT</td><td>Initial condition, a vector of max(num.length, den.length)-1</td><td></tr>
 
 </table>
 <p></p>
 <table  id="notes">
   <tr><th>Outputs</th></tr>
-  <tr><td><ul><li><b><font face="Courier New">y</font></b> is filtered data.</li></ul></td></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> is filtered data.</li><li><b><font face="Courier New">final</font></b> is the final condition after filtering</li></ul></td></tr>
 </table>
 <p></p>
 <table  id="notes">
