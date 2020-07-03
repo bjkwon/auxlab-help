@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AUX function erase</title>
+<link rel="stylesheet" type="text/css" href="auxhelp.css">
+</head>
+<body>
+<h1>erase</h1>
+
+<table id="usage"><tr><th>
+y = erase ( obj,field_name )<br>y = obj.erase ( field_name )</th></tr></table>
+
+<font face="Arial"><p>Remove a field from a structure object</p></font>
+
+<table id="arguments">
+  <tr>
+    <th>arg</th>
+    <th>type</th>
+    <th>Description</th>
+    <th>Unit or Value scale</th>
+  </tr>
+  <tr><td width="15%"><b><font face="Courier New">obj</font></b></td><td width="10%">STRUCT</td><td width="50%"> A structure object</td><td width="25%"></tr>
+<tr><td><b><font face="Courier New">field_name</font></b></td><td>TXT</td><td>The string of the field</td><td></tr>
+
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Outputs</th></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> is the structure object</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+  <tr><td><ul><li>v=[]; v.fs=22050; v.ex = "something to get rid of";// A structure object is defined. fields: fs and ex <br>v.erase("ex") // the field "ex" is removed.</li></ul></td></tr>
+</table>
+<p></p>
+<table id="notes"><tr><th>See Also</th></tr></table><a href=".html"> </a>
+</body>
+</html>

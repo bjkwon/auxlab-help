@@ -20,7 +20,7 @@ y = fopen ( filename,mode )</th></tr></table>
     <th>Unit or Value scale</th>
   </tr>
   <tr><td width="15%"><b><font face="Courier New">filename</font></b></td><td width="10%">TXT</td><td width="50%"> Name of the file to open</td><td width="25%"></tr>
-<tr><td><b><font face="Courier New">mode</font></b></td><td>TXT</td><td>File open mode, such as "r" "w" "a" </td><td></tr>
+<tr><td><b><font face="Courier New">mode</font></b></td><td>TXT</td><td>File open mode, such as "r" "w" "a" "rb" "rt" "wb" "wt"</td><td></tr>
 
 </table>
 <p></p>
@@ -31,7 +31,7 @@ y = fopen ( filename,mode )</th></tr></table>
 <p></p>
 <table  id="notes">
   <tr><th>Notes</th></tr>
-  <tr><td><ul><li>Internally, the C fopen function is called with the given arguments. This means that this follows all the conventions in C language.</li></ul></td></tr>
+  <tr><td><ul><li>Internally, the C fopen function is called with the given arguments.</li><li>Make sure to open the file as binary (use "wb") when opening a binary file (one of most frequent mistakes!)</li></ul></td></tr>
 </table>
 <p></p>
 <table  id="notes">

@@ -52,6 +52,16 @@
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="<>="><param name="Local" value="compopop_timestretch.html"></OBJECT>
 		</UL>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Loops and Conditionals">	<param name="Local" value="loop-cond.html">	</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="if"><param name="Local" value="loop_if.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="for"><param name="Local" value="loop_for.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="while"><param name="Local" value="loop_while.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="switch"><param name="Local" value="loop_switch.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="break"><param name="Local" value="loop_break.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="continue"><param name="Local" value="loop_continue.html"></OBJECT>
+		</UL>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Signal/Vector Generation">	<param name="Local" value="generation.html">	</OBJECT>
 		<UL>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="cell"><param name="Local" value="cell.html"></OBJECT>
@@ -188,10 +198,19 @@
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="iscell"><param name="Local" value="iscell.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="isclass"><param name="Local" value="isclass.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="isempty"><param name="Local" value="isempty.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="ismember"><param name="Local" value="ismember.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="issame"><param name="Local" value="issame.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="isstereo"><param name="Local" value="isstereo.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="isstring"><param name="Local" value="isstring.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="isvector"><param name="Local" value="isvector.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="or"><param name="Local" value="or.html"></OBJECT>
+		</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Struct Functions">	<param name="Local" value="struct.html">	</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="erase"><param name="Local" value="erase.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="head"><param name="Local" value="head.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="ismember"><param name="Local" value="ismember.html"></OBJECT>
 		</UL>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="File Handling Functions">	<param name="Local" value="filehandling.html">	</OBJECT>
@@ -212,6 +231,7 @@
 		<param name="Name" value="Miscellaneous Functions">	<param name="Local" value="misc.html">	</OBJECT>
 		<UL>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="clear"><param name="Local" value="clear.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="dtype"><param name="Local" value="dtype.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="eval"><param name="Local" value="eval.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="getfs"><param name="Local" value="getfs.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="input"><param name="Local" value="input.html"></OBJECT>
@@ -219,9 +239,14 @@
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="msgbox"><param name="Local" value="msgbox.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="setfs"><param name="Local" value="setfs.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="sprintf"><param name="Local" value="sprintf.html"></OBJECT>
+			<LI> <OBJECT type="text/sitemap"><param name="Name" value="squeeze"><param name="Local" value="squeeze.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="str2num"><param name="Local" value="str2num.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="_tic"><param name="Local" value="_tic.html"></OBJECT>
 			<LI> <OBJECT type="text/sitemap"><param name="Name" value="_toc"><param name="Local" value="_toc.html"></OBJECT>
+		</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Pseudo Variables">	<param name="Local" value="pseudo.html">	</OBJECT>
+		<UL>
 		</UL>
 </UL>
 </BODY></HTML>

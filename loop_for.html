@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>for</title>
+<link rel="stylesheet" type="text/css" href="auxhelp.css">
+</head>
+<body>
+<h1><font face="Courier New"><strong>for</strong></font></h1>
+
+<table id="notes"><tr><th></th><th></th></tr>
+  <tr><td width="5%"></td><td width="30%">for <font face="Courier New">var = expression</font></td><td width="40%"></td></tr>
+  <tr><td width="5%"></td><td width="30%">&emsp;...</td><td width="40%"></td></tr>
+  <tr><td width="5%"></td><td width="30%">end</td><td width="40%"></td></tr>
+</table><p></p>
+
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul>
+  <li><font face="Courier New">expression</font> should be evaluated as a vector.</li> 
+</ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+   <tr><td><ul>In these examples, the for block across multiple lines is pasted (control-V'ed) on the AUXLAB command line.
+   </ul><ul><font face="Courier New">AUX> count = 0;<br>for k=1:10<br>&emsp;count += k<br>end<br>AUX> count
+   <p style="padding-left: 10px;">count = <br>&ensp;55</p></font>
+   </ul><ul><font face="Courier New">AUX> count = 0;<br>for k=[2 8 1 4]<br>&emsp;count += k<br>end<br>AUX> count
+   <p style="padding-left: 10px;">count = <br>&ensp;15</p></font>
+   </ul><ul>The entire looping block can be placed on one line.
+   </ul><ul><font face="Courier New">AUX> count = 0;&ensp;for k=[2 8 1 4],&ensp;count += k,&ensp;end
+    </ul></td></tr>
+</table>
+</body>
+</html>

@@ -8,8 +8,12 @@
 0. Before running HTML help Workshop
 	* To edit the content of an existing file, go to the "helpfiles-ready" directory, find the .txt file and edit it
 	* To create a new .txt file, use an existing file as a template and produce it. 
-		Or, to create many .txt files, run auxhtmlhelp and create all .txt files of "registered" help items with empty content and use the ones necessary as a barebone.
-	* To update the "registration" of help items, edit init.cpp in the auxhtmlhelp project.
+		Or, to create many .txt files, add new functions in init.cpp and run auxhtmlhelp to create multiple barebone .txt 
+		files and use the ones necessary as a barebone.
+	* auxhtmlhelp 1) generates blank txt files from init.cpp, 2) converts txt files into html files. 
+	  These two features are not meant to be performed at one shot (they are essentially separate tasks)
+	  auxhtmlhelp will need to be revised to address this weird practice.
+	  Watch out where those files (txt and html) are generated. The htmls are used in HTML help Workshop to generate chm.
 
 1. How to make chm
 	a. Run HTML help Workshop

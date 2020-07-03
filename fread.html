@@ -8,7 +8,7 @@
 <h1>fread</h1>
 
 <table id="usage"><tr><th>
-y = fread ( file_id,precision )<br>y = file_id.fread ( precision )</th></tr></table>
+y = fread ( file_id,precision,additionalstr[=""] )<br>y = file_id.fread ( precision,additionalstr[=""] )</th></tr></table>
 
 <font face="Arial"><p>Read a binary file</p></font>
 
@@ -21,6 +21,7 @@ y = fread ( file_id,precision )<br>y = file_id.fread ( precision )</th></tr></ta
   </tr>
   <tr><td width="15%"><b><font face="Courier New">file_id</font></b></td><td width="10%">file_id</td><td width="50%"> file identifier from fopen</td><td width="25%"></tr>
 <tr><td><b><font face="Courier New">precision</font></b></td><td>TXT</td><td>string of precision; see below </td><td></tr>
+<tr><td><b><font face="Courier New">additionalstr</font></b></td><td>TXT</td><td>additional text "audio" "a" "audio2" or "a2"</td><td></tr>
 
 </table>
 <p></p>
@@ -36,7 +37,7 @@ y = fread ( file_id,precision )<br>y = file_id.fread ( precision )</th></tr></ta
 <p></p>
 <table  id="notes">
   <tr><th>Examples</th></tr>
-  
+  <tr><td><ul><li>Open the file generated in examples of <a href="fwrite.html">fwrite</a>, read as int16 into 1) a non-audio object and 2) an audio object:</li><li><p style="padding-left: 30px;"><font face="Courier New">fd=fopen("x.raw","rb")<br>a=fd.fread("int16")<br>fd.fclose</font></p></li><li><p style="padding-left: 30px;"><font face="Courier New">fd=fopen("x.raw","rb")<br>b=fd.fread("int16","audio")<br>fd.fclose</font></p></li><li>a is a non-audio object with the range between -32768 and 32767; b is an audio object with the range between -1 and 1.</li><li>If the raw file represents a stereo audio data, "audio2" should be used as the second arg instead of "audio."</li></ul></td></tr>
 </table>
 <p></p>
 <table id="notes"><tr><th>See Also</th></tr></table><a href="fopen.html">fopen</a>&nbsp;&#124; <a href="fclose.html">fclose</a>&nbsp;&#124; <a href="fwrite.html">fwrite </a>

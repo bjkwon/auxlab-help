@@ -10,7 +10,7 @@
 <table id="usage"><tr><th>
 y = file ( filename )</th></tr></table>
 
-<font face="Arial"><p>Read from a file (TO BE DONE)</p></font>
+<font face="Arial"><p>Read from a file</p></font>
 
 <table id="arguments">
   <tr>
@@ -19,18 +19,18 @@ y = file ( filename )</th></tr></table>
     <th>Description</th>
     <th>Unit or Value scale</th>
   </tr>
-  <tr><td width="15%"><b><font face="Courier New">filename</font></b></td><td width="10%">TEXT</td><td width="50%">  ...................</td><td width="25%"></tr>
+  <tr><td width="15%"><b><font face="Courier New">filename</font></b></td><td width="10%">TEXT</td><td width="50%">  the name of the file to read</td><td width="25%"></tr>
 
 </table>
 <p></p>
 <table  id="notes">
   <tr><th>Outputs</th></tr>
-  <tr><td><ul><li><b><font face="Courier New">y</font></b> is anything</li></ul></td></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> is either a cell array (for a .txt file), or an audio signal (for an audio file)</li></ul></td></tr>
 </table>
 <p></p>
 <table  id="notes">
   <tr><th>Notes</th></tr>
-  
+  <tr><td><ul><li>Currently .txt, .wav. .mp3, .aiff files are allowed</li><li>For .txt file, each line of the file is read and made into each item of a cell array</li></ul></td></tr>
 </table>
 <p></p>
 <table  id="notes">
@@ -38,6 +38,6 @@ y = file ( filename )</th></tr></table>
   
 </table>
 <p></p>
-<table id="notes"><tr><th>See Also</th></tr></table><a href=".html"> </a>
+<table id="notes"><tr><th>See Also</th></tr></table><a href="wave.html">wave </a>
 </body>
 </html>

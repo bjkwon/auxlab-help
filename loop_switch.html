@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>switch</title>
+<link rel="stylesheet" type="text/css" href="auxhelp.css">
+</head>
+<body>
+<h1><font face="Courier New"><strong>switch</strong></font></h1>
+
+<table id="notes"><tr><th></th><th></th></tr>
+  <tr><td width="5%"></td><td width="30%">switch <font face="Courier New">expression_ref</font></td><td width="40%"></td></tr>
+  <tr><td width="5%"></td><td width="30%">&emsp;case <font face="Courier New">expression1</font></td><td width="40%"></td></tr>
+  <tr><td width="5%"></td><td width="30%">&emsp;&emsp;...</td><td width="40%"></td></tr>
+  <tr><td width="5%"></td><td width="30%">&emsp;case <font face="Courier New">expression2</font></td><td width="40%"></td></tr>
+  <tr><td width="5%"></td><td width="30%">&emsp;&emsp;...</td><td width="40%"></td></tr>
+  <tr><td width="5%"></td><td width="30%">&emsp;otherwise</font></td><td width="40%"></td></tr>
+  <tr><td width="5%"></td><td width="30%">&emsp;&emsp;...</td><td width="40%"></td></tr>
+  <tr><td width="5%"></td><td width="30%">end</td><td width="40%"></td></tr>
+</table><p></p>
+
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul>
+  <li><font face="Courier New">expression</font> can be a scalar, vector, string, or an audio object.</li> 
+</ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+   <tr><td><ul>Suppose a user-defined function is defined as following:
+   </ul><ul><font face="Courier New">function out = test_switch(in)<br>switch in<br>&ensp;case 99<br>&emsp;&emsp;out=9999;
+   <br>&ensp;case "bj"<br>&emsp;&emsp;out=in++"kwon";
+   <br>&ensp;case tone(440,10)@-20<br>&emsp;&emsp;out=in.rms;
+   <br>&ensp;case noise(30)<br>&emsp;&emsp;out="you can never have this output.";
+   <br>&ensp;otherwise<br>&emsp;&emsp;out="Not one of prepared input items.";
+   <br>end</p></font></ul><ul>
+   </ul><ul>In the AUXLAB workspace:
+   </ul><ul><font face="Courier New">AUX> test_switch(99)<p style="padding-left: 10px;">ans =<br>&emsp;9999</p>
+   </ul><ul><font face="Courier New">AUX> test_switch("bj")<p style="padding-left: 10px;">ans =<br>&emsp;"bjkwon"</p>
+   </ul><ul><font face="Courier New">AUX> test_switch(tone(440,5+5)@-20)<p style="padding-left: 10px;">ans =<br>&emsp;-20</p>
+   </ul><ul><font face="Courier New">AUX> test_switch(99.0001)<p style="padding-left: 10px;">ans =<br>&emsp;"Not one of prepared input items."</p>
+   </ul><ul><font face="Courier New">AUX> test_switch(noise(30))<p style="padding-left: 10px;">ans =<br>&emsp;"Not one of prepared input items."</p>
+   
+    </ul></td></tr>
+</table>
+</body>
+</html>

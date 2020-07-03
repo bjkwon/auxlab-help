@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AUX function head</title>
+<link rel="stylesheet" type="text/css" href="auxhelp.css">
+</head>
+<body>
+<h1>head</h1>
+
+<table id="usage"><tr><th>
+y = head ( obj,data )<br>y = obj.head ( data )</th></tr></table>
+
+<font face="Arial"><p>Assign a represented data ("head" data) to a structure object</p></font>
+
+<table id="arguments">
+  <tr>
+    <th>arg</th>
+    <th>type</th>
+    <th>Description</th>
+    <th>Unit or Value scale</th>
+  </tr>
+  <tr><td width="15%"><b><font face="Courier New">obj</font></b></td><td width="10%">STRUCT</td><td width="50%"> A structure object</td><td width="25%"></tr>
+<tr><td><b><font face="Courier New">data</font></b></td><td>SCL VCT TXT AUD</td><td>The data to assign to the structure object</td><td></tr>
+
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Outputs</th></tr>
+  <tr><td><ul><li><b><font face="Courier New">y</font></b> is the structure object</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Notes</th></tr>
+  <tr><td><ul><li>If you make a structure variable out of an existing non-struct object, add a structure statement to the object (example 1)</li><li><b><font face="Courier New">obj</font></b> can be either a text of the file name (if an extension is not specified, .txt is added by default) or a file identifier, which is the output of fopen</li><li>When the file name is specified for <b><font face="Courier New">obj</font></b>, fprintf opens the file with the mode "at," meaning that the content will be appended to the existing content in the file, writes the content as specified, and closes the file. </li><li>If a file identifier is used for <b><font face="Courier New">obj</font></b>, fprintf writes the content to the file stream opened by a prior call to fopen.</li></ul></td></tr>
+</table>
+<p></p>
+<table  id="notes">
+  <tr><th>Examples</th></tr>
+  <tr><td><ul><li>v = 150; v.type="weight" // v, a scalar object of 150, is updated as a struct object (150 becomes the head data) </li><li>v=[]; v.type="weight"; // v, a structure object, is defined.<br>v = 150; // v is overwritten with a scalar assignment of 150</li></ul></td></tr>
+</table>
+<p></p>
+<table id="notes"><tr><th>See Also</th></tr></table><a href=".html"> </a>
+</body>
+</html>
